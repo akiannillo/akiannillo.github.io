@@ -9,7 +9,7 @@
 orcid:
   name: "Orcid"
   baseURL: "https://orcid.org/"
-  icon: "fa-orcid"
+  icon: "fab fa-orcid"
 
 facebook:
   name: "Facebook"
