@@ -1,6 +1,7 @@
 ---
 layout: page
 title: My Ph.D. Deliverables
+published: true
 ---
 
 |Year|Title|Link|
