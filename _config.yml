@@ -66,7 +66,8 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-#  orcid: 0000-0001-9358-7100
+  rss: true
+  orcid: "0000-0001-9358-7100"
   email: "antonioken.iannillo@uni.lu"
   facebook: antonioken
   github: akiannillo
@@ -76,10 +77,10 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-   instagram: italiaken
+  instagram: italiaken
 #  youtube: user/deanat78
 #  spotify: yourname
-  telephone: +3524666449660
+  telephone: "+3524666449660"
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
