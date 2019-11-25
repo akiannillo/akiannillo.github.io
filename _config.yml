@@ -67,6 +67,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
+  orcid: 0000-0001-9358-7100
   email: "antonioken.iannillo@uni.lu"
   email: "ak.iannillo@gmail.com"
   facebook: antonioken
@@ -86,10 +87,10 @@ social-network-links:
 #  yelp: yourname
 
 # Select which share links to show in posts
-#share-links-active:
-#  twitter: true
-#  facebook: true
-#  linkedin: true
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
