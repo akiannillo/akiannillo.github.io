@@ -6,6 +6,11 @@
 #            site.social-network-links.<key>
 #   icon: Specify a valid fontawesome icon class
 
+orcid:
+  name: "Orcid"
+  baseURL: "https://orcid.org/"
+  icon: "fa-orcid"
+
 facebook:
   name: "Facebook"
   baseURL: "https://www.facebook.com/"
