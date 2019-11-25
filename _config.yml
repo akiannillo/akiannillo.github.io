@@ -20,7 +20,7 @@ description: My personal website (and blog in the future?)
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me: "index"
   Publications: "publications"
   My PhD: "phd"
   Grants&Projects: "projects"
