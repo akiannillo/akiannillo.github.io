@@ -1,7 +1,8 @@
 ---
 layout: post
-title: First post!
+title: New website!
 image: /img/hello_world.jpeg
+published: true
 ---
 
-This is my first post, how exciting!
+I wanted to give a new look to my personal website and I found this amazing template. Enjoy.
