@@ -4,18 +4,20 @@ title: About me
 subtitle: I am an IT researcher and software engineer dreaming to change the world.
 published: true
 ---
+If you want my full curriculum vitae, you can find it [here](https://akiannillo.github.io/misc/CV-AntonioKenIannillo.pdf).
+
 # present me
 
 I'm currently working as a Research Associate at the Interdisciplinary Centre for Security, Reliability, and Trust ([SnT](https://wwwen.uni.lu/snt)), University of Luxembourg, in the SEDAN group headed by [Dr. Habil. Radu State](https://wwwen.uni.lu/snt/people/radu_state).
 
 My research activities focus on software dependability and security, especially software verification and assessment. 
-Currently, my research targets include new and innovative technologies such as ARM Trustzone for Cortex-M, Ethereum Smart Contract, and ROS. 
+Currently, my research targets include new and innovative technologies such as **ARM Trustzone for Cortex-M**, **Ethereum Smart Contract**, and **ROS**. 
 I am engaged in providing concrete and easy-to-use methodologies and tools that could help industries and open-source communities to provide software that can be trusted. 
 The challenges arise from the nature of modern systems, complex and fragmented, that makes actual acceptance criteria for non-functional requirements incomplete or hard to apply in practice.
 
-I'm the principal investigator of the project "SecuriTy Assessment of tRusTzone-m based Software" ([STARTS](https://starts.uni.lu/)) funded by the Luxembourg National Research Fund under the programme Junion CORE. STARTS project aims to create a methodology for the security assessment of software based on TrustZone-M technology and a novel verification and validation framework to implement this methodology. The project will start in 2020, tutored by prof. Radu Sion, and I'm actively looking for Ph.D. students and post-doc researchers to fill some project positions. Mail me if interested.
+I'm the principal investigator of the project _"SecuriTy Assessment of tRusTzone-m based Software"_ ([STARTS](https://starts.uni.lu/)) funded by the Luxembourg National Research Fund under the programme Junion CORE. STARTS project aims to create a methodology for the security assessment of software based on TrustZone-M technology and a novel verification and validation framework to implement this methodology. The project will start in 2020, tutored by prof. Radu Sion, and **I'm actively looking for Ph.D. students and post-doc researchers** to fill some project positions. Mail me if interested.
 
-I'm involved in the management of the European H2020 project [Concordia](https://www.concordia-h2020.eu/)), a dedicated consortium leading the integration of Europe's cybersecurity competencies in a network of expertise to build the European secure, resilient, and trusted ecosystem.
+I'm involved in the management of the European H2020 project [CONCORDIA](https://www.concordia-h2020.eu/), a dedicated consortium leading the integration of Europe's cybersecurity competencies in a network of expertise to build the European secure, resilient, and trusted ecosystem.
 
 # past me
 
@@ -25,6 +27,3 @@ During my PhD course, I was a visiting scholar at Northeastern University, Bosto
 
 I'm a contributor to the [FЯIDA](https://frida.re/) tool project: more precisely, to the low-level code instrumentation library frida-gum.
 
-### my full cv
-
-If you want my curriculum vitae, you can find it [here](https://akiannillo.github.io/misc/CV-AntonioKenIannillo.pdf).
