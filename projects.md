@@ -1,6 +1,7 @@
 ---
 layout: page
-title: 'Projects&Grants'
+title: Projects&Grants
+published: true
 ---
 | Period | Name | Info | Role | Budget |
 |---|---|---|---|---|
