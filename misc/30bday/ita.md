@@ -7,11 +7,11 @@ published: true
 
 **_Controllate spesso questa pagina per le ultime notizie circa questa weekend di fuoco_**
 
+Se avete deciso di venire ad Amsterdam, vi prego di farmi sapere scrivendo su questo foglio di lavoro Google. Anche se non avete tutte le informazioni, potete aggiungerle di volta il volta.
+### PARTECIPANTI: [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1xXKqnDKmUWszrGrB6Y_Ekgz0Q1ZFp85lEwwvPB8vCZM/edit?usp=sharing)
 ### DOVE: [Amsterdam](https://goo.gl/maps/WQT5Dh31MLMZqqvB8)
 ### QUANDO: da venerdì 14/2/2020 a domenica 16/2/2020
 
-Se avete deciso di venire, vi prego di farmi sapere scrivendo su questo foglio di lavoro Google. Anche se non avete tutte le informazioni, potete aggiungerle di volta il volta.
-### PARTECIPANTI: [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1xXKqnDKmUWszrGrB6Y_Ekgz0Q1ZFp85lEwwvPB8vCZM/edit?usp=sharing)
  
 
 ## FASE 0: IDEA
