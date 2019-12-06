@@ -8,6 +8,7 @@ published: true
 
 |Date|Journal|Title|Article|
 |--- |--- |--- |--- |
+|December 2019|Dependability Assessment of the Android OS Through Fault Injection*|[link](https://doi.org/10.1109/TR.2019.2954384)|
 |May 2019|Empirical Software Engineering|Evolutionary Fuzzing of Android OS Vendor System Services*|[link](https://rdcu.be/bFj5F)|
 
 
