@@ -51,4 +51,23 @@ Chi vuole fare un'esperienza tecnologica e all'avanguardia, mi hanno consigliato
 
 In ogni caso, controllate sempre su Google Maps che l'hotel non sia più lontano di 30 minuti dal centro con i mezzi (che funzionano benissimo).
 
-## FASE 2: ???
+## FASE 2: EVENTI
+
+Di seguito gli eventi fissi di questo weekend. Ovviamente qualcosa puo' piacervi e qualcosaltro no. L'unico evento a cui tengo che partecipiate e' il party del sabato sera. Ho prenotato un tavolo per mangiare e sarei piu' che felice di offrirvi qualcosa per festeggiare tutti insieme.
+
+### Venerdi' sera @ BULLDOG PALACE
+Venerdì arriveremo tutti ad orari diversi, quindi direi di vederci al [Bulldog Palace](https://goo.gl/maps/8sV4YS8wzvtQp9tu5). È un coffeeshop e cocktail bar. Arriveremo tutti da luoghi e in orari diversi, quindi quando volete potete raggiungermi al Bulldog. Da lì poi possiamo muoverci in libertà per i canali di Amsterdam.
+
+### Sabato mattina @ MoCo Museum 
+Sabato mattina ho preso dei biglietti per il Moco Museum. Se volete aggregarvi potete acquistare i biglietti direttamente dal sito (20% di sconto) [https://tickets.mocomuseum.com/](https://tickets.mocomuseum.com/it/tickets).
+
+L'orario del mio biglietto è 11:30. Ci vediamo di fronte al museo verso le 11:00 per un caffè.
+Dopo la visita al museo, possiamo andare a mangiare nei dintorni.
+
+### Sabato sera @ Belushi's
+Sabato sera, come già detto, ho prenotato dei tavoli al [Belushi's](https://goo.gl/maps/eUbdnQmVMsPGbgj9A) dove ceneremo.
+Essendo sabato sera ed un gruppo numeroso, il locale mi ha chiesto di fargli sapere cosa vogliamo mangiare entro venerdì.
+Quindi potete iniziare a dare un'occhiata al [menù](https://www.belushis.com/__data/assets/pdf_file/0003/502887/combinepdf-1.pdf) e farmi sapere cosa volete cenare.
+Sono più che felice di offrirvi da bere durante la serata.
+Il locale ha tavoli da biliardo, freccette, e un dancefloor.
+
