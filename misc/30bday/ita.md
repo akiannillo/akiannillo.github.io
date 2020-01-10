@@ -65,9 +65,8 @@ L'orario del mio biglietto è 11:30. Ci vediamo di fronte al museo verso le 11:0
 Dopo la visita al museo, possiamo andare a mangiare nei dintorni.
 
 ### Sabato sera @ Belushi's
-Sabato sera, come già detto, ho prenotato dei tavoli al [Belushi's](https://goo.gl/maps/eUbdnQmVMsPGbgj9A) dove ceneremo.
+Sabato sera, come già detto, ho prenotato dei tavoli alle 20:00 al [Belushi's](https://goo.gl/maps/eUbdnQmVMsPGbgj9A) dove ceneremo.
 Essendo sabato sera ed un gruppo numeroso, il locale mi ha chiesto di fargli sapere cosa vogliamo mangiare entro venerdì.
 Quindi potete iniziare a dare un'occhiata al [menù](https://www.belushis.com/__data/assets/pdf_file/0003/502887/combinepdf-1.pdf) e farmi sapere cosa volete cenare.
 Sono più che felice di offrirvi da bere durante la serata.
 Il locale ha tavoli da biliardo, freccette, e un dancefloor.
-
