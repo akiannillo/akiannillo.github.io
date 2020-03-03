@@ -2,7 +2,7 @@
 layout: page
 title: 30 is the new 20...
 subtitle: ... so let's celebrate in Amsterdam!
-published: true
+published: false
 ---
 
 **_Check this page frequently for the latest news about this crazy weekend_**
