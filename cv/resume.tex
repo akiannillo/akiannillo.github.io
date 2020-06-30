@@ -1,0 +1,225 @@
+\documentclass[margin,line]{resume}
+\newif\ifReferences
+\newif\ifOnline
+\usepackage{hyperref}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage[skins]{tcolorbox}
+\usepackage{everypage}
+
+%Make bottom margin nicer
+\addtolength{\textheight}{-0.75in}
+
+
+\begin{document}
+
+
+\Referencesfalse
+\Onlinefalse
+
+
+\name{\Large Antonio Ken Iannillo, Ph.D.}
+\begin{resume}
+
+%\tikz\node[circle,draw,inner sep=1.5cm,fill overzoom image=AKI_PHOTO] (A) {};
+%\hfill\begin{tikzpicture}[radius=2cm,delta angle=180]
+%\path[draw,thick,fill overzoom image=AKI_PHOTO]
+%  (0,0) arc [start angle=-90] -- ++(-3,0) arc [start angle=90] -- cycle;
+%\end{tikzpicture}
+
+\section{\mysidestyle Contact Information}
+\ifOnline
+	mail: ak.iannillo@gmail.com	 							\hfill Luxembourg\\
+\else
+    59 Monte\'e Saint-Cr\'epin			                   			\hfill cell: +352 661 196 166\\
+    1365 Luxembourg								        \hfill mail: antonioken.iannillo@uni.lu\\
+    Luxembourg										\hfill website: \url{akiannillo.github.io/}\\
+\fi
+
+
+
+
+\section{\mysidestyle Research Interests}
+Software engineering, software dependability and security, fault injection testing, fuzz testing, trusted computing
+
+
+\section{\mysidestyle Education}
+\textbf{Universit\`a degli Studi di Napoli Federico II}, Naples, Italy \vspace{1mm}\\%
+\textsl{PhD in Computer Engineering} \hfill \textbf{November 2014 -- October 2017}\vspace{-3mm}\\\vspace{-1mm}%
+\begin{list2}
+	\item Defence: 31 January 2018
+	\item Thesis: \textsl{Dependability assessment of Android OS}
+	\item Advisors: Dr. Domenico Cotroneo and Dr. Roberto Natella
+\end{list2}
+
+\textbf{Universit\`a degli Studi di Napoli Federico II}, Naples, Italy \vspace{1mm}\\%
+\textsl{M.Sc., Computer Engineering} \hfill \textbf{November 2011 -- January 2014}\vspace{-3mm}\\\vspace{-1mm}%
+\begin{list2}
+	\item GPA: 3.91
+	\item Thesis: \textsl{A Fault injection tool for Java software applications}
+	\item Final grade: 110/110 cum laude
+\end{list2}\vspace{-1.5mm}    
+
+
+\textbf{Universit\`a degli Studi di Napoli Federico II}, Naples, Italy \vspace{1mm}\\%
+\textsl{B.Sc., Computer Engineering} \hfill \textbf{October 2008 -- October 2011}\vspace{-3mm}\\\vspace{-1mm}%
+\begin{list2}
+	\item GPA: 3.88
+	\item Thesis: \textsl{Comparison between programming models in Facebook and Google Plus}
+        \item Final grade: 110/110 cum laude
+\end{list2}\vspace{-1.5mm}    
+
+
+
+%\section{\mysidestyle Posters}
+
+
+\section{\mysidestyle Professional Experience}
+
+\textbf{University of Luxembourg}, Luxembourg City, Luxembourg\hfill\textbf{November 2018 -- present}\\
+\textbf{Research Associate, Interdisciplinary Centre for Security, Reliability and Trust}\hfill\\
+\textbf{Research Scientist - since February 2020}\hfill  
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+	\item \filbreak\textit{Research group:} SEDAN headed by Dr. Radu State.
+	\item \filbreak\textit{Concordia - H2020 EU project:} Task leader for the liaisons with the stakeholder, where Concordia is a cybersecurity competence network with leading research, technology, industrial and public competences.
+	\item \filbreak\textit{STARTS - FNR Junior Core project:} (starting soon) Principal Investigator of the ``SecuriTy Assessment of tRusTzone-m based Software'' (STARTS) project that aims to create a methodology for the security assessment of software based on TrustZone-M technology and a novel verification and validation framework to implement this methodology. 
+\end{list2}
+
+
+
+\textbf{Universit\`a degli Studi di Napoli Federico II}, Naples, Italy\hfill\textbf{May 2018 -- October 2018}\\
+\textbf{Research Fellow, Dependable Systems and Software Engineering Research Team}\hfill 
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+	\item \filbreak\textit{Automatic Feature Extraction and Analysis of Faulty Code:} Software faults are code imperfections that may lead to the system's eventually failure. A deep understanding of the code developers insert specific software faults into will help several tasks such as bug prevention, bug detection, and software fault injection.
+    \item \filbreak\textit{Fuzz Testing on Android OS:} Study and research on important challenges for the robustness (security and dependability) of the Android OS. Study and research on evolutionary algorithms and search strategies. Design and development of a smart testing tool on Android.
+\end{list2}
+
+\textbf{Critiware s.r.l.}, Naples, Italy\hfill\textbf{November 2017 - April 2018}\\
+\textbf{Research Consultant}\hfill 
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+	\item \filbreak\textit{Python Fault Injection:} Study and research on Python parsing technologies and programming language theory. Design and implementation of a DSL framework for code changes in Python code. Collaboration with Huawei Technologies Co. Lts.
+\end{list2}
+
+\textbf{Northeastern University}, Boston, MA\hfill\textbf{September 2016 -- April 2017}\\
+\textbf{Research Assistant (Visitor), Network and Distributed Systems Security Lab}\hfill 
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+	\item \filbreak\textit{Vendor customizations on Android system services:} Study and research on important challenges for the robustness (security and dependability) of the Android OS. Design and development of an innovative testing tool. Robustness and security testing on physical devices. Tutored by Dr. Cristina Nita-Rotaru.
+\end{list2}
+
+\textbf{Consorzio Interuniversitario Nazionale Italiano (CINI)}, Naples, Italy\\
+\null\hfill\textbf{January 2014 - October 2014}\\
+\textbf{Junior Research Fellow}\hfill 
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+	\item \filbreak\textit{NFVI reliability:} Study and research of new approach for software reliability evaluation of virtualized environments for Network Function Virtualization (NFV). Design and implementation of a reliability evaluation tool for VMWare ESXi. Collaboration with Huawei Technologies Co. Lts.
+	\item \filbreak\textit{PON SVEVIA:} Study and research of usability for fault injection tools. Design and implementation of an integrated fault injection tool (Eclipse plug-in) for the fault injection test design and analysis of results, in Java and C/C++ software.
+\end{list2}
+
+
+\filbreak
+\textbf{R\&D department, Infosys LTD}, Bangalore, India\hfill
+\textbf{June 2014 -- September 2014}\\
+\textbf{R\&D Intern}\hfill 
+\vspace{-3mm}\\\vspace{-1mm}
+\begin{list2}
+    \item \filbreak\textit{Java Fault Injection:} Study and research of new approaches for the injection of software defects. Design and development of a tool for fault injection into the Java Bytecode. This thesis work has been conducted in India during the preparation of my MSc. degree thesis. Tutored by Dr. Santonu Sarkar.
+\end{list2}
+
+\section{\mysidestyle Honors and Awards}
+ISSRE 2017 Conference Best Paper Award
+\vspace{1mm}\\%
+Netsoft 2015 Conference Best Paper Award
+\vspace{1mm}\\%
+Information Technology and Electrical Engineering PhD 2014-2017 scholarship by Universit\`a degli Studi di Napoli Federico II
+
+\section{\mysidestyle Publications}
+
+\filbreak
+Antonio Ken Iannillo and Radu State\\
+``\textbf{A Proposal for Security Assessment of Trustzone-M based Software}''
+[Software Reliability Engineering (ISSRE), 2019 IEEE 30th International Symposium on]
+\filbreak
+Domenico Cotroneo, Luigi De Simone, Antonio Ken Iannillo, Roberto Natella, Stefano Rosiello***\\
+``\textbf{Analyzing the Context of Bug-Fixing Changes in the OpenStack Cloud Computing Platform}''
+[Software Reliability Engineering (ISSRE), 2019 IEEE 30th International Symposium on]
+\filbreak
+Sean Rivera, Sofiane Lagraa, Antonio Ken Iannillo, Radu State\\
+``\textbf{Auto-encoding Robot State against Sensor Spoofing Attacks}''
+[Software Reliability Engineering (ISSRE), 2019 IEEE 30th International Symposium on]
+\filbreak
+Domenico Cotroneo, Antonio Ken Iannillo, Roberto Natella***\\
+``\textbf{Evolutionary Fuzzing of Android OS Vendor System Services}''
+[Empir Software Eng (2019). https://doi.org/10.1007/s10664-019-09725-6]
+\filbreak
+Antonio Ken Iannillo, Roberto Natella, Domenico Cotroneo, Cristina Nita-Rotaru\\
+``\textbf{Chizpurfle: A Gray-Box Android Fuzzer for Vendor Service Customizations}''
+[Software Reliability Engineering (ISSRE), 2017 IEEE 28th International Symposium on]\\\textbf{Conference Best Paper Award}
+\filbreak
+Domenico Cotroneo, Francesco Fucci, Antonio Ken Iannillo, Roberto Natella, Roberto Pietrantuono***\\
+``\textbf{Software Aging Analysis of the Android Mobile OS}''
+[Software Reliability Engineering (ISSRE), 2016 IEEE 27th International Symposium on]
+\filbreak
+Domenico Cotroneo, Antonio Ken Iannillo, Roberto Natella, Roberto Pietrantuono, Stefano Russo***\\
+``\textbf{The Software Aging and Rejuvenation Repository}''
+[Software Reliability Engineering (ISSRE), 2015 IEEE 26th International Symposium on]
+\filbreak
+Domenico Cotroneo, Luigi De Simone, Antonio Ken Iannillo, Anna Lanzaro, Roberto Natella***\\
+``\textbf{Dependability Evaluation and Benchmarking of Network Function Virtualization Infrastructures}''
+[Network Softwarization (NetSoft), 2015 IEEE 1st Conference on]\\\textbf{Conference Best Paper Award}
+\filbreak
+Domenico Cotroneo, Luigi De Simone, Antonio Ken Iannillo, Anna Lanzaro, Roberto Natella***\\
+``\textbf{Usability of Fault Injection}''
+[Software Reliability Engineering (ISSRE), 2014 IEEE 25th International Symposium on]
+\filbreak
+Domenico Cotroneo, Luigi De Simone, Antonio Ken Iannillo, Anna Lanzaro, Roberto Natella, Jian Fan, Wang Ping\\
+``\textbf{Network Function Virtualization: Challenges and Directions for Reliability Assurance}''
+[Software Reliability Engineering (ISSRE), 2014 IEEE 25th International Symposium on]
+\filbreak
+{\footnotesize*** international authorship order does not apply; authors are in an alphabetic order, due to internal policies applied by the authors' research group.}
+
+
+\filbreak
+\section{\mysidestyle Relevant\\Skills} 
+\textbf{Programming Languages:} Python, Bash scripting, Java, C\vspace{2mm}\\
+\textbf{Databases:} MySQL, MongoDB\vspace{2mm}\\
+\textbf{Other tools and frameworks:} Android, F\reflectbox{R}IDA, Pandas 
+%\textbf{Other:} OpenCV, SQL 
+
+
+%\filbreak
+%\section{\mysidestyle Relevant Courses}
+%Security Analytics, Machine Learning, Data Mining,
+%Distributed Systems, Networking, Operating Systems,
+%Data Structures, Algorithms, Differential Privacy, 
+%Cryptography, Quantum Information
+
+%\filbreak
+%\section{\mysidestyle Activities}
+%Organize group meetings for Networks and Distributed Systems Security PhD students\vspace{1.5mm}\\
+%Endurance running\vspace{1.5mm}\\
+%Organize and compete in tournaments for Super Smash Brothers\vspace{1.5mm}\\
+ 
+%\filbreak
+%\section{\mysidestyle Professional Affiliations}
+
+
+%\filbreak
+%\section{\mysidestyle References}
+%\ifReferences
+%	\begin{tabular}{@{}p{6cm}p{6cm}}
+%	 \textbf{Dr. Cristina Nita-Rotaru} 	& \textbf{Dr. Sonia Fahmy}\\
+%	 Associate Professor					& Professor\\
+%	 Northeastern University				& Northeastern University\\
+%	 Boston, MA			                	& Boston, MA \\
+%	 phone: 765-496-6757					& phone: 765-494-6183\\
+%	 email: crisn@cs.purdue.edu				& email: fahmy@cs.purdue.edu\\
+%	 \end{tabular}
+%
+%\else % References
+%	{\sl Available on request}
+%\fi
+\end{resume}
+\end{document}
