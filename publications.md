@@ -10,7 +10,7 @@ published: true
 |--- |--- |--- |--- |
 |December 2019|IEEE Transactions on Reliability|Dependability Assessment of the Android OS Through Fault Injection*|[link](https://doi.org/10.1109/TR.2019.2954384)|
 |May 2019|Empirical Software Engineering|Evolutionary Fuzzing of Android OS Vendor System Services*|[link](https://rdcu.be/bFj5F)|
-
+|June 2020|Empirical Software Engineering|A comprehensive study on software aging across android versions and vendors*|[link](https://rdcu.be/b5jdw)|
 
 ## Conferences
 
