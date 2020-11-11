@@ -8,7 +8,7 @@ If you want my full curriculum vitae, you can find it [here](https://akiannillo.
 
 # present me
 
-I'm currently working as a Research Scientist at the Interdisciplinary Centre for Security, Reliability, and Trust ([SnT](https://wwwen.uni.lu/snt)), University of Luxembourg, in the SEDAN group headed by [Dr. Habil. Radu State](https://wwwen.uni.lu/snt/people/radu_state).
+I'm currently working as a Research Scientist at the Interdisciplinary Centre for Security, Reliability, and Trust ([SnT](https://wwwen.uni.lu/snt)), University of Luxembourg, in the SEDAN group headed by [Prof. Radu State](https://wwwen.uni.lu/snt/people/radu_state).
 
 My research activities focus on software dependability and security, especially software verification and assessment. 
 Currently, my research targets include new and innovative technologies such as **ARM Trustzone for Cortex-M**, **Ethereum Smart Contract**, and **ROS**. 
