@@ -16,6 +16,7 @@ published: true
 
 |Conference|Title|Paper|Presentation|
 |--- |--- |--- |--- |
+|ARES 2020|Leveraging eBPF to preserve user privacy for DNS, DoT, and DoH queries|[link](https://akiannillo.github.io/misc/publications/ARES2020_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ARES2020_Rivera.ppsx)|
 |ISSRE 2019|A Proposal for Security Assessment of Trust zone-M based Software|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.ppsx)|
 |ISSRE 2019|Analyzing the Context of Bug-Fixing Changes in the OpenStack Cloud Computing Platform|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.ppsx)|
 |ISSRE 2019|Auto-encoding Robot State against Sensor Spoofing Attacks|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Rivera.ppsx)|
