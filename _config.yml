@@ -21,7 +21,7 @@ description: My personal website (and blog in the future?)
 # List of links in the navigation bar
 navbar-links:
   Publications: "publications"
-  Grants&Projects: "projects"
+  Projects&Activities: "projects"
   My PhD: "myphd"
   About Me: "aboutme"
 
