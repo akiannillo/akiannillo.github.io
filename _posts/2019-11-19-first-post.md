@@ -1,7 +1,9 @@
 ---
 layout: post
 title: New website!
-image: assets/img/hello_world.jpeg
+cover-img: /assets/img/hello_world.jpeg
+thumbnail-img: /assets/img/hello_world.jpeg
+share-img: /assets/img/hello_world.jpeg
 published: true
 date: '2019-11-19'
 ---
