@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Android Aging on Journal
 date: '2020-06-30'
-image: img/old-android.jpg
+image: /assets/img/old-android.jpg
 ---
 I got my PhD two years ago, and now I can say that all my work is published on journals.
 Today, the last contribution of my thesis is available on _Empirical Software Engineering Journal_!

@@ -24,7 +24,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   rss: true
-  orcid: "0000-0001-9358-7100"
+  ORCID: "0000-0001-9358-7100"
   email: "antonioken.iannillo@uni.lu"
   facebook: antonioken
   github: akiannillo
