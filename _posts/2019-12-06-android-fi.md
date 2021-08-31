@@ -4,9 +4,6 @@ published: true
 title: Android Fault Injection on Journal
 date: '2019-12-06'
 cover-img: /assets/img/android-fi.png
-thumbnail-img: /assets/img/android-fi.png
-share-img: /assets/img/android-fi.png
-
 ---
 Finally, after almost 2 years from my Ph.D. defense, the publication on one of my thesis contributions arrived on _IEEE Transactions on Reliability_!
 
