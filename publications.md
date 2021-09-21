@@ -18,6 +18,7 @@ published: true
 |--- |--- |--- |--- |
 |EURO S&P 2021|ConFuzzius: A Data Dependency-Aware Hybrid Fuzzer for Smart Contracts|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.ppsx)|
 |FC 2021|The Eye of Horus: Spotting and Analyzing Attacks on Ethereum Smart Contracts|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.ppsx)|
+|ICECCS 2020| ROS-FM: Fast Monitoring for the Robotic Operating System |[link](https://akiannillo.github.io/misc/publications/ICECCS2020_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ICECCS2020_Rivera.ppsx)|
 |ARES 2020|Leveraging eBPF to preserve user privacy for DNS, DoT, and DoH queries|[link](https://akiannillo.github.io/misc/publications/ARES2020_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ARES2020_Rivera.ppsx)|
 |ISSRE 2019|A Proposal for Security Assessment of Trust zone-M based Software|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.ppsx)|
 |ISSRE 2019|Analyzing the Context of Bug-Fixing Changes in the OpenStack Cloud Computing Platform|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.ppsx)|
