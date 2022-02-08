@@ -19,7 +19,7 @@ published: true
 | 2021 | ISSRE | Research Program Committee |
 | 2019,2021 | ISSRE | Pubblicity Chair | 
 | 2019>2021 | RSDA | Program Committee |
-| 2021 | IFIP SEC | Program Committee |
+| 2021,2022 | IFIP SEC | Program Committee |
 | 2021 | WAFERS | Program Committee |
 
 ## My PhD
