@@ -16,10 +16,11 @@ published: true
 
 | Year | Name | Role |
 |---|---| --- |
+| 2022 | ISSRE | Fast Abstract Co-Chair, Research Program Committee |
+| 2022,2021 | IFIP SEC | Program Committee |
 | 2021 | ISSRE | Research Program Committee |
-| 2019,2021 | ISSRE | Pubblicity Chair | 
-| 2019>2021 | RSDA | Program Committee |
-| 2021,2022 | IFIP SEC | Program Committee |
+| 2021, 2019 | ISSRE | Pubblicity Chair | 
+| 2021, 2020, 2019 | RSDA | Program Committee |
 | 2021 | WAFERS | Program Committee |
 
 ## My PhD

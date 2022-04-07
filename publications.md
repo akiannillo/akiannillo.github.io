@@ -16,6 +16,7 @@ published: true
 
 |Conference|Title|Paper|Presentation|
 |--- |--- |--- |--- |
+|CPSS 2022|An REE-independent Approach to Identify Callers of TEEs in TrustZone-enabled Cortex-M Devices|[link](https://akiannillo.github.io/misc/publications/CPSS2022_Iannillo.pdf)||
 |EURO S&P 2021|ConFuzzius: A Data Dependency-Aware Hybrid Fuzzer for Smart Contracts|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.ppsx)|
 |FC 2021|The Eye of Horus: Spotting and Analyzing Attacks on Ethereum Smart Contracts|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.ppsx)|
 |ICECCS 2020| ROS-FM: Fast Monitoring for the Robotic Operating System |[link](https://akiannillo.github.io/misc/publications/ICECCS2020_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ICECCS2020_Rivera.ppsx)|
