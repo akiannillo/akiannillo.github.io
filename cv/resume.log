@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.17)  11 MAY 2022 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.17)  11 MAY 2022 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -627,13 +627,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--37
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] ) 
 Here is how much of TeX's memory you used:
- 21136 strings out of 478994
- 415609 string characters out of 5858183
+ 21135 strings out of 478994
+ 415601 string characters out of 5858183
  729063 words of memory out of 5000000
- 38310 multiletter control sequences out of 15000+600000
+ 38309 multiletter control sequences out of 15000+600000
  406724 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,5n,97p,441b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 93i,5n,97p,441b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
@@ -643,7 +643,7 @@ b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on resume.pdf (3 pages, 137047 bytes).
+Output written on resume.pdf (3 pages, 136952 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
