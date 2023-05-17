@@ -15,10 +15,10 @@ My research activities focus on software dependability and security, especially 
 Currently, my research targets include new and innovative technologies such as **ARM Trustzone for Cortex-M**, **Ethereum Smart Contract**, and **ROS**. 
 I am engaged in providing concrete and easy-to-use methodologies and tools that could help industries and open-source communities to provide software that can be trusted. 
 The challenges arise from the nature of modern systems, complex and fragmented, that makes actual acceptance criteria for non-functional requirements incomplete or hard to apply in practice.
+I also shifted my interests towards AI, in particular with regards to **Vehicle Routing Optimization**.
 
-I'm the principal investigator of the project _"SecuriTy Assessment of tRusTzone-m based Software"_ ([STARTS](https://starts.uni.lu/)) funded by the Luxembourg National Research Fund under the programme Junion CORE. STARTS project aims to create a methodology for the security assessment of software based on TrustZone-M technology and a novel verification and validation framework to implement this methodology. The project will start in 2020, tutored by prof. Radu Sion, and **I'm actively looking for Ph.D. students and post-doc researchers** to fill some project positions. Mail me if interested.
-
-I'm involved in the management of the European H2020 project [CONCORDIA](https://www.concordia-h2020.eu/), a dedicated consortium leading the integration of Europe's cybersecurity competencies in a network of expertise to build the European secure, resilient, and trusted ecosystem.
+I'm also the CEO and Co-Founder of [WAVY MEET S.à r.l.](https://wavymeet.com/).
+WAVY MEET provides a medical software platform with a secure and comprehensive approach to remote rehabilitation.
 
 # past me
 
@@ -28,3 +28,6 @@ During my PhD course, I was a visiting scholar at Northeastern University, Bosto
 
 I'm a contributor to the [FЯIDA](https://frida.re/) tool project: more precisely, to the low-level code instrumentation library frida-gum.
 
+I was involved in the management of the European H2020 project [CONCORDIA](https://www.concordia-h2020.eu/), a dedicated consortium that led the integration of Europe's cybersecurity competencies in a network of expertise to build the European secure, resilient, and trusted ecosystem.
+
+I was the principal investigator of the project _"SecuriTy Assessment of tRusTzone-m based Software"_ ([STARTS](https://starts.uni.lu/)) funded by the Luxembourg National Research Fund under the programme Junion CORE. STARTS project created a methodology for the security assessment of software based on TrustZone-M technology.
