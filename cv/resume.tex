@@ -2,12 +2,19 @@
 \newif\ifReferences
 \newif\ifOnline
 \usepackage{hyperref}
-\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage{graphicx}
 \usepackage[skins]{tcolorbox}
 \usepackage{everypage}
+\usepackage{fancyhdr} % Added for page numbering
 
 %Make bottom margin nicer
-\addtolength{\textheight}{-0.75in}
+\addtolength{\textheight}{-1.2in}
+
+% Page numbering setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage} % Page number in the center of the footer
 
 
 \begin{document}
@@ -31,7 +38,7 @@
 	mail: ak.iannillo@gmail.com	 							\hfill Luxembourg\\
 \else
     5 Rue St Mathieu				                   			\hfill cell: +352 661 196 166\\
-    2138 Luxembourg								        \hfill mail: antonioken.iannillo@uni.lu\\
+    2138 Luxembourg								        \hfill mail: ak.iannillo@gmail.com\\
     Luxembourg										\hfill website: \url{akiannillo.github.io/}\\
 \fi
 
@@ -39,8 +46,8 @@
 
 
 \section{\mysidestyle Research Interests}
-Software engineering, Certification engineering, software dependability and security, fault injection testing, fuzz testing, trusted computing
-
+Cybersecurity, Software Engineering, Secure and Compliant Data Management;
+\textit{application domains:} Health Tech, Blockchain, Logistics, Trusted Execution Environments, AI
 
 \section{\mysidestyle Education}
 \textbf{Universit\`a degli Studi di Napoli Federico II}, Naples, Italy \vspace{1mm}\\%
@@ -69,32 +76,69 @@ Software engineering, Certification engineering, software dependability and secu
 \end{list2}\vspace{-1.5mm}    
 
 
-
-%\section{\mysidestyle Posters}
-
-
 \section{\mysidestyle Professional Experience}
 
 \textbf{WAVY MEET S.à r.l.}, Luxembourg City, Luxembourg \hfill \textbf{March 2023 -- present}\\
-\textbf{CEO and Co-Founder}\hfill\\
+\textit{CEO and Co-Founder}\hfill\\
 \vspace{-3mm}\\\vspace{-1mm}
 \begin{list2}
-	\item \filbreak\textit{WAVY MEET platform:} Born from ``OWL - FNR JUMP project'', it's a medical software platform with a secure and comprehensive approach to remote rehabilitation.
-	\item \filbreak\textit{FIT4START \#13 awards:} One of the 20 selected startups, from a total of 214 applications coming from 42 countries, awarded with specialized coaching as well as €50,000 of funding from the Ministry of the Economy each, with an additional €100,000 for the successfully graduation from the program and injection of private capital.
+	\item \filbreak WAVY MEET platform: Born from ``OWL - FNR JUMP project'', it's a medical software platform with a secure and comprehensive approach to remote rehabilitation.
+	\item \filbreak\textbf{FIT4START \#13 graduate:} 
+	
+	\emph{Selected in October 2022. Graduated in June 2023. Acquired budget: 150,000 euros.}
+	
+	One of the 20 selected startups, from a total of 214 applications coming from 42 countries, for specialized coaching organized by LuxInnovation. WAVY MEET graduated from the program FIT4START funded by the Ministry of the Economy as planned.
+	
 	\item \filbreak\textit{website:} \url{https://wavymeet.com/}.
 \end{list2}
 
 
 \textbf{University of Luxembourg}, Luxembourg City, Luxembourg\\  \phantom{.} \hfill \textbf{November 2018 -- November 2023}\\
-\textbf{Research Associate, Interdisciplinary Centre for Security, Reliability and Trust}\hfill\\
-\textbf{Research Scientist - since February 2020}\hfill  
+\textit{Interdisciplinary Centre for Security, Reliability and Trust}\hfill\\
+\textit{Research Associate - since November 2018}\hfill\\
+\textit{Research Scientist - since February 2020}\hfill  
 \vspace{-3mm}\\\vspace{-1mm}
 \begin{list2}
-	\item \filbreak\textit{Research group:} SEDAN headed by Dr. Radu State.
-	\item \filbreak\textit{Concordia - H2020 EU project:} Task leader for the liaisons with the stakeholder, where Concordia is a cybersecurity competence network with leading research, technology, industrial and public competences.
-	\item \filbreak\textit{STARTS - FNR Junior Core project:} Principal Investigator of the ``SecuriTy Assessment of tRusTzone-m based Software'' (STARTS) project that aims to create a methodology for the security assessment of software based on TrustZone-M technology and a novel verification and validation framework to implement this methodology. 
-	\item \filbreak\textit{OWL - FNR JUMP project}: Principal Investigator of the ``Online Workout Platform'' (OWL) project that aims to enable the creation of a start-up company to commercialize a tele-rehabilitation platform for cardiac patients.
-	\item \filbreak\textit{AI for transport \& logistic - Luxembourgish R\&D project}: Project Manager and Scientist of the agreement between SnT (project partner) and Gulliver Luxembourg S.à r.l. (project leader). The project aims to improve software for the transport and logistic services with the aid of novel AI technologies.
+	\item \filbreak {Research group:} SEDAN headed by Dr. Radu State.
+	\item \filbreak {Ph.D. students support}: Dedicated to the mentorship and support of SEDAN Ph.D. students, my role involves providing guidance and assistance to the next generation of researchers. This includes sharing expertise, facilitating research discussions, and fostering a collaborative and productive research environment within the group. 
+	\item \filbreak\textbf{Luxembourgish R\&D fund (partner: GULLIVER)}: 
+	
+	\emph{On-going project. Acquired budget: 800,000 euros. Total project budget: 3,000,000 euros.}
+	
+	I acquired a partnership with Gulliver Luxembourg S.à r.l., securing a budget of 800,000 million euros for SnT in a granted project from the Ministry of Economy using the Luxembourgish R\&D fund. As the Project Manager and Scientist, I am actively involved among SnT (project partner) and Gulliver Luxembourg S.à r.l. (project leader). The primary objective is to enhance software used in transport and logistic services through the incorporation of novel AI technologies, thereby improving efficiency and reliability in the industry.
+
+	\item \filbreak\textbf{Industrial partnership (partner: QUANTSTAMP)}: 
+	
+	\emph{On-going project. Acquired budget: 260,000 euros.}
+	
+	I successfully acquired a partnership with Quantstamp, securing a budget of 260,000 euros. Leading the SnT team in collaboration with Quantstamp, spearheading initiatives to advance the security of decentralized finance (DeFi) on the blockchain. This industrial project plays a crucial role in addressing emerging challenges in the blockchain space, contributing to the secure and reliable implementation of DeFi systems. 
+		
+	\item \filbreak\textbf{CONCORDIA - EU H2020:} 
+	
+	\emph{Project ended in December 2023. Managed budget: 465,000 euros. Total project budget: 23,000,000 euros.}
+	
+	I was the leader for liaisons with stakeholders. CONCORDIA was a cybersecurity competence network with leading research, technology, industrial, and public competences. I was actively involved in organizing annual events and several cybersecurity workshops to foster collaboration and knowledge exchange among experts in the field. More information about the project can be found at \url{https://www.concordia-h2020}.
+	
+	\item \filbreak\textbf{OWL - FNR JUMP project}: 
+	
+	\emph{Project ended in June 2023. Acquired budget: 250,000 euros.}
+		
+	Served as the Principal Investigator for the "Online Workout Platform" (OWL) project, acquiring a budget of 250,000 euros funded by the FNR. The role involved steering the project towards its goal of establishing a startup company dedicated to commercializing a tele-rehabilitation platform designed for cardiac patients. This initiative not only contributes to scientific research but also has the potential to make a positive impact on healthcare by providing innovative solutions for rehabilitation. 
+	
+	\item \filbreak\textbf{STARTS - FNR Junior Core:} 
+	
+	\emph{Project ended in December 2020. Acquired budget: 550,000 euros.}
+	
+	As the Principal Investigator of the "SecuriTy Assessment of tRusTzone-m based Software" (STARTS) project, successfully acquired a budget of 550,000 euros. The focus was on developing a comprehensive methodology for the security assessment of software based on TrustZone-M technology. Additionally, working on a novel verification and validation framework to implement this methodology effectively. This project represents a significant contribution to advancing the field of software security. More information about the project can be found at \url{https://starts.uni.lu/}. 
+
+	\item \filbreak\textbf{Cybersecurity in Robot (partner: Ministry of Defence)}: 
+	
+	\emph{Project ended in June 2020.}	
+		
+	I led a project focusing on the cybersecurity assessment and enforcement in a Robotic Operating System (ROS) for military and defense applications. Utilized Trusted Execution Environments to enhance security measures. Project ended in June 2020.
+
+
+
 \end{list2}
 
 
@@ -126,10 +170,10 @@ Software engineering, Certification engineering, software dependability and secu
 \textbf{Junior Research Fellow}\hfill 
 \vspace{-3mm}\\\vspace{-1mm}
 \begin{list2}
-	\item \filbreak\textit{NFVI reliability:} Study and research of new approach for software reliability evaluation of virtualized environments for Network Function Virtualization (NFV). Design and implementation of a reliability evaluation tool for VMWare ESXi. Collaboration with Huawei Technologies Co. Lts.
+	\item \filbreak\textit{NFVI reliability:} Research of new approach for software reliability evaluation of virtualized environments for Network Function Virtualization (NFV). Design and implementation of a reliability evaluation tool for VMWare ESXi. Collaboration with Huawei Technologies Co. Lts.
+	\item[] \item[] \hfill \textit{Professional experience section continues on next page...}
 	\item \filbreak\textit{PON SVEVIA:} Study and research of usability for fault injection tools. Design and implementation of an integrated fault injection tool (Eclipse plug-in) for the fault injection test design and analysis of results, in Java and C/C++ software.
 \end{list2}
-
 
 \filbreak
 \textbf{R\&D department, Infosys LTD}, Bangalore, India\hfill
@@ -147,8 +191,26 @@ Netsoft 2015 Conference Best Paper Award
 \vspace{1mm}\\%
 Information Technology and Electrical Engineering PhD 2014-2017 scholarship by Universit\`a degli Studi di Napoli Federico II
 
+\filbreak
+\section{\mysidestyle Relevant\\Skills} 
+\textbf{Programming:} Python, Javascript, Bash, Java, C/C++\vspace{2mm}\\
+\textbf{Development Tools:} Git, GitHub, GitLab, JIRA, Confluence, Slack, Eclipse, VS Code, Android Studio, Maven, Gradle, Jenkins, Docker \vspace{2mm}\\
+\textbf{Cybersecurity:} TLS, SSL, SSH, OWASP ZAP, Burp Suite, Kali Linux, Metasploit, F\reflectbox{R}IDA  \vspace{2mm}\\
+\textbf{Research:} ns-3, SimPy, R, Python (NumPy, Pandas), Scikit-learn, TensorFlow, Matplotlib  \vspace{2mm}\\
+\textbf{Project Management}: Agile (Scrum), Gantt charts, WBS, Risk Management, Software Lifecycle Management, ISO knowledge \vspace{2mm}\\
+\textbf{Interpersonal Skills}: Strong communication, teamwork, leadership, adaptability \vspace{2mm}\\
+
+\filbreak
+\section{\mysidestyle LANGUAGES} 
+Italian (Native), English (Professional), French (Basic), Spanish (Basic)
+
+\filbreak
 \section{\mysidestyle Publications}
 
+\filbreak
+Bahareh Parhizkari, Antonio Ken IANNILLO, Christof FERREIRA TORRES, Sebastian Banescu, Joseph Xu\\
+``\textbf{Timely Identification of Victim Addresses in DeFi Attacks}''
+[7th International Workshop on Cryptocurrencies and Blockchain Technology (CBT 2023)]
 \filbreak
 Antonio Ken Iannillo, Sean Rivera, Darius Suciu, Radu Sion, and Radu State\\
 ``\textbf{An REE-independent Approach to Identify Callers of TEEs in TrustZone-enabled Cortex-M Devices}''
@@ -184,7 +246,7 @@ Sean Rivera, Sofiane Lagraa, Antonio Ken Iannillo, Radu State\\
 \filbreak
 Domenico Cotroneo, Antonio Ken Iannillo, Roberto Natella***\\
 ``\textbf{Evolutionary Fuzzing of Android OS Vendor System Services}''
-[Empir Software Eng (2019). https://doi.org/10.1007/s10664-019-09725-6]
+[Empirical Software Engineering Journal (2019)]
 \filbreak
 Antonio Ken Iannillo, Roberto Natella, Domenico Cotroneo, Cristina Nita-Rotaru\\
 ``\textbf{Chizpurfle: A Gray-Box Android Fuzzer for Vendor Service Customizations}''
@@ -213,12 +275,8 @@ Domenico Cotroneo, Luigi De Simone, Antonio Ken Iannillo, Anna Lanzaro, Roberto 
 {\footnotesize*** international authorship order does not apply; authors are in an alphabetic order, due to internal policies applied by the authors' research group.}
 
 
-\filbreak
-\section{\mysidestyle Relevant\\Skills} 
-\textbf{Programming Languages:} Python, Bash scripting, Java, C\vspace{2mm}\\
-\textbf{Databases:} MySQL, MongoDB\vspace{2mm}\\
-\textbf{Other tools and frameworks:} Android, F\reflectbox{R}IDA, Pandas 
-%\textbf{Other:} OpenCV, SQL 
+
+
 
 
 %\filbreak

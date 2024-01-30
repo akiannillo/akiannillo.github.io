@@ -16,6 +16,7 @@ published: true
 
 |Conference|Title|Paper|Presentation|
 |--- |--- |--- |--- |
+|CBT 2023|Timely Identification of Victim Addresses in DeFi Attacks|[link](https://orbilu.uni.lu/bitstream/10993/59129/1/Identifying_Victims_in_DeFi_Attacks.pdf)|[link](https://akiannillo.github.io/misc/publications/CBT2023_Parhizkari.ppsx)|
 |CPSS 2022|An REE-independent Approach to Identify Callers of TEEs in TrustZone-enabled Cortex-M Devices|[link](https://akiannillo.github.io/misc/publications/CPSS2022_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/CPSS2022_Iannillo.ppsx)|
 |EURO S&P 2021|ConFuzzius: A Data Dependency-Aware Hybrid Fuzzer for Smart Contracts|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/EUROSP2021_Torres.ppsx)|
 |FC 2021|The Eye of Horus: Spotting and Analyzing Attacks on Ethereum Smart Contracts|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.pdf)|[link](https://akiannillo.github.io/misc/publications/FC2021_Torres.ppsx)|
