@@ -5,7 +5,7 @@ subtitle: I am an IT researcher and software engineer dreaming to change the wor
 published: true
 ---
 
-If you want my full curriculum vitae, you can find it [here](https://akiannillo.github.io/misc/CV-AntonioKenIannillo.pdf).
+If you want my full curriculum vitae, you can find it [here](https://akiannillo.github.io/cv/CV-AntonioKenIannillo.pdf).
 
 # present me
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  30 JAN 2024 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  23 SEP 2024 09:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,13 +634,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--44
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.98839pt too wide) in paragraph at lines 131--132
+Overfull \hbox (3.98839pt too wide) in paragraph at lines 134--135
 []\OT1/cmr/m/it/10 Project ended in De-cem-ber 2023. Man-aged bud-get: 465,000 
 eu-ros. To-tal project bud-get: 23,000,000
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 220--226
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
@@ -662,7 +662,7 @@ b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on resume.pdf (5 pages, 159882 bytes).
+Output written on resume.pdf (5 pages, 159913 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
