@@ -17,7 +17,7 @@ We’ve created an Amazon wishlist with some things we need for the first months
 
 Gifts will be shipped directly to our home, so it’s all very easy. Every thought is greatly appreciated!
 
-### 💙 SUPPORT WITH A FREE GIFT  
+### 🧩 HELP BUILD OUR TOY COLLECTION  
 Another idea we really love are the **Lovevery** boxes, which contain educational toys and beautiful items designed to accompany the baby’s growth month by month.
 
 If you prefer to contribute to this collective gift, you can use the button below to make a small donation:
