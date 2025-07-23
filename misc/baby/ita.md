@@ -34,7 +34,7 @@ Siamo profondamente grati per tutto l’amore, il supporto e l’entusiasmo che 
 Il regalo più bello, in ogni caso, è sapere che il nostro bimbo crescerà circondato da persone meravigliose come voi.
 
 Con affetto,  
-**[I vostri nomi qui]**
+**Antonio&Martina**
 
 ---
 
