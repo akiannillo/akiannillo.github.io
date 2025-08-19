@@ -10,6 +10,8 @@ published: true
 As many of you know, we are expecting a baby — and the excitement is sky-high!  
 If you’d like to give us a gift (of course, no obligation at all!), we’ve prepared two simple and helpful options:
 
+*(We’re skipping plushies and random toys for now — space is tight, and we’d love to focus on essentials 💙)*
+
 ### 🎁 CHOOSE A GIFT  
 We’ve created an Amazon wishlist with some things we need for the first months of our little one.
 

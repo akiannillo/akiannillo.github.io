@@ -10,6 +10,8 @@ published: true
 Come molti di voi sanno, stiamo aspettando un bimbo — e l’emozione è alle stelle!  
 Se desiderate farci un regalo (ovviamente senza alcun obbligo!), abbiamo preparato due modalità semplici e utili:
 
+*(Per ora evitiamo pupazzi e giochi a iosa — lo spazio è limitato e preferiamo concentrarci sulle cose essenziali 💙)*
+
 ### 🎁 SCEGLI UN REGALO
 Abbiamo creato una wishlist Amazon con alcune cosine che ci servono per i primi mesi del nostro piccolo.
 
