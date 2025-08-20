@@ -17,6 +17,7 @@ published: true
 
 | Year | Name | Role |
 |---|---| --- |
+| 2025 | B4TI | Steering Committee |
 | 2025 | TIFS | Reviewer |
 | 2022 | ISSRE | Fast Abstract Co-Chair, Research Program Committee |
 | 2022,2021 | IFIP SEC | Program Committee |
