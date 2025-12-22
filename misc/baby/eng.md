@@ -1,39 +1,39 @@
 ---
 layout: page
-title: Our little one is on the way!
-subtitle: ... and if you want, you can help us give him a warm welcome 💙
+title: A little something for Gino 💙
+subtitle: If you wish to celebrate and support Gino as he grows
 published: true
 ---
 
-**_Check this page if you want to send a little something for our baby on the way!_**
+**_If you’d like to give something to little Gino, this page is here to help._**
 
-As many of you know, we are expecting a baby — and the excitement is sky-high!  
-If you’d like to give us a gift (of course, no obligation at all!), we’ve prepared two simple and helpful options:
+Our son **Gino Leone Iannillo** is growing up surrounded by love, and we’re incredibly grateful for the people in his life.  
+If you’d like to mark a birthday, a visit, or a special moment with a gift (never an obligation), we’ve gathered a couple of simple options that work well over time.
 
-*(We’re skipping plushies and random toys for now — space is tight, and we’d love to focus on essentials 💙)*
+*(We try to keep things intentional and avoid random toys — space is limited, and we prefer useful, meaningful items 💙)*
 
 ### 🎁 CHOOSE A GIFT  
-We’ve created an Amazon wishlist with some things we need for the first months of our little one.
+We keep an Amazon wishlist updated with items Gino can use as he grows — practical things, books, and a few carefully chosen surprises.
 
-👉 [Amazon Baby Wishlist](https://www.amazon.de/baby-reg/antonioken-iannillo-martina-florio-november-2025-luxembourg/2HPEPP4JMTXGT)
+👉 [Amazon Wishlist for Gino](https://www.amazon.de/baby-reg/antonioken-iannillo-martina-florio-november-2025-luxembourg/2HPEPP4JMTXGT)
 
-Gifts will be shipped directly to our home, so it’s all very easy. Every thought is greatly appreciated!
+Items are delivered directly to our home, making it easy for everyone.
 
-### 🧩 HELP BUILD OUR TOY COLLECTION  
-Another idea we really love are the **Lovevery** boxes, which contain educational toys and beautiful items designed to accompany the baby’s growth month by month.
+### 🧩 SUPPORT GINO’S PLAY & LEARNING  
+We also love toys and materials that support learning through play. One of our favorites are the **Lovevery** boxes, which are designed to grow with children over time.
 
-If you prefer to contribute to this collective gift, you can use the button below to make a small donation:
+If you’d like to contribute to this idea, you can do so here:
 
-👉 [Donate via PayPal](https://www.paypal.com/donate?campaign_id=V6HKGDTHFH7MC)
+👉 [Contribute via PayPal](https://www.paypal.com/donate?campaign_id=V6HKGDTHFH7MC)
 
-Every contribution will be used to purchase Lovevery boxes as our baby grows.
+Contributions are used over time for age-appropriate Lovevery boxes and similar learning materials.
 
 ---
 
-## Thank you from the bottom of our hearts 💙
+## Thank you 💙
 
-We are deeply grateful for all the love, support, and enthusiasm you have shown us.  
-The greatest gift, in any case, is knowing that our baby will grow up surrounded by wonderful people like you.
+We truly appreciate every kind thought, message, and gesture.  
+More than anything, we’re thankful that Gino is growing up surrounded by caring and generous people.
 
 With love,  
-**Antonio&Martina**
+**Antonio & Martina**

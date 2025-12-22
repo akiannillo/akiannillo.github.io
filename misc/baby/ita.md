@@ -1,42 +1,39 @@
 ---
 layout: page
-title: Sta arrivando il nostro piccolo!
-subtitle: ... e se volete, potete aiutarci a dargli un caloroso benvenuto 💙
+title: Un pensiero per Gino 💙
+subtitle: Se desideri celebrare e accompagnare Gino mentre cresce
 published: true
 ---
 
-**_Controllate questa pagina se volete fare un pensiero per il nostro bimbo in arrivo!_**
+**_Se ti va di fare un piccolo regalo a Gino, questa pagina è qui per aiutarti._**
 
-Come molti di voi sanno, stiamo aspettando un bimbo — e l’emozione è alle stelle!  
-Se desiderate farci un regalo (ovviamente senza alcun obbligo!), abbiamo preparato due modalità semplici e utili:
+Nostro figlio **Gino Leone Iannillo** sta crescendo circondato da tanto affetto, e ne siamo profondamente grati.  
+Se desideri segnare un compleanno, una visita o un momento speciale con un pensiero (senza alcun obbligo), abbiamo raccolto alcune opzioni semplici e adatte nel tempo.
 
-*(Per ora evitiamo pupazzi e giochi a iosa — lo spazio è limitato e preferiamo concentrarci sulle cose essenziali 💙)*
+*(Cerchiamo di essere intenzionali nelle scelte ed evitiamo giochi casuali — lo spazio è limitato e preferiamo oggetti utili e significativi 💙)*
 
-### 🎁 SCEGLI UN REGALO
-Abbiamo creato una wishlist Amazon con alcune cosine che ci servono per i primi mesi del nostro piccolo.
+### 🎁 SCEGLI UN REGALO  
+Manteniamo aggiornata una wishlist Amazon con oggetti che Gino può usare mentre cresce: cose pratiche, libri e qualche piccolo pensiero scelto con cura.
 
-👉 [Amazon Baby Wishlist](https://www.amazon.de/baby-reg/antonioken-iannillo-martina-florio-november-2025-luxembourg/2HPEPP4JMTXGT)
+👉 [Wishlist Amazon per Gino](https://www.amazon.de/baby-reg/antonioken-iannillo-martina-florio-november-2025-luxembourg/2HPEPP4JMTXGT)
 
-I regali verranno spediti direttamente a casa nostra, quindi è tutto molto semplice. Ogni pensiero è super apprezzato! 
+I regali vengono spediti direttamente a casa nostra, così è tutto più semplice per tutti.
 
-### 🧩 AIUTACI A CREARE LA NOSTRA COLLEZIONE DI GIOCHI 
-Un'altra idea che ci piace tantissimo sono i box di **Lovevery**, che contengono giochi educativi e oggetti bellissimi pensati per accompagnare la crescita del bambino mese per mese.
+### 🧩 SOSTIENI IL GIOCO E L’APPRENDIMENTO DI GINO  
+Ci piacciono molto anche giochi e materiali che favoriscono l’apprendimento attraverso il gioco. Tra quelli che apprezziamo di più ci sono le box **Lovevery**, pensate per accompagnare i bambini nella loro crescita.
 
-Se preferite contribuire a questo regalo collettivo, potete usare il pulsante qui sotto per fare una piccola donazione:
+Se preferisci contribuire a questa idea, puoi farlo tramite il link qui sotto:
 
-👉 [Dona via PayPal](https://www.paypal.com/donate?campaign_id=V6HKGDTHFH7MC)
+👉 [Contribuisci via PayPal](https://www.paypal.com/donate?campaign_id=V6HKGDTHFH7MC)
 
-Ogni contributo sarà usato per acquistare i box Lovevery man mano che il nostro bimbo cresce.
+I contributi verranno utilizzati nel tempo per box Lovevery e materiali educativi adatti all’età.
 
 ---
 
 ## Grazie di cuore 💙
 
-Siamo profondamente grati per tutto l’amore, il supporto e l’entusiasmo che ci state dimostrando.  
-Il regalo più bello, in ogni caso, è sapere che il nostro bimbo crescerà circondato da persone meravigliose come voi.
+Apprezziamo davvero ogni pensiero, messaggio e gesto di affetto.  
+Più di ogni altra cosa, siamo felici che Gino stia crescendo circondato da persone così presenti e generose.
 
 Con affetto,  
-**Antonio&Martina**
-
----
-
+**Antonio & Martina**
