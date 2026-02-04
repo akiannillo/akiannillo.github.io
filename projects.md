@@ -8,15 +8,19 @@ published: true
 
 | Period | Name | Info | Role | Budget |
 |---|---|---|---|---|
+| April 2023 - March 2026 | AI for transport & logistic | partnership with Gulliver Luxembourg | Principal Investigator | confidential | 
 | January 2023 - June 2023 | [FIT4START #13](https://gouvernement.lu/en/actualites/toutes_actualites/communiques/2022/10-octobre/28-fit4-start.html) | WAVY MEET | Project Leader | 150k |
+| October 2022 - September 2025 | DeFi Security | partnership with [Quantstamp Inc](https://quantstamp.com/) |  Principal Investigator | confidential |
 | January 2022 - December 2022 | [OWL](https://www.fnr.lu/results-2021-jump21-call/) | Online Work(it)out Platform | Principal Investigator | 240k |
 | May 2020 - April 2022 | [STARTS](https://starts.uni.lu/) | SecuriTy Assessment of tRusTzone-m based Software | Principal Investigator | 549k |
-| January 2019 - December 2022 | [CONCORDIA](https://www.concordia-h2020.eu/) | Α Cybersecurity Competence Network with leading research, technology, industrial and public competences | Task Leader (Liaison with Stakeholders) together with [prof. Radu State](https://wwwfr.uni.lu/snt/people/radu_state)| ~23M |
+| January 2019 - December 2022 | [CONCORDIA](https://www.concordia-h2020.eu/) | Α Cybersecurity Competence Network with leading research, technology, industrial and public competences | Task Leader (Liaison with Stakeholders) together with [prof. Radu State](https://wwwfr.uni.lu/snt/people/radu_state)| 23M |
 
 ## Academic Service
 
 | Year | Name | Role |
 |---|---| --- |
+| 2026 | DSN | Research Program Committee |
+| 2025 | ISSRE | Research Program Committee |
 | 2025 | B4TI | Steering Committee |
 | 2025 | TIFS | Reviewer |
 | 2022 | ISSRE | Fast Abstract Co-Chair, Research Program Committee |

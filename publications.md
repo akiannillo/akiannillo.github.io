@@ -16,6 +16,12 @@ published: true
 
 |Conference|Title|Paper|Presentation|
 |--- |--- |--- |--- |
+| EAI INTSYS 2025 | Multimodal Learning for Operational Risk Detection in Delivery Route Planning **_BEST PAPER AWARD_**| [link](https://akiannillo.github.io/misc/publications/INTSYS2025_Gupta-best.pdf) | [link]() | 
+| EAI INTSYS 2025 | SYNAPSE:Synthesizing Narratives from Agentic Path Spatial Exploration | [link](https://akiannillo.github.io/misc/publications/INTSYS2025_Gupta.pdf) | [link]() | 
+| ISSRE 2025 | ChaosLLM: A Dependability Testing Approach for Tool-calling Agents | [link](https://akiannillo.github.io/misc/publications/ISSRE2025_Iannillo.pdf) | [link](https://akiannillo.github.io/misc/publications/ISSRE2025_Iannillo.ppsx) |
+| TrustCom 2025 | On-Chain Risk Signals: Predicting Security Threats in DeFi Projects | [link](https://akiannillo.github.io/misc/publications/TRUSTCOM2025_Parhizkari.pdf) | [link](https://akiannillo.github.io/misc/publications/TRUSTCOM2025_Parhizkari.ppsx) |
+| EUROCAST 2024 | Modelling Electric Vehicle Routing Problem with Heterogeneous Fleet for Simultaneous Pickup and Delivery | [link](https://link.springer.com/chapter/10.1007/978-3-031-83885-9_11) | [link]() |
+| BCCA 2024 | Whistleblowers’ Protection with XRP Ledger | [link](https://akiannillo.github.io/misc/publications/BCCA2024_Pantiukhov.pdf) | [link](https://akiannillo.github.io/misc/publications/BCCA2024_Pantiukhov.ppsx) |
 | SecureComm 2024 | Beyond the Public Mempool: Catching DeFi Attacks Before They Happen with Real-Time Smart Contract Analysis | [link](https://akiannillo.github.io/misc/publications/SECURECOMM2024_Parhizkari.pdf) | [link](https://akiannillo.github.io/misc/publications/SECURECOMM2024_Parhizkari.pptx) |
 |CBT 2023|Timely Identification of Victim Addresses in DeFi Attacks|[link](https://orbilu.uni.lu/bitstream/10993/59129/1/Identifying_Victims_in_DeFi_Attacks.pdf)|[link](https://akiannillo.github.io/misc/publications/CBT2023_Parhizkari.ppsx)|
 |CPSS 2022|An REE-independent Approach to Identify Callers of TEEs in TrustZone-enabled Cortex-M Devices|[link](https://akiannillo.github.io/misc/publications/CPSS2022_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/CPSS2022_Iannillo.ppsx)|
@@ -26,7 +32,7 @@ published: true
 |ISSRE 2019|A Proposal for Security Assessment of Trust zone-M based Software|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Iannillo.ppsx)|
 |ISSRE 2019|Analyzing the Context of Bug-Fixing Changes in the OpenStack Cloud Computing Platform|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_DeSimone.ppsx)|
 |ISSRE 2019|Auto-encoding Robot State against Sensor Spoofing Attacks|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Rivera.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2019_Rivera.ppsx)|
-|ISSRE 2017|Chizpurfle: A Gray-Box Android Fuzzer for Vendor Service Customizations _**BEST RESEARCH PAPER AWARD**_|[link](https://akiannillo.github.io/misc/publications/ISSRE2017_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2017_Iannillo.ppsx)|
+|ISSRE 2017|Chizpurfle: A Gray-Box Android Fuzzer for Vendor Service Customizations **_BEST RESEARCH PAPER AWARD_**|[link](https://akiannillo.github.io/misc/publications/ISSRE2017_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2017_Iannillo.ppsx)|
 |ISSRE 2016|Software Aging Analysis of the Android Mobile OS*|[link](https://akiannillo.github.io/misc/publications/ISSRE2016_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2016_Iannillo.ppsx)|
 |ISSRE 2015|The Software Aging and Rejuvenation Repository*|[link](https://akiannillo.github.io/misc/publications/ISSRE2015_Iannillo.pdf)|[link](https://akiannillo.github.io/misc/publications/ISSRE2015_Natella.ppsx)|
 |NETSOFT 2015|Dependability evaluation and benchmarking of Network Function Virtualization Infrastructures* **_BEST CONFERENCE PAPER AWARD_**|[link](https://akiannillo.github.io/misc/publications/NETSOFT2015_Natella.pdf)|[link](https://akiannillo.github.io/misc/publications/NETSOFT2015_Natella.ppsx)|
