@@ -16,6 +16,7 @@ published: true
 
 |Conference|Title|Paper|Presentation|
 |--- |--- |--- |--- |
+| SAC 2026 | PSolid: A Web-Native Framework for Privacy-Preserving and Sovereign Data Verification | [link]((https://akiannillo.github.io/misc/publications/SAC2026_Becerra.pdf) | [link]() |
 | EAI INTSYS 2025 | Multimodal Learning for Operational Risk Detection in Delivery Route Planning **_BEST PAPER AWARD_**| [link](https://akiannillo.github.io/misc/publications/INTSYS2025_Gupta-best.pdf) | [link]() | 
 | EAI INTSYS 2025 | SYNAPSE:Synthesizing Narratives from Agentic Path Spatial Exploration | [link](https://akiannillo.github.io/misc/publications/INTSYS2025_Gupta.pdf) | [link]() | 
 | ISSRE 2025 | ChaosLLM: A Dependability Testing Approach for Tool-calling Agents | [link](https://akiannillo.github.io/misc/publications/ISSRE2025_Iannillo.pdf) | [link](https://akiannillo.github.io/misc/publications/ISSRE2025_Iannillo.ppsx) |
