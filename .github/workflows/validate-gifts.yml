@@ -1,0 +1,32 @@
+name: Validate gift data
+
+# The gift pages are built from _data/gifts.yml. A malformed or nonsensical
+# file must not reach the live site, so this fails the build rather than
+# rendering a broken page. Runs only when the gift data or its tooling change.
+on:
+  push:
+    paths:
+      - '_data/gifts.yml'
+      - '_data/gifts_i18n.yml'
+      - 'scripts/validate_gifts.rb'
+      - '.github/workflows/validate-gifts.yml'
+  pull_request:
+    paths:
+      - '_data/gifts.yml'
+      - '_data/gifts_i18n.yml'
+      - 'scripts/validate_gifts.rb'
+      - '.github/workflows/validate-gifts.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate _data/gifts.yml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      # No bundle install: the validator uses only Ruby's standard library.
+      - name: Validate gift data
+        run: ruby scripts/validate_gifts.rb
