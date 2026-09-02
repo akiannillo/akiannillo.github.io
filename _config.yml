@@ -227,6 +227,45 @@ date_format: "%B %-d, %Y"
 # Facebook App ID
 #fb_app_id: ""
 
+##############################
+# --- Collaborative gifts --- #
+##############################
+
+# Settings for the gift pages at /misc/baby/eng/ and /misc/baby/ita/.
+# The gift list itself lives in _data/gifts.yml, the wording in _data/gifts_i18n.yml.
+gifts:
+  paypal_me: "akiannillo"          # paypal.me/<this>
+  revolut_tag: "akiannillo"        # revolut.me/<this>
+  account_holder: "Antonio Ken Iannillo"
+  contact_email: "ak.iannillo@gmail.com"
+
+  # The IBAN is split and base64-encoded so it is not sitting in the page source
+  # as plain text for scrapers. The page reassembles it in JS when the visitor
+  # asks to see it; with JS off, a mailto: fallback is offered instead.
+  # This deters casual harvesting only -- it is not a secret, and an IBAN alone
+  # cannot be used to pull money without a signed direct-debit mandate.
+  # To regenerate after changing accounts, see misc/baby/gifts/README.md.
+  iban_parts:
+    - "TFQ3NjMyNTA="
+    - "MDg2MjY5NA=="
+    - "MjAyNjE="
+
+  # Written on every payment so contributions can be matched to a gift.
+  # Deliberately language-neutral: both pages emit the same string.
+  reference_prefix: "Gift"
+
+  # Suggested amounts, in euro. The remaining amount is offered automatically.
+  preset_amounts: "10,25,50"
+
+  # Path D -- visitors ask by email for a PayPal money request, which they can
+  # then pay by card without an account. Costs a manual step every time, so it
+  # is off. Set to true to show it.
+  path_d: false
+
+  # Optional third-party form relay for the "let us know" form. Left empty:
+  # the form falls back to a mailto: link and no third party is involved.
+  form_endpoint: ""
+
 #################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
 #################################################################################
@@ -260,6 +299,7 @@ defaults:
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
+  - misc/baby/gifts/README.md   # internal notes for the gift pages, not a page
   - CNAME
   - Gemfile
   - Gemfile.lock

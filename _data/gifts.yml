@@ -1,0 +1,99 @@
+# ---------------------------------------------------------------------------
+# Collaborative gift list for the /misc/baby/ pages.
+#
+# This file is the ONLY thing you edit when money arrives. Totals, percentages
+# and remaining amounts are computed at build time from `contributions` --
+# never store a precomputed total, it will drift.
+#
+# Easiest way to record a contribution:   python3 scripts/add-contribution.py
+# Validate before pushing:                python3 scripts/validate_gifts.py
+#
+# Gift fields
+#   id           required, unique, lowercase slug. Used in URL anchors and in
+#                the payment reference, so DO NOT change it once it is public.
+#   name         required. Shown to visitors and used in the payment reference.
+#   name_it      optional Italian override for `name`.
+#   description  required.
+#   description_it  optional Italian override for `description`.
+#   image        optional, e.g. /assets/img/gifts/lovevery.jpg
+#                The file must exist or the validator fails the build.
+#   link         optional "see the gift" link.
+#   target       required, positive number.
+#   status       open | funded | closed | hidden
+#                  open   - accepting contributions
+#                  funded - celebratory state, no contribute button
+#                           (also applied automatically once total >= target)
+#                  closed - shown, greyed out, no contribute button
+#                  hidden - not rendered at all
+#
+# Contribution fields
+#   date       required, YYYY-MM-DD
+#   name       required. Use a real name even when show_name is false --
+#              it is for your own records, it is not published.
+#   amount     required, positive number.
+#   show_name  required. false => still counts toward the total, but is
+#              displayed as "Anonymous".
+#   note       optional, for your eyes only. Never rendered.
+# ---------------------------------------------------------------------------
+
+currency: EUR
+
+gifts:
+  # --- DUMMY DATA -----------------------------------------------------------
+  # These three exist to show every visual state (0%, part-funded, complete).
+  # Replace them with the real list; that is a data-only change, no templates
+  # need touching.
+  # --------------------------------------------------------------------------
+
+  - id: lovevery-box
+    name: "Lovevery Play Kit"
+    name_it: "Box Lovevery"
+    description: "One age-appropriate box of learning materials, designed to grow with him."
+    description_it: "Una box di materiali per imparare giocando, pensata per la sua età."
+    link: https://lovevery.eu
+    target: 120.00
+    status: open
+    contributions: []
+
+  - id: wooden-play-arch
+    name: "Wooden play arch"
+    name_it: "Arco da gioco in legno"
+    description: "A climbing arch that becomes a rocker, a tunnel and a den. It lasts for years."
+    description_it: "Un arco per arrampicarsi che diventa dondolo, tunnel e capanna. Dura anni."
+    target: 180.00
+    status: open
+    contributions:
+      - date: 2026-08-14
+        name: "Zia Maria"
+        amount: 40.00
+        show_name: true
+        note: "PayPal, friends and family"
+      - date: 2026-08-19
+        name: "Marco e Sara"
+        amount: 25.00
+        show_name: true
+        note: ""
+      - date: 2026-08-26
+        name: "Colleagues at work"
+        amount: 15.00
+        show_name: false
+        note: "asked not to be named"
+
+  - id: first-library
+    name: "His first little library"
+    name_it: "La sua prima piccola libreria"
+    description: "A front-facing bookshelf and a starter set of board books in three languages."
+    description_it: "Una libreria frontale e una prima raccolta di libri cartonati in tre lingue."
+    target: 90.00
+    status: funded
+    contributions:
+      - date: 2026-07-02
+        name: "Nonna Rosa"
+        amount: 50.00
+        show_name: true
+        note: ""
+      - date: 2026-07-11
+        name: "Giulia"
+        amount: 40.00
+        show_name: true
+        note: "bank transfer"

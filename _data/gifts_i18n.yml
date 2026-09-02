@@ -1,0 +1,232 @@
+# ---------------------------------------------------------------------------
+# Every visible string on the collaborative gift pages lives here.
+# Templates contain no copy of their own -- edit wording in this file only.
+#
+# %NAME% style markers are substituted at build time. Keep them intact:
+#   %PCT% %N% %AMOUNT% %GIFT% %NAME% %EMAIL%
+#
+# The Italian was drafted by Claude and is FLAGGED FOR REVIEW -- Antonio is a
+# native speaker and should adjust the tone, which is the point of the page.
+# ---------------------------------------------------------------------------
+
+en:
+  meta:
+    other_lang_label: "Questa pagina in italiano"
+    other_lang_href: "/misc/baby/ita/"
+    other_lang_code: "it"
+
+  intro:
+    lead: "If you'd like to give something to little Gino, this page is here to help."
+    body: "Our son <strong>Gino Leone Iannillo</strong> is growing up surrounded by love, and we're incredibly grateful for the people in his life. If you'd like to mark a birthday, a visit, or a special moment with a gift — never an obligation — here are a few things we're saving up for."
+    note: "We try to keep things intentional and avoid random toys — space is limited, and we prefer useful, meaningful items 💙"
+
+  how:
+    heading: "How this works"
+    step1: "Pick a gift below. Each one shows how much has been collected so far."
+    step2: "Choose any amount — small is perfectly good. Several people can club together on the same present, which is rather the point."
+    step3: "Send it however suits you best, then tell us, so we can move the bar along."
+
+  grid:
+    heading: "The gifts"
+    see_gift: "See the gift"
+    collected: "collected"
+    of_target: "of %AMOUNT%"
+    to_go: "%AMOUNT% still to go"
+    percent_funded: "%PCT%% funded"
+    aria_progress: "Funding progress for %GIFT%"
+    people_none: "Nobody yet — you'd be the first"
+    people_one: "1 person so far"
+    people_many: "%N% people so far"
+    badge_funded: "Complete"
+    btn_contribute: "Contribute to this gift"
+    btn_funded: "Fully funded — thank you 💙"
+    btn_funded_hint: "See the gifts still open"
+    closed_note: "This one is closed — thank you to everyone who helped."
+    overfunded_note: "Kindly overshot, and we're not complaining."
+    placeholder_alt: "No photo yet"
+    empty: "The list is being put together — do check back."
+
+  amount:
+    legend: "How much would you like to give?"
+    preset_remaining: "%AMOUNT% — completes it"
+    other_label: "Or another amount"
+    other_hint: "in euro"
+    reference_label: "Please add this reference so we know what it's for:"
+    copy: "Copy"
+    copied: "Copied"
+    copy_failed: "Press and hold to copy"
+
+  paths:
+    heading: "Then send it, whichever way suits you"
+    nojs_note: "Your browser has JavaScript switched off, so the amount below can't be filled in for you. Everything still works — just type the amount yourself when your bank or PayPal asks."
+
+    a_title: "PayPal"
+    a_who: "Easiest if you already have PayPal."
+    a_button: "Open PayPal"
+    a_warning: "Please choose <strong>“Sending to a friend”</strong>, not “Paying for an item or service”. The second option charges us a fee."
+    a_nojs: "Or go straight to a set amount:"
+
+    b_title: "Revolut"
+    b_who: "Instant and free if you already use Revolut."
+    b_button: "Open Revolut"
+    b_note: "You type the amount yourself in the app. If Revolut asks you to create an account, please don't bother — use the bank transfer below instead, it's simpler for you and it always works."
+
+    c_title: "Bank transfer"
+    c_who: "Works for everyone in Europe. No app, no account, no fees."
+    c_reveal: "Show the bank details"
+    c_holder_label: "Account holder"
+    c_iban_label: "IBAN"
+    c_reference_label: "Reference"
+    c_safe_note: "An IBAN on its own can't be used to take money out — a transfer has to be authorised by you, and a direct debit needs a mandate you've signed."
+    c_noscript: "Bank details are assembled by the page itself, which needs JavaScript. Email us and we'll send them straight over:"
+    c_noscript_link: "Ask us for the bank details"
+
+    d_title: "Rather we just sent you a request?"
+    d_who: "Tell us and we'll email you a PayPal payment request, which you can pay by card without creating anything."
+    d_name: "Your name"
+    d_email: "Your email"
+    d_amount: "Amount"
+    d_send: "Ask for a payment request"
+
+  confirm:
+    heading: "One last thing — tell us"
+    body: "Payment notes have a habit of going missing, so this is how we actually find out who gave what. It's also how the bar above moves."
+    name_label: "Your name"
+    amount_label: "Amount sent"
+    anon_label: "Please don't show my name on the page"
+    button: "Let us know"
+    nojs: "This opens your email app with the message already written."
+    subject: "Gift for Gino: %GIFT%"
+    body_template: "Hello!\n\nI've sent something for: %GIFT%\nAmount: %AMOUNT%\nFrom: %NAME%\n\n"
+    body_anon: "Please show me as Anonymous on the page.\n\n"
+
+  thanks:
+    heading: "Thank you 💙"
+    intro: "We truly appreciate every kind thought, message and gesture. More than anything, we're thankful that Gino is growing up surrounded by caring and generous people."
+    contributors_heading: "Who has chipped in"
+    anonymous: "Anonymous"
+    none_yet: "No one yet."
+    signoff: "With love,"
+    signature: "Antonio & Martina"
+
+  smallprint:
+    heading: "The honest small print"
+    money: "This money comes to us personally. It isn't a charity, and there's no escrow or third party holding it — you're trusting us, and we don't take that lightly."
+    protection: "PayPal friends-and-family payments carry no purchase protection. Between family that's fine, but you should know it before you press send."
+    fees: "If you fund a PayPal friends-and-family payment with a <strong>credit card</strong>, PayPal charges you around 3%. Paying from your PayPal balance or a linked bank account is free, and an ordinary bank transfer is always free. It's your money — use the free route."
+    manual: "We update these bars by hand, so there may be a day or two of delay before your contribution shows up. It isn't lost."
+    surplus: "TODO: say what happens if a gift is overfunded — does the extra roll onto the next gift, or go towards something else?"
+    unfilled: "TODO: say what happens if a gift never fills up — do you top it up yourselves, or redirect what was collected?"
+    names: "Names only appear on this page if the giver said yes. Ask us to remove yours at any time and we will, no explanation needed."
+    contact: "Anything at all, just write: %EMAIL%"
+
+it:
+  meta:
+    other_lang_label: "This page in English"
+    other_lang_href: "/misc/baby/eng/"
+    other_lang_code: "en"
+
+  intro:
+    lead: "Se ti va di fare un pensiero a Gino, questa pagina è qui per aiutarti."
+    body: "Nostro figlio <strong>Gino Leone Iannillo</strong> sta crescendo circondato da tanto affetto, e ne siamo profondamente grati. Se desideri segnare un compleanno, una visita o un momento speciale con un regalo — senza alcun obbligo — qui trovi le cose che stiamo mettendo da parte."
+    note: "Cerchiamo di essere intenzionali nelle scelte ed evitiamo giochi casuali — lo spazio è limitato e preferiamo oggetti utili e significativi 💙"
+
+  how:
+    heading: "Come funziona"
+    step1: "Scegli un regalo qui sotto. Per ognuno vedi quanto è stato raccolto finora."
+    step2: "Scegli la cifra che preferisci — anche piccola va benissimo. In più persone si può contribuire allo stesso regalo, ed è proprio questa l'idea."
+    step3: "Invia come ti è più comodo, poi faccelo sapere, così aggiorniamo la barra."
+
+  grid:
+    heading: "I regali"
+    see_gift: "Guarda il regalo"
+    collected: "raccolti"
+    of_target: "su %AMOUNT%"
+    to_go: "mancano %AMOUNT%"
+    percent_funded: "%PCT%% raggiunto"
+    aria_progress: "Avanzamento della raccolta per %GIFT%"
+    people_none: "Ancora nessuno — saresti il primo"
+    people_one: "1 persona finora"
+    people_many: "%N% persone finora"
+    badge_funded: "Completo"
+    btn_contribute: "Contribuisci a questo regalo"
+    btn_funded: "Raggiunto — grazie di cuore 💙"
+    btn_funded_hint: "Guarda i regali ancora aperti"
+    closed_note: "Questo è chiuso — grazie a tutti quelli che hanno partecipato."
+    overfunded_note: "Avete superato la cifra, e non ci lamentiamo."
+    placeholder_alt: "Ancora senza foto"
+    empty: "La lista è in preparazione — torna a dare un'occhiata."
+
+  amount:
+    legend: "Quanto ti va di dare?"
+    preset_remaining: "%AMOUNT% — lo completa"
+    other_label: "Oppure un altro importo"
+    other_hint: "in euro"
+    reference_label: "Aggiungi questa causale, così sappiamo a cosa si riferisce:"
+    copy: "Copia"
+    copied: "Copiato"
+    copy_failed: "Tieni premuto per copiare"
+
+  paths:
+    heading: "Poi invia come preferisci"
+    nojs_note: "Il tuo browser ha JavaScript disattivato, quindi non possiamo compilare l'importo al posto tuo. Funziona tutto lo stesso — scrivi tu la cifra quando PayPal o la banca te la chiedono."
+
+    a_title: "PayPal"
+    a_who: "Il modo più semplice se hai già PayPal."
+    a_button: "Apri PayPal"
+    a_warning: "Scegli <strong>“Invio di denaro a un amico”</strong>, non “Pagamento per beni o servizi”. La seconda opzione ci fa pagare una commissione."
+    a_nojs: "Oppure vai direttamente a un importo fisso:"
+
+    b_title: "Revolut"
+    b_who: "Immediato e gratuito se usi già Revolut."
+    b_note: "L'importo lo scrivi tu nell'app. Se Revolut ti chiede di creare un account, lascia perdere — usa il bonifico qui sotto: è più semplice per te e funziona sempre."
+    b_button: "Apri Revolut"
+
+    c_title: "Bonifico bancario"
+    c_who: "Va bene per chiunque in Europa. Nessuna app, nessun account, nessuna commissione."
+    c_reveal: "Mostra le coordinate bancarie"
+    c_holder_label: "Intestatario"
+    c_iban_label: "IBAN"
+    c_reference_label: "Causale"
+    c_safe_note: "Un IBAN da solo non permette a nessuno di prelevare denaro — un bonifico lo autorizzi tu, e per un addebito diretto serve un mandato che hai firmato."
+    c_noscript: "Le coordinate vengono composte dalla pagina stessa, che ha bisogno di JavaScript. Scrivici e te le mandiamo subito:"
+    c_noscript_link: "Chiedici le coordinate bancarie"
+
+    d_title: "Preferisci che ti mandiamo noi la richiesta?"
+    d_who: "Diccelo e ti inviamo per email una richiesta di pagamento PayPal, che puoi pagare con carta senza creare nulla."
+    d_name: "Il tuo nome"
+    d_email: "La tua email"
+    d_amount: "Importo"
+    d_send: "Chiedi una richiesta di pagamento"
+
+  confirm:
+    heading: "Un'ultima cosa — faccelo sapere"
+    body: "Le causali dei pagamenti hanno il vizio di sparire, quindi è così che scopriamo davvero chi ha contribuito. Ed è così che si muove la barra qui sopra."
+    name_label: "Il tuo nome"
+    amount_label: "Importo inviato"
+    anon_label: "Preferisco non comparire con il mio nome"
+    button: "Faccelo sapere"
+    nojs: "Si apre la tua app di posta con il messaggio già scritto."
+    subject: "Regalo per Gino: %GIFT%"
+    body_template: "Ciao!\n\nHo inviato un contributo per: %GIFT%\nImporto: %AMOUNT%\nDa parte di: %NAME%\n\n"
+    body_anon: "Preferisco comparire come Anonimo sulla pagina.\n\n"
+
+  thanks:
+    heading: "Grazie 💙"
+    intro: "Apprezziamo davvero ogni pensiero, messaggio e gesto di affetto. Più di ogni altra cosa, siamo felici che Gino stia crescendo circondato da persone così presenti e generose."
+    contributors_heading: "Chi ha contribuito"
+    anonymous: "Anonimo"
+    none_yet: "Ancora nessuno."
+    signoff: "Con affetto,"
+    signature: "Antonio & Martina"
+
+  smallprint:
+    heading: "Le cose da dire chiaramente"
+    money: "Questi soldi arrivano direttamente a noi. Non è una raccolta benefica e non c'è nessun terzo che li custodisce — ti stai fidando di noi, e non lo diamo per scontato."
+    protection: "I pagamenti PayPal tra amici non hanno la protezione acquisti. Tra familiari va benissimo, ma è giusto saperlo prima di inviare."
+    fees: "Se paghi con <strong>carta di credito</strong> un invio PayPal tra amici, PayPal ti addebita circa il 3%. Pagare dal saldo PayPal o dal conto collegato è gratis, e un normale bonifico è sempre gratis. Sono soldi tuoi — usa la strada gratuita."
+    manual: "Aggiorniamo queste barre a mano, quindi può passare un giorno o due prima che il tuo contributo compaia. Non è andato perso."
+    surplus: "TODO: spiegare cosa succede se un regalo supera la cifra — l'eccedenza passa al regalo successivo o va su altro?"
+    unfilled: "TODO: spiegare cosa succede se un regalo non viene completato — ci mettete voi la differenza o si usa diversamente?"
+    names: "I nomi compaiono su questa pagina solo se chi ha contribuito è d'accordo. Chiedici di togliere il tuo quando vuoi, senza doverci spiegare nulla."
+    contact: "Per qualsiasi cosa, scrivici: %EMAIL%"
