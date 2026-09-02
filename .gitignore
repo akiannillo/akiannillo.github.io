@@ -13,3 +13,4 @@ Gemfile.lock
 beautiful-jekyll-theme-*.gem
 workspace.code-workspace
 cv/resume.log
+.jekyll-cache
