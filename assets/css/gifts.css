@@ -1,0 +1,408 @@
+/* ---------------------------------------------------------------------------
+   Collaborative gift pages (/misc/baby/eng/, /misc/baby/ita/).
+   Loaded only on those pages, via the `css:` key in their front matter.
+
+   No framework, no build step. Everything is scoped under .gifts so it cannot
+   leak into the rest of the site. Colours mirror the theme values set in
+   _config.yml (link-col #008AFF, hover-col #0085A1); fonts and base sizing are
+   inherited from beautifuljekyll.css rather than restated.
+
+   Dark mode: the theme hard-codes a white page background (page-col), so a
+   prefers-color-scheme block here would paint dark cards onto a white page and
+   look broken. The dark palette is therefore attached to [data-theme="dark"],
+   which does nothing today and starts working the moment the site gains a real
+   dark theme. See misc/baby/gifts/README.md.
+   --------------------------------------------------------------------------- */
+
+.gifts {
+  --gift-ink: #2f2f2f;
+  --gift-ink-soft: #6b6b6b;
+  --gift-accent: #0085a1;
+  --gift-accent-strong: #006b83;
+  --gift-link: #008aff;
+  --gift-surface: #ffffff;
+  --gift-surface-alt: #f7f9fa;
+  --gift-border: #e0e4e6;
+  --gift-track: #e9edef;
+  --gift-done: #2e7d32;
+  --gift-done-soft: #edf6ed;
+  --gift-warn-bg: #fff8e6;
+  --gift-warn-border: #e8c96a;
+  --gift-radius: 10px;
+  --gift-gap: 1rem;
+  color: var(--gift-ink);
+}
+
+[data-theme="dark"] .gifts {
+  --gift-ink: #e8eaec;
+  --gift-ink-soft: #a8b0b5;
+  --gift-accent: #4ec3dd;
+  --gift-accent-strong: #7ad4e8;
+  --gift-link: #6cb8ff;
+  --gift-surface: #1e2225;
+  --gift-surface-alt: #262b2f;
+  --gift-border: #3a4045;
+  --gift-track: #343a3f;
+  --gift-done: #6fbf73;
+  --gift-done-soft: #23301f;
+  --gift-warn-bg: #332c14;
+  --gift-warn-border: #7a6529;
+}
+
+/* --- intro ---------------------------------------------------------------- */
+
+.gifts__langswitch { text-align: right; font-size: 0.9rem; margin-bottom: 0.75rem; }
+.gifts__lead { font-size: 1.15rem; font-weight: 600; }
+.gifts__note { color: var(--gift-ink-soft); font-style: italic; }
+.gifts__h2 { margin-top: 2.25rem; }
+.gifts__steps { padding-left: 1.25rem; }
+.gifts__steps li { margin-bottom: 0.4rem; }
+.gifts__empty { color: var(--gift-ink-soft); font-style: italic; }
+
+/* --- grid ----------------------------------------------------------------- */
+
+.gift-grid {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 620px) {
+  .gift-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gift-card--open.is-open-wide { grid-column: 1 / -1; }
+}
+
+.gift-card {
+  border: 1px solid var(--gift-border);
+  border-radius: var(--gift-radius);
+  background: var(--gift-surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gift-card.is-funded { border-color: var(--gift-done); }
+.gift-card.is-closed { opacity: 0.72; }
+
+/* A card whose panel is open spans the full width so the payment paths get
+   room to breathe. :has() is progressive -- without it the panel simply stays
+   inside one column. */
+@media (min-width: 620px) {
+  .gift-grid:has(.contribute[open]) .gift-card:has(.contribute[open]) { grid-column: 1 / -1; }
+}
+
+.gift-card__media { position: relative; background: var(--gift-surface-alt); }
+.gift-card__media img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+
+.gift-card__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  font-size: 2.75rem;
+  color: var(--gift-ink-soft);
+  background:
+    repeating-linear-gradient(45deg, transparent 0 10px, rgba(0, 133, 161, 0.05) 10px 20px),
+    var(--gift-surface-alt);
+}
+
+.gift-card__badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--gift-done);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.gift-card__body { padding: 1rem; display: flex; flex-direction: column; flex: 1 1 auto; }
+.gift-card__title { margin: 0 0 0.35rem; font-size: 1.2rem; }
+.gift-card__desc { margin: 0 0 0.5rem; color: var(--gift-ink-soft); }
+.gift-card__link { margin: 0 0 0.75rem; font-size: 0.9rem; }
+.gift-card__link a { color: var(--gift-link); }
+
+/* --- progress ------------------------------------------------------------- */
+
+.gift-progress { margin-top: auto; }
+
+.gift-progress__track {
+  height: 14px;
+  border-radius: 999px;
+  background: var(--gift-track);
+  border: 1px solid var(--gift-border);
+  overflow: hidden;
+}
+
+.gift-progress__fill {
+  height: 100%;
+  background: var(--gift-accent);
+  border-radius: 999px 0 0 999px;
+  transition: none;
+}
+
+/* The done state is signalled by a stripe pattern and the ✓ badge as well as by
+   colour, so it survives a monochrome screen or colour-blind vision. */
+.gift-progress__fill--done {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.28) 0 5px, transparent 5px 10px),
+    var(--gift-done);
+  border-radius: 999px;
+}
+
+.gift-progress__figures {
+  margin: 0.5rem 0 0.15rem;
+  font-size: 0.92rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+  align-items: baseline;
+}
+
+.gift-progress__collected { color: var(--gift-accent-strong); font-size: 1.02rem; }
+.is-funded .gift-progress__collected { color: var(--gift-done); }
+.gift-progress__of, .gift-progress__pct, .gift-progress__left { color: var(--gift-ink-soft); }
+.gift-progress__pct::before, .gift-progress__left::before { content: "·"; margin-right: 0.5rem; }
+.gift-progress__people { margin: 0; font-size: 0.85rem; color: var(--gift-ink-soft); }
+.gift-progress__over { margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--gift-done); }
+
+.gift-card__closed { margin: 0.9rem 0 0; font-size: 0.9rem; color: var(--gift-ink-soft); font-style: italic; }
+
+.gift-card__done {
+  margin: 0.9rem 0 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--gift-radius);
+  background: var(--gift-done-soft);
+  text-align: center;
+}
+.gift-card__done-label { display: block; font-weight: 700; color: var(--gift-done); }
+.gift-card__done-link { display: inline-block; margin-top: 0.2rem; font-size: 0.88rem; }
+
+/* --- contribute panel ------------------------------------------------------ */
+
+.contribute { margin-top: 0.9rem; }
+
+.contribute__summary {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: var(--gift-radius);
+  background: var(--gift-accent);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  min-height: 44px;
+}
+.contribute__summary::-webkit-details-marker { display: none; }
+.contribute__summary:hover, .contribute__summary:focus-visible { background: var(--gift-accent-strong); }
+.contribute[open] .contribute__summary { border-radius: var(--gift-radius) var(--gift-radius) 0 0; }
+
+.contribute__panel {
+  border: 1px solid var(--gift-border);
+  border-top: none;
+  border-radius: 0 0 var(--gift-radius) var(--gift-radius);
+  padding: 1rem;
+  background: var(--gift-surface-alt);
+}
+
+.contribute__h { font-size: 1rem; margin: 1.25rem 0 0.5rem; }
+
+/* --- amount picker --------------------------------------------------------- */
+
+.amount { border: none; margin: 0 0 0.9rem; padding: 0; }
+.amount__legend { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; padding: 0; width: auto; border: none; }
+.amount__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+/* Radios stay in the accessibility tree and keep focus -- clipped, not hidden. */
+.amount__radio {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.amount__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  margin: 0;
+  border: 1px solid var(--gift-border);
+  border-radius: 999px;
+  background: var(--gift-surface);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.amount__chip:hover { border-color: var(--gift-accent); }
+.amount__radio:checked + .amount__chip {
+  background: var(--gift-accent);
+  border-color: var(--gift-accent);
+  color: #fff;
+  font-weight: 700;
+}
+.amount__radio:focus-visible + .amount__chip { outline: 3px solid var(--gift-link); outline-offset: 2px; }
+
+.amount__free { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.6rem 0 0; }
+.amount__free-label { margin: 0; font-size: 0.9rem; color: var(--gift-ink-soft); }
+.amount__free-field { display: inline-flex; align-items: center; border: 1px solid var(--gift-border); border-radius: 6px; background: var(--gift-surface); padding: 0 0.5rem; }
+.amount__currency { color: var(--gift-ink-soft); }
+.amount__input { width: 6.5rem; min-height: 44px; border: none; background: transparent; padding: 0 0.35rem; color: inherit; font-size: 1rem; }
+.amount__input:focus { outline: none; }
+.amount__free-field:focus-within { outline: 3px solid var(--gift-link); outline-offset: 1px; }
+.amount__hint { font-size: 0.85rem; color: var(--gift-ink-soft); }
+
+/* --- reference + copy ------------------------------------------------------ */
+
+.reference { margin: 0 0 0.5rem; font-size: 0.9rem; }
+.reference__label { display: block; color: var(--gift-ink-soft); margin-bottom: 0.3rem; }
+.reference__row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.reference__value, .bank__value {
+  background: var(--gift-surface);
+  border: 1px solid var(--gift-border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  word-break: break-all;
+  color: var(--gift-ink);
+}
+
+.copy {
+  min-height: 36px;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--gift-accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--gift-accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.copy:hover { background: var(--gift-accent); color: #fff; }
+.copy.is-done { border-color: var(--gift-done); color: var(--gift-done); }
+.copy.is-done:hover { background: var(--gift-done); color: #fff; }
+
+/* Anything that only works with JS stays hidden until gifts.js strips the
+   class. Done by removing the class rather than overriding with `display:
+   revert`, which Safari below 15.4 drops -- that would have left the bank
+   details unreachable on older iPhones. */
+.js-only { display: none; }
+
+.nojs-note, .path__nojs {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--gift-warn-border);
+  background: var(--gift-warn-bg);
+  font-size: 0.88rem;
+}
+
+/* --- payment paths --------------------------------------------------------- */
+
+.path {
+  border-top: 1px solid var(--gift-border);
+  padding: 0.9rem 0 0.2rem;
+}
+.path__title { font-size: 1rem; margin: 0 0 0.2rem; display: flex; align-items: center; gap: 0.5rem; }
+.path__tag {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.5rem; height: 1.5rem;
+  border-radius: 50%;
+  background: var(--gift-accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+.path__who { margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--gift-ink-soft); }
+.path__note, .path__safe { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--gift-ink-soft); }
+.path__warn {
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--gift-warn-border);
+  background: var(--gift-warn-bg);
+  font-size: 0.88rem;
+}
+.path__go { margin: 0.5rem 0 0; }
+.path__nojs-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.4rem 0 0; }
+
+.btn-gift {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--gift-radius);
+  background: var(--gift-accent);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid var(--gift-accent);
+  cursor: pointer;
+}
+.btn-gift:hover, .btn-gift:focus { background: var(--gift-accent-strong); border-color: var(--gift-accent-strong); color: #fff; text-decoration: none; }
+.btn-gift--ghost { background: transparent; color: var(--gift-accent); }
+.btn-gift--ghost:hover, .btn-gift--ghost:focus { background: var(--gift-accent); color: #fff; }
+
+/* --- bank details ---------------------------------------------------------- */
+
+.bank { margin: 0.7rem 0 0; font-size: 0.9rem; }
+.bank dt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gift-ink-soft); font-weight: 600; margin-top: 0.5rem; }
+.bank dd { margin: 0.2rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.bank__iban { letter-spacing: 0.03em; }
+
+/* Path D is deliberately the quietest thing on the page. */
+.path--d { opacity: 0.85; }
+.path--d .path__title { font-size: 0.95rem; font-weight: 600; }
+.request-form p { margin: 0 0 0.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.request-form label { font-size: 0.85rem; color: var(--gift-ink-soft); margin: 0; }
+.request-form input { min-height: 44px; border: 1px solid var(--gift-border); border-radius: 6px; padding: 0.3rem 0.5rem; background: var(--gift-surface); color: inherit; }
+
+/* --- confirm --------------------------------------------------------------- */
+
+.confirm { border-top: 1px solid var(--gift-border); margin-top: 1rem; padding-top: 0.9rem; }
+.confirm__title { font-size: 1rem; margin: 0 0 0.3rem; }
+.confirm__body { font-size: 0.9rem; color: var(--gift-ink-soft); margin: 0 0 0.6rem; }
+.confirm__field { display: flex; flex-direction: column; gap: 0.2rem; margin: 0 0 0.5rem; }
+.confirm__field label { font-size: 0.85rem; color: var(--gift-ink-soft); margin: 0; }
+.confirm__field input[type="text"] { min-height: 44px; border: 1px solid var(--gift-border); border-radius: 6px; padding: 0.3rem 0.5rem; background: var(--gift-surface); color: inherit; }
+.confirm__amount { margin: 0 0 0.5rem; font-size: 0.9rem; display: flex; gap: 0.4rem; align-items: baseline; }
+.confirm__amount-label { color: var(--gift-ink-soft); }
+.confirm__field--check { flex-direction: row; align-items: center; gap: 0.5rem; }
+.confirm__field--check input { width: 1.1rem; height: 1.1rem; }
+.confirm__hint { font-size: 0.82rem; color: var(--gift-ink-soft); margin: 0.4rem 0 0; }
+
+/* --- thanks + small print --------------------------------------------------- */
+
+.thanks__h3 { font-size: 1.05rem; margin-top: 1.25rem; }
+.thanks__gift { margin-bottom: 0.9rem; }
+.thanks__gift-name { font-size: 0.95rem; margin: 0 0 0.2rem; }
+.thanks__list { margin: 0; padding-left: 1.1rem; font-size: 0.92rem; }
+.thanks__none { margin: 0; font-size: 0.9rem; color: var(--gift-ink-soft); font-style: italic; }
+.thanks__signoff { margin-top: 1.5rem; }
+
+.smallprint {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--gift-border);
+  border-radius: var(--gift-radius);
+  background: var(--gift-surface-alt);
+  font-size: 0.88rem;
+}
+.smallprint .gifts__h2 { margin-top: 0; font-size: 1.1rem; }
+.smallprint__list { margin: 0; padding-left: 1.1rem; }
+.smallprint__list li { margin-bottom: 0.5rem; }
+.smallprint__contact { margin: 0.75rem 0 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gifts * { transition: none !important; animation: none !important; }
+}

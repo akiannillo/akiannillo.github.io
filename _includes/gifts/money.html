@@ -1,0 +1,15 @@
+{%- comment -%}
+Formats a number as a currency string at build time.
+  include.amount  number
+  include.lang    'en' -> €120.00   |   'it' -> 120,00 €
+Liquid has no printf, so this rounds to integer cents and reassembles.
+{%- endcomment -%}
+{%- assign m_cents = include.amount | times: 1.0 | times: 100 | round -%}
+{%- assign m_whole = m_cents | divided_by: 100 -%}
+{%- assign m_frac = m_cents | modulo: 100 -%}
+{%- if m_frac < 10 -%}{%- assign m_frac = m_frac | prepend: '0' -%}{%- endif -%}
+{%- if include.lang == 'it' -%}
+{{- m_whole }},{{ m_frac }}&nbsp;€
+{%- else -%}
+€{{ m_whole }}.{{ m_frac }}
+{%- endif -%}

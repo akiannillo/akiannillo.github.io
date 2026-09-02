@@ -1,0 +1,352 @@
+{%- comment -%}
+  Collaborative gift page. Rendered by misc/baby/eng.md and misc/baby/ita.md.
+
+    {% include gifts/page.html lang="en" %}
+
+  Contains NO copy of its own -- every visible string comes from
+  _data/gifts_i18n.yml, and all gift content from _data/gifts.yml.
+  Totals and percentages are computed here at build time, so the page is
+  fully correct with JavaScript switched off.
+{%- endcomment -%}
+
+{%- assign lang = include.lang | default: 'en' -%}
+{%- assign t = site.data.gifts_i18n[lang] -%}
+{%- assign cfg = site.gifts -%}
+{%- assign ref_prefix = cfg.reference_prefix | default: 'Gift' -%}
+{%- assign presets = cfg.preset_amounts | default: '10,25,50' | split: ',' -%}
+{%- assign all_gifts = site.data.gifts.gifts -%}
+
+<div class="gifts{% if lang == 'it' %} gifts--it{% endif %}">
+
+  <p class="gifts__langswitch">
+    <a href="{{ t.meta.other_lang_href | relative_url }}" lang="{{ t.meta.other_lang_code }}" hreflang="{{ t.meta.other_lang_code }}">{{ t.meta.other_lang_label }}</a>
+  </p>
+
+  <p class="gifts__lead">{{ t.intro.lead }}</p>
+  <p>{{ t.intro.body }}</p>
+  <p class="gifts__note">{{ t.intro.note }}</p>
+
+  <section class="gifts__how" aria-labelledby="gifts-how-heading">
+    <h2 id="gifts-how-heading" class="gifts__h2">{{ t.how.heading }}</h2>
+    <ol class="gifts__steps">
+      <li>{{ t.how.step1 }}</li>
+      <li>{{ t.how.step2 }}</li>
+      <li>{{ t.how.step3 }}</li>
+    </ol>
+  </section>
+
+  <h2 id="gift-grid" class="gifts__h2">{{ t.grid.heading }}</h2>
+
+  {%- assign visible_count = 0 -%}
+  {%- for g in all_gifts -%}{%- unless g.status == 'hidden' -%}{%- assign visible_count = visible_count | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+
+  {%- if visible_count == 0 -%}
+  <p class="gifts__empty">{{ t.grid.empty }}</p>
+  {%- else -%}
+
+  <ul class="gift-grid">
+  {%- for gift in all_gifts -%}
+  {%- if gift.status == 'hidden' -%}{%- continue -%}{%- endif -%}
+
+    {%- comment -%} --- computed at build time, never stored --- {%- endcomment -%}
+    {%- assign total = 0 -%}
+    {%- for c in gift.contributions -%}{%- assign total = total | plus: c.amount -%}{%- endfor -%}
+    {%- assign count = gift.contributions | size -%}
+    {%- assign target = gift.target | times: 1.0 -%}
+    {%- assign pct = 0 -%}
+    {%- if target > 0 -%}{%- assign pct = total | times: 100.0 | divided_by: target -%}{%- endif -%}
+    {%- assign pct_r = pct | round -%}
+    {%- assign bar = pct_r -%}
+    {%- if bar > 100 -%}{%- assign bar = 100 -%}{%- endif -%}
+    {%- assign remaining = target | minus: total -%}
+    {%- if remaining < 0 -%}{%- assign remaining = 0 -%}{%- endif -%}
+    {%- assign is_closed = false -%}
+    {%- if gift.status == 'closed' -%}{%- assign is_closed = true -%}{%- endif -%}
+    {%- assign is_funded = false -%}
+    {%- if gift.status == 'funded' or remaining <= 0 -%}{%- assign is_funded = true -%}{%- endif -%}
+    {%- assign is_open = true -%}
+    {%- if is_closed or is_funded -%}{%- assign is_open = false -%}{%- endif -%}
+
+    {%- comment -%} --- optional Italian overrides, falling back to the base --- {%- endcomment -%}
+    {%- assign gname = gift.name -%}
+    {%- assign gdesc = gift.description -%}
+    {%- if lang == 'it' -%}
+      {%- if gift.name_it -%}{%- assign gname = gift.name_it -%}{%- endif -%}
+      {%- if gift.description_it -%}{%- assign gdesc = gift.description_it -%}{%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} The payment reference stays language-neutral so both pages
+    produce the same string on a bank statement. {%- endcomment -%}
+    {%- capture reference -%}{{ ref_prefix }}: {{ gift.name }}{%- endcapture -%}
+
+    {%- capture money_total -%}{% include gifts/money.html amount=total lang=lang %}{%- endcapture -%}
+    {%- capture money_target -%}{% include gifts/money.html amount=target lang=lang %}{%- endcapture -%}
+    {%- capture money_remaining -%}{% include gifts/money.html amount=remaining lang=lang %}{%- endcapture -%}
+
+    <li class="gift-card gift-card--{{ gift.status }}{% if is_funded %} is-funded{% endif %}{% if is_closed %} is-closed{% endif %}" id="gift-{{ gift.id }}">
+
+      <div class="gift-card__media">
+        {%- if gift.image %}
+        <img src="{{ gift.image | relative_url }}" alt="{{ gname | escape }}" loading="lazy" width="640" height="420">
+        {%- else %}
+        <div class="gift-card__placeholder" role="img" aria-label="{{ t.grid.placeholder_alt | escape }}"><span aria-hidden="true">🎁</span></div>
+        {%- endif %}
+        {%- if is_funded %}
+        <p class="gift-card__badge">✓ {{ t.grid.badge_funded }}</p>
+        {%- endif %}
+      </div>
+
+      <div class="gift-card__body">
+        <h3 class="gift-card__title">{{ gname }}</h3>
+        <p class="gift-card__desc">{{ gdesc }}</p>
+        {%- if gift.link %}
+        <p class="gift-card__link"><a href="{{ gift.link }}" target="_blank" rel="noopener noreferrer">{{ t.grid.see_gift }} <span aria-hidden="true">↗</span></a></p>
+        {%- endif %}
+
+        <div class="gift-progress">
+          <div class="gift-progress__track"
+               role="progressbar"
+               aria-valuenow="{{ bar }}"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               aria-label="{{ t.grid.aria_progress | replace: '%GIFT%', gname | escape }}"
+               aria-valuetext="{{ money_total | strip }} {{ t.grid.of_target | replace: '%AMOUNT%', money_target | strip }}">
+            <div class="gift-progress__fill{% if is_funded %} gift-progress__fill--done{% endif %}" style="width: {{ bar }}%"></div>
+          </div>
+
+          <p class="gift-progress__figures">
+            <strong class="gift-progress__collected">{{ money_total }} {{ t.grid.collected }}</strong>
+            <span class="gift-progress__of">{{ t.grid.of_target | replace: '%AMOUNT%', money_target }}</span>
+            <span class="gift-progress__pct">{{ t.grid.percent_funded | replace: '%PCT%', pct_r }}</span>
+            {%- unless is_funded %}
+            <span class="gift-progress__left">{{ t.grid.to_go | replace: '%AMOUNT%', money_remaining }}</span>
+            {%- endunless %}
+          </p>
+
+          <p class="gift-progress__people">
+            {%- if count == 0 -%}{{ t.grid.people_none }}
+            {%- elsif count == 1 -%}{{ t.grid.people_one }}
+            {%- else -%}{{ t.grid.people_many | replace: '%N%', count }}
+            {%- endif -%}
+          </p>
+
+          {%- if pct_r > 100 %}
+          <p class="gift-progress__over">{{ t.grid.overfunded_note }}</p>
+          {%- endif %}
+        </div>
+
+        {%- if is_closed %}
+        <p class="gift-card__closed">{{ t.grid.closed_note }}</p>
+
+        {%- elsif is_funded %}
+        <p class="gift-card__done">
+          <span class="gift-card__done-label">{{ t.grid.btn_funded }}</span>
+          <a class="gift-card__done-link" href="#gift-grid">{{ t.grid.btn_funded_hint }}</a>
+        </p>
+
+        {%- else %}
+        <details class="contribute" id="give-{{ gift.id }}" data-gift
+                 data-gift-id="{{ gift.id }}"
+                 data-gift-name="{{ gift.name | escape }}"
+                 data-reference="{{ reference | escape }}">
+          <summary class="contribute__summary">{{ t.grid.btn_contribute }}</summary>
+          <div class="contribute__panel">
+
+            <fieldset class="amount">
+              <legend class="amount__legend">{{ t.amount.legend }}</legend>
+              <div class="amount__chips">
+                {%- assign default_amount = 10 -%}
+                {%- if remaining > 0 and remaining < 10 -%}{%- assign default_amount = remaining -%}{%- endif -%}
+                {%- for p in presets -%}
+                {%- assign pnum = p | plus: 0 -%}
+                {%- capture money_preset -%}{% include gifts/money.html amount=pnum lang=lang %}{%- endcapture -%}
+                <input class="amount__radio" type="radio" name="amt-{{ gift.id }}" id="amt-{{ gift.id }}-{{ p }}" value="{{ p }}"{% if pnum == default_amount %} checked{% endif %}>
+                <label class="amount__chip" for="amt-{{ gift.id }}-{{ p }}">{{ money_preset }}</label>
+                {%- endfor -%}
+                {%- assign show_remaining = true -%}
+                {%- for p in presets -%}{%- assign pnum = p | plus: 0 -%}{%- if pnum == remaining -%}{%- assign show_remaining = false -%}{%- endif -%}{%- endfor -%}
+                {%- if remaining <= 0 -%}{%- assign show_remaining = false -%}{%- endif -%}
+                {%- if show_remaining %}
+                <input class="amount__radio" type="radio" name="amt-{{ gift.id }}" id="amt-{{ gift.id }}-rest" value="{{ remaining }}"{% if remaining == default_amount %} checked{% endif %}>
+                <label class="amount__chip amount__chip--rest" for="amt-{{ gift.id }}-rest">{{ t.amount.preset_remaining | replace: '%AMOUNT%', money_remaining }}</label>
+                {%- endif %}
+                <input class="amount__radio" type="radio" name="amt-{{ gift.id }}" id="amt-{{ gift.id }}-other" value="other" data-amount-other-radio>
+                <label class="amount__chip amount__chip--other" for="amt-{{ gift.id }}-other">{{ t.amount.other_label }}</label>
+              </div>
+              <p class="amount__free">
+                <label class="amount__free-label" for="amt-{{ gift.id }}-input">{{ t.amount.other_label }}</label>
+                <span class="amount__free-field">
+                  <span class="amount__currency" aria-hidden="true">€</span>
+                  <input class="amount__input" type="number" inputmode="decimal" min="1" step="0.01" id="amt-{{ gift.id }}-input" data-amount-input placeholder="0.00">
+                </span>
+                <span class="amount__hint">{{ t.amount.other_hint }}</span>
+              </p>
+            </fieldset>
+
+            <p class="reference">
+              <span class="reference__label">{{ t.amount.reference_label }}</span>
+              <span class="reference__row">
+                <code class="reference__value" data-reference-text>{{ reference }}</code>
+                <button type="button" class="copy js-only" data-copy="reference">{{ t.amount.copy }}</button>
+              </span>
+            </p>
+
+            <h4 class="contribute__h">{{ t.paths.heading }}</h4>
+            <noscript><p class="nojs-note">{{ t.paths.nojs_note }}</p></noscript>
+
+            <div class="path path--a">
+              <h5 class="path__title"><span class="path__tag">A</span> {{ t.paths.a_title }}</h5>
+              <p class="path__who">{{ t.paths.a_who }}</p>
+              <p class="path__warn">{{ t.paths.a_warning }}</p>
+              <p class="path__go"><a class="btn-gift" href="https://paypal.me/{{ cfg.paypal_me }}" target="_blank" rel="noopener noreferrer" data-paypal>{{ t.paths.a_button }}</a></p>
+              <noscript>
+                <p class="path__nojs">{{ t.paths.a_nojs }}</p>
+                <p class="path__nojs-links">
+                  {%- for p in presets %}
+                  {%- capture money_preset_nojs %}{% include gifts/money.html amount=p lang=lang %}{% endcapture -%}
+                  <a href="https://paypal.me/{{ cfg.paypal_me }}/{{ p }}EUR" target="_blank" rel="noopener noreferrer">{{ money_preset_nojs }}</a>
+                  {%- endfor %}
+                </p>
+              </noscript>
+            </div>
+
+            <div class="path path--b">
+              <h5 class="path__title"><span class="path__tag">B</span> {{ t.paths.b_title }}</h5>
+              <p class="path__who">{{ t.paths.b_who }}</p>
+              <p class="path__go"><a class="btn-gift" href="https://revolut.me/{{ cfg.revolut_tag }}" target="_blank" rel="noopener noreferrer">{{ t.paths.b_button }}</a></p>
+              <p class="path__note">{{ t.paths.b_note }}</p>
+            </div>
+
+            <div class="path path--c">
+              <h5 class="path__title"><span class="path__tag">C</span> {{ t.paths.c_title }}</h5>
+              <p class="path__who">{{ t.paths.c_who }}</p>
+              <p class="path__go js-only">
+                <button type="button" class="btn-gift btn-gift--ghost" data-iban-reveal aria-expanded="false" aria-controls="bank-{{ gift.id }}">{{ t.paths.c_reveal }}</button>
+              </p>
+              <dl class="bank" id="bank-{{ gift.id }}" hidden>
+                <dt>{{ t.paths.c_holder_label }}</dt>
+                <dd><span class="bank__value">{{ cfg.account_holder }}</span> <button type="button" class="copy js-only" data-copy="holder">{{ t.amount.copy }}</button></dd>
+                <dt>{{ t.paths.c_iban_label }}</dt>
+                <dd><code class="bank__value bank__iban" data-iban-slot></code> <button type="button" class="copy js-only" data-copy="iban">{{ t.amount.copy }}</button></dd>
+                <dt>{{ t.paths.c_reference_label }}</dt>
+                <dd><code class="bank__value" data-reference-text>{{ reference }}</code> <button type="button" class="copy js-only" data-copy="reference">{{ t.amount.copy }}</button></dd>
+              </dl>
+              <p class="path__safe">{{ t.paths.c_safe_note }}</p>
+              <noscript>
+                <p class="path__nojs">{{ t.paths.c_noscript }}</p>
+                {%- capture iban_subject -%}{{ ref_prefix }}: {{ gift.name }} — bank details{%- endcapture -%}
+                <p><a href="mailto:{{ cfg.contact_email }}?subject={{ iban_subject | url_encode | replace: '+', '%20' }}">{{ t.paths.c_noscript_link }}</a></p>
+              </noscript>
+            </div>
+
+            {%- if cfg.path_d %}
+            <div class="path path--d">
+              <h5 class="path__title">{{ t.paths.d_title }}</h5>
+              <p class="path__who">{{ t.paths.d_who }}</p>
+              {%- if cfg.form_endpoint and cfg.form_endpoint != '' %}
+              <form class="request-form" method="post" action="{{ cfg.form_endpoint }}">
+                <input type="hidden" name="gift" value="{{ gname | escape }}">
+                <p><label for="d-name-{{ gift.id }}">{{ t.paths.d_name }}</label><input id="d-name-{{ gift.id }}" name="name" type="text" autocomplete="name" required></p>
+                <p><label for="d-email-{{ gift.id }}">{{ t.paths.d_email }}</label><input id="d-email-{{ gift.id }}" name="email" type="email" autocomplete="email" required></p>
+                <p><label for="d-amt-{{ gift.id }}">{{ t.paths.d_amount }}</label><input id="d-amt-{{ gift.id }}" name="amount" type="number" min="1" step="0.01" required></p>
+                <p><button type="submit" class="btn-gift btn-gift--ghost">{{ t.paths.d_send }}</button></p>
+              </form>
+              {%- else %}
+              {%- capture d_subject -%}{{ t.confirm.subject | replace: '%GIFT%', gift.name }}{%- endcapture -%}
+              <p class="path__go"><a class="btn-gift btn-gift--ghost" href="mailto:{{ cfg.contact_email }}?subject={{ d_subject | url_encode | replace: '+', '%20' }}">{{ t.paths.d_send }}</a></p>
+              {%- endif %}
+            </div>
+            {%- endif %}
+
+            <div class="confirm" data-confirm>
+              <h5 class="confirm__title">{{ t.confirm.heading }}</h5>
+              <p class="confirm__body">{{ t.confirm.body }}</p>
+              <p class="confirm__field">
+                <label for="cf-name-{{ gift.id }}">{{ t.confirm.name_label }}</label>
+                <input id="cf-name-{{ gift.id }}" type="text" autocomplete="name" data-confirm-name>
+              </p>
+              <p class="confirm__amount js-only">
+                <span class="confirm__amount-label">{{ t.confirm.amount_label }}</span>
+                <strong data-confirm-amount>&mdash;</strong>
+              </p>
+              <p class="confirm__field confirm__field--check">
+                <input id="cf-anon-{{ gift.id }}" type="checkbox" data-confirm-anon>
+                <label for="cf-anon-{{ gift.id }}">{{ t.confirm.anon_label }}</label>
+              </p>
+              {%- capture cf_subject -%}{{ t.confirm.subject | replace: '%GIFT%', gift.name }}{%- endcapture -%}
+              {%- capture cf_body -%}{{ t.confirm.body_template | replace: '%GIFT%', gift.name | replace: '%AMOUNT%', '' | replace: '%NAME%', '' }}{%- endcapture -%}
+              <p class="path__go"><a class="btn-gift" href="mailto:{{ cfg.contact_email }}?subject={{ cf_subject | url_encode | replace: '+', '%20' }}&amp;body={{ cf_body | url_encode | replace: '+', '%20' }}" data-confirm-link>{{ t.confirm.button }}</a></p>
+              <p class="confirm__hint">{{ t.confirm.nojs }}</p>
+            </div>
+
+          </div>
+        </details>
+        {%- endif %}
+      </div>
+    </li>
+  {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+  <section class="thanks" aria-labelledby="thanks-heading">
+    <h2 id="thanks-heading" class="gifts__h2">{{ t.thanks.heading }}</h2>
+    <p>{{ t.thanks.intro }}</p>
+
+    <h3 class="thanks__h3">{{ t.thanks.contributors_heading }}</h3>
+    {%- for gift in all_gifts -%}
+    {%- if gift.status == 'hidden' -%}{%- continue -%}{%- endif -%}
+    {%- assign gname = gift.name -%}
+    {%- if lang == 'it' and gift.name_it -%}{%- assign gname = gift.name_it -%}{%- endif -%}
+    <div class="thanks__gift">
+      <h4 class="thanks__gift-name"><a href="#gift-{{ gift.id }}">{{ gname }}</a></h4>
+      {%- assign n = gift.contributions | size -%}
+      {%- if n == 0 %}
+      <p class="thanks__none">{{ t.thanks.none_yet }}</p>
+      {%- else %}
+      <ul class="thanks__list">
+        {%- for c in gift.contributions %}
+        <li>{% if c.show_name %}{{ c.name }}{% else %}<em>{{ t.thanks.anonymous }}</em>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+    {%- endfor -%}
+
+    <p class="thanks__signoff">{{ t.thanks.signoff }}<br><strong>{{ t.thanks.signature }}</strong></p>
+  </section>
+
+  <section class="smallprint" aria-labelledby="smallprint-heading">
+    <h2 id="smallprint-heading" class="gifts__h2">{{ t.smallprint.heading }}</h2>
+    <ul class="smallprint__list">
+      <li>{{ t.smallprint.money }}</li>
+      <li>{{ t.smallprint.protection }}</li>
+      <li>{{ t.smallprint.fees }}</li>
+      <li>{{ t.smallprint.manual }}</li>
+      <li>{{ t.smallprint.surplus }}</li>
+      <li>{{ t.smallprint.unfilled }}</li>
+      <li>{{ t.smallprint.names }}</li>
+    </ul>
+    <p class="smallprint__contact">{{ t.smallprint.contact | replace: '%EMAIL%', cfg.contact_email }}</p>
+  </section>
+
+  <script type="application/json" id="gifts-config">
+  {
+    "paypal": {{ cfg.paypal_me | jsonify }},
+    "revolut": {{ cfg.revolut_tag | jsonify }},
+    "holder": {{ cfg.account_holder | jsonify }},
+    "email": {{ cfg.contact_email | jsonify }},
+    "ibanParts": {{ cfg.iban_parts | jsonify }},
+    "currency": {{ site.data.gifts.currency | default: 'EUR' | jsonify }},
+    "lang": {{ lang | jsonify }},
+    "t": {
+      "copy": {{ t.amount.copy | jsonify }},
+      "copied": {{ t.amount.copied | jsonify }},
+      "copyFailed": {{ t.amount.copy_failed | jsonify }},
+      "subject": {{ t.confirm.subject | jsonify }},
+      "bodyTemplate": {{ t.confirm.body_template | jsonify }},
+      "bodyAnon": {{ t.confirm.body_anon | jsonify }}
+    }
+  }
+  </script>
+
+</div>
