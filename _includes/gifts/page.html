@@ -194,28 +194,12 @@
             <h4 class="contribute__h">{{ t.paths.heading }}</h4>
             <noscript><p class="nojs-note">{{ t.paths.nojs_note }}</p></noscript>
 
-            <div class="path path--a">
-              <h5 class="path__title"><span class="path__tag">A</span> {{ t.paths.a_title }}</h5>
-              <p class="path__who">{{ t.paths.a_who }}</p>
-              <p class="path__warn">{{ t.paths.a_warning }}</p>
-              <p class="path__go"><a class="btn-gift" href="https://paypal.me/{{ cfg.paypal_me }}" target="_blank" rel="noopener noreferrer" data-paypal>{{ t.paths.a_button }}</a></p>
-              <noscript>
-                <p class="path__nojs">{{ t.paths.nojs_presets }}</p>
-                <p class="path__nojs-links">
-                  {%- for p in presets %}
-                  {%- capture money_preset_nojs %}{% include gifts/money.html amount=p lang=lang %}{% endcapture -%}
-                  <a href="https://paypal.me/{{ cfg.paypal_me }}/{{ p }}EUR" target="_blank" rel="noopener noreferrer">{{ money_preset_nojs }}</a>
-                  {%- endfor %}
-                </p>
-              </noscript>
-            </div>
-
             {%- capture ref_q -%}{{ reference | url_encode | replace: '+', '%20' }}{%- endcapture -%}
-            <div class="path path--b">
-              <h5 class="path__title"><span class="path__tag">B</span> {{ t.paths.b_title }}</h5>
-              <p class="path__who">{{ t.paths.b_who }}</p>
-              <p class="path__go"><a class="btn-gift" href="https://revolut.me/{{ cfg.revolut_tag }}?note={{ ref_q }}" target="_blank" rel="noopener noreferrer" data-revolut>{{ t.paths.b_button }}</a></p>
-              <p class="path__note">{{ t.paths.b_note }}</p>
+            <div class="path path--revolut">
+              <h5 class="path__title">{{ t.paths.revolut_title }}</h5>
+              <p class="path__who">{{ t.paths.revolut_who }}</p>
+              <p class="path__go"><a class="btn-gift" href="https://revolut.me/{{ cfg.revolut_tag }}?note={{ ref_q }}" target="_blank" rel="noopener noreferrer" data-revolut>{{ t.paths.revolut_button }}</a></p>
+              <p class="path__note">{{ t.paths.revolut_note }}</p>
               <noscript>
                 <p class="path__nojs">{{ t.paths.nojs_presets }}</p>
                 <p class="path__nojs-links">
@@ -227,46 +211,27 @@
               </noscript>
             </div>
 
-            <div class="path path--c">
-              <h5 class="path__title"><span class="path__tag">C</span> {{ t.paths.c_title }}</h5>
-              <p class="path__who">{{ t.paths.c_who }}</p>
+            <div class="path path--bank">
+              <h5 class="path__title">{{ t.paths.bank_title }}</h5>
+              <p class="path__who">{{ t.paths.bank_who }}</p>
               <p class="path__go js-only">
-                <button type="button" class="btn-gift btn-gift--ghost" data-iban-reveal aria-expanded="false" aria-controls="bank-{{ gift.id }}">{{ t.paths.c_reveal }}</button>
+                <button type="button" class="btn-gift btn-gift--ghost" data-iban-reveal aria-expanded="false" aria-controls="bank-{{ gift.id }}">{{ t.paths.bank_reveal }}</button>
               </p>
               <dl class="bank" id="bank-{{ gift.id }}" hidden>
-                <dt>{{ t.paths.c_holder_label }}</dt>
+                <dt>{{ t.paths.bank_holder_label }}</dt>
                 <dd><span class="bank__value">{{ cfg.account_holder }}</span> <button type="button" class="copy js-only" data-copy="holder">{{ t.amount.copy }}</button></dd>
-                <dt>{{ t.paths.c_iban_label }}</dt>
+                <dt>{{ t.paths.bank_iban_label }}</dt>
                 <dd><code class="bank__value bank__iban" data-iban-slot></code> <button type="button" class="copy js-only" data-copy="iban">{{ t.amount.copy }}</button></dd>
-                <dt>{{ t.paths.c_reference_label }}</dt>
+                <dt>{{ t.paths.bank_reference_label }}</dt>
                 <dd><code class="bank__value" data-reference-text>{{ reference }}</code> <button type="button" class="copy js-only" data-copy="reference">{{ t.amount.copy }}</button></dd>
               </dl>
-              <p class="path__safe">{{ t.paths.c_safe_note }}</p>
+              <p class="path__safe">{{ t.paths.bank_safe_note }}</p>
               <noscript>
-                <p class="path__nojs">{{ t.paths.c_noscript }}</p>
+                <p class="path__nojs">{{ t.paths.bank_noscript }}</p>
                 {%- capture iban_subject -%}{{ ref_prefix }}: {{ gift.name }} — bank details{%- endcapture -%}
-                <p><a href="mailto:{{ cfg.contact_email }}?subject={{ iban_subject | url_encode | replace: '+', '%20' }}">{{ t.paths.c_noscript_link }}</a></p>
+                <p><a href="mailto:{{ cfg.contact_email }}?subject={{ iban_subject | url_encode | replace: '+', '%20' }}">{{ t.paths.bank_noscript_link }}</a></p>
               </noscript>
             </div>
-
-            {%- if cfg.path_d %}
-            <div class="path path--d">
-              <h5 class="path__title">{{ t.paths.d_title }}</h5>
-              <p class="path__who">{{ t.paths.d_who }}</p>
-              {%- if cfg.form_endpoint and cfg.form_endpoint != '' %}
-              <form class="request-form" method="post" action="{{ cfg.form_endpoint }}">
-                <input type="hidden" name="gift" value="{{ gname | escape }}">
-                <p><label for="d-name-{{ gift.id }}">{{ t.paths.d_name }}</label><input id="d-name-{{ gift.id }}" name="name" type="text" autocomplete="name" required></p>
-                <p><label for="d-email-{{ gift.id }}">{{ t.paths.d_email }}</label><input id="d-email-{{ gift.id }}" name="email" type="email" autocomplete="email" required></p>
-                <p><label for="d-amt-{{ gift.id }}">{{ t.paths.d_amount }}</label><input id="d-amt-{{ gift.id }}" name="amount" type="number" min="1" step="0.01" required></p>
-                <p><button type="submit" class="btn-gift btn-gift--ghost">{{ t.paths.d_send }}</button></p>
-              </form>
-              {%- else %}
-              {%- capture d_subject -%}{{ t.confirm.subject | replace: '%GIFT%', gift.name }}{%- endcapture -%}
-              <p class="path__go"><a class="btn-gift btn-gift--ghost" href="mailto:{{ cfg.contact_email }}?subject={{ d_subject | url_encode | replace: '+', '%20' }}">{{ t.paths.d_send }}</a></p>
-              {%- endif %}
-            </div>
-            {%- endif %}
 
             <div class="confirm" data-confirm>
               <h5 class="confirm__title">{{ t.confirm.heading }}</h5>
@@ -341,7 +306,6 @@
 
   <script type="application/json" id="gifts-config">
   {
-    "paypal": {{ cfg.paypal_me | jsonify }},
     "revolut": {{ cfg.revolut_tag | jsonify }},
     "holder": {{ cfg.account_holder | jsonify }},
     "email": {{ cfg.contact_email | jsonify }},

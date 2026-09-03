@@ -234,7 +234,6 @@ date_format: "%B %-d, %Y"
 # Settings for the gift pages at /misc/baby/eng/ and /misc/baby/ita/.
 # The gift list itself lives in _data/gifts.yml, the wording in _data/gifts_i18n.yml.
 gifts:
-  paypal_me: "akiannillo"          # paypal.me/<this>
   revolut_tag: "akiannillo"        # revolut.me/<this>
   account_holder: "Antonio Ken Iannillo"
   contact_email: "ak.iannillo@gmail.com"
@@ -256,15 +255,6 @@ gifts:
 
   # Suggested amounts, in euro. The remaining amount is offered automatically.
   preset_amounts: "10,25,50"
-
-  # Path D -- visitors ask by email for a PayPal money request, which they can
-  # then pay by card without an account. Costs a manual step every time, so it
-  # is off. Set to true to show it.
-  path_d: false
-
-  # Optional third-party form relay for the "let us know" form. Left empty:
-  # the form falls back to a mailto: link and no third party is involved.
-  form_endpoint: ""
 
 #################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #

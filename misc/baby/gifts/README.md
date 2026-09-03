@@ -173,12 +173,12 @@ EOF
 Paste the three strings into `gifts.iban_parts` in `_config.yml`, and update
 `gifts.account_holder` if the name changed.
 
-## How the payment links carry the amount
+## How the Revolut link carries the amount
 
-**PayPal** uses a documented path format: `paypal.me/<handle>/<amount>EUR`,
-e.g. `paypal.me/akiannillo/25.50EUR`. Decimals are fine.
+There are two ways to give: **Revolut** and **bank transfer**. That is the whole
+set. PayPal was removed deliberately — see "Why only two paths" below.
 
-**Revolut.me** takes the amount as *query parameters* instead:
+The Revolut button is built from query parameters:
 
 ```
 https://revolut.me/akiannillo?amount=2550&currency=EUR&note=Gift%3A%20Lovevery%20Play%20Kit
@@ -188,10 +188,9 @@ That link opens at **€25.50**. Three things to know, because they are easy to
 get wrong later:
 
 - **`amount` is in MINOR units — cents, not euros.** `amount=2550` is €25.50,
-  and `amount=25` is €0.25. This is the opposite of PayPal, where the same
-  amount is written `paypal.me/akiannillo/25.50EUR`. It is parsed with
-  `parseInt`, so it must be a whole number of cents: the page multiplies by 100
-  and rounds. Verified by hand against a real link, not inferred.
+  and `amount=25` is €0.25. It is parsed with `parseInt`, so it must be a whole
+  number of cents: the page multiplies by 100 and rounds. Verified by hand
+  against a real link, not inferred.
 - **These parameters are undocumented.** Revolut publishes nothing about them;
   the format was read off revolut.me's own JavaScript bundle, which parses
   `amount`, `currency` and `note` from the query string. That means Revolut can
@@ -201,49 +200,30 @@ get wrong later:
   unrecognised, Revolut discards the amount *and* the currency and shows an
   empty form.
 
-The `note` parameter is worth keeping: it pre-fills the payment reference, so
-Revolut transfers arrive already labelled with the gift name. It is set even
-when no amount is (the plain "Open Revolut" button carries it).
+The `note` parameter pre-fills the payment reference, so Revolut transfers
+arrive already labelled with the gift name. It is set even when no amount is —
+the plain "Open Revolut" button carries it.
 
-## Path D — sending a PayPal money request
+## Why only two paths
 
-Off by default. It exists for relatives who will not manage any of the other
-routes: they send you their email address, you send them a PayPal money
-request, and they pay it **by card without creating a PayPal account**. It
-costs you a manual step per person, which is why it is off and why it sits last
-and visually quiet on the page.
+Revolut does let people pay by card, which is why PayPal was dropped. But
+Revolut caps what can be **received** by card through a revolut.me link at
+roughly £250 per week and £1,000 per month, with no more than 20 completed
+top-ups per week. The limit is per-person and cannot be raised. When a sender
+hits it, Revolut asks *them* to create an account.
 
-Turn it on in `_config.yml`:
-
-```yaml
-gifts:
-  path_d: true
-```
-
-With no `form_endpoint` set it renders as a `mailto:` link, so no third party is
-involved. Then, when a request arrives:
-
-1. Sign in at <https://www.paypal.com> and choose **Send and Request** →
-   **Request a payment** (labelled *Create an invoice or request money*).
-2. Enter their email address.
-3. Enter the amount in EUR and put the gift name in the note, matching the
-   reference the page uses, e.g. `Gift: Lovevery Play Kit`.
-4. Send it. They get an email with a **Pay now** button and can pay by card as
-   a guest.
-5. When the money lands, record it the normal way with
-   `scripts/add-contribution.py`.
-
-Two things to know before you switch it on. A money request is a *commercial*
-payment, so unlike the friends-and-family route **PayPal takes a fee** from what
-you receive — the convenience is paid for by you, not the sender. And enabling
-it means collecting email addresses through the page, so only turn it on if you
-are willing to handle those.
+So Revolut is the convenient option for people who already use it — not the
+card option for everyone, and the page never claims otherwise. **Bank transfer
+is what keeps the promise that nobody has to create an account**: free,
+uncapped, and available to everyone in the EU. If contributions ever start
+arriving faster than that weekly cap, the bank transfer path absorbs it without
+anything needing to change.
 
 ## Things deliberately not built
 
-No automatic payment detection, no webhooks, no PayPal IPN or Transaction
-Search, no Revolut API, no card processor, no accounts, no analytics, no
-cookies, no third-party JavaScript. The bars move when you edit the file. That
+No automatic payment detection, no webhooks, no Revolut API, no card
+processor, no PayPal, no accounts, no analytics, no cookies, no third-party
+JavaScript. The bars move when you edit the file. That
 is the whole design, and it is why the page has no running costs and nothing
 that can quietly break.
 

@@ -2,11 +2,11 @@
    Collaborative gift pages -- progressive enhancement only.
 
    The page is already correct and usable with this file blocked: progress bars
-   are rendered by Jekyll at build time, the PayPal/Revolut links work without
-   an amount, and <noscript> blocks cover the bits that genuinely need script.
+   are rendered by Jekyll at build time, the Revolut link works without an
+   amount, and <noscript> blocks cover the bits that genuinely need script.
    Everything here is optional polish on top of that:
 
-     - carries the chosen amount into the PayPal link and the mailto: body
+     - carries the chosen amount into the Revolut link and the mailto: body
      - assembles the IBAN from base64 parts on request
      - copy-to-clipboard buttons
      - opens the right panel when the page is opened on a #give-<id> link
@@ -104,7 +104,6 @@
     var radios = panel.querySelectorAll('input[type="radio"]');
     var otherRadio = panel.querySelector('[data-amount-other-radio]');
     var otherInput = panel.querySelector('[data-amount-input]');
-    var paypalLink = panel.querySelector('[data-paypal]');
     var revolutLink = panel.querySelector('[data-revolut]');
     var confirmLink = panel.querySelector('[data-confirm-link]');
     var confirmName = panel.querySelector('[data-confirm-name]');
@@ -124,12 +123,6 @@
 
     var refresh = function () {
       var amount = currentAmount();
-
-      if (paypalLink) {
-        paypalLink.href = amount
-          ? 'https://paypal.me/' + cfg.paypal + '/' + amount.toFixed(2) + (cfg.currency || 'EUR')
-          : 'https://paypal.me/' + cfg.paypal;
-      }
 
       // revolut.me reads amount/currency/note from the query string. These
       // parameters are undocumented -- they were read off the site's own
