@@ -43,7 +43,7 @@ gifts:
     name: "Lovevery Play Kits (0–48 months)"
     name_it: "Box Lovevery (0–48 mesi)"
     description: "The whole run of play kits, from birth to four years — each box arrives just as he is ready for it."
-    description_it: "L'intera serie di box, dalla nascita ai quattro anni: ognuna arriva proprio quando lui è pronto."
+    description_it: "L'intera serie, dalla nascita ai quattro anni: ogni box arriva proprio quando lui è pronto."
     link: https://lovevery.eu/
     target: 2600.00
     status: open
@@ -121,7 +121,7 @@ gifts:
     name: "woom WOW self-balancing bike"
     name_it: "Bicicletta autobilanciante woom WOW"
     description: "A first bike that balances itself, for when he is ready to push off on his own."
-    description_it: "La prima bici, che si bilancia da sola, per quando sarà pronto a spingersi da solo."
+    description_it: "La sua prima bici, che si bilancia da sola, per quando sarà pronto a partire da solo."
     link: https://woom.com/en_INT/balance-bikes/self-balancing-bike/wow?variant=dreamy-sky
     target: 179.00
     status: open
@@ -141,7 +141,7 @@ gifts:
     name: "Rain cover for the Osprey carrier"
     name_it: "Copertura antipioggia per lo zaino Osprey"
     description: "The cover that goes with the carrier. Not glamorous, but it is the difference between going out and staying in."
-    description_it: "La copertura che va con lo zaino. Poco affascinante, ma è la differenza tra uscire e restare a casa."
+    description_it: "La copertura che va con lo zaino. Niente di entusiasmante, ma è la differenza tra uscire e restare a casa."
     link: https://www.amazon.de/-/en/Osprey-Child-Carrier-Raincover-Limon/dp/B0CN1K66DV
     target: 27.00
     status: open
@@ -151,7 +151,7 @@ gifts:
     name: "Foam climbing blocks"
     name_it: "Blocchi da arrampicata in gommapiuma"
     description: "Soft blocks to climb, fall off and build again — indoor energy, safely spent."
-    description_it: "Blocchi morbidi da scalare, da cui cadere e da rimettere insieme: l'energia di casa, spesa in sicurezza."
+    description_it: "Blocchi morbidi da scalare, da cui cadere e da rimontare: per sfogare l'energia in casa, in sicurezza."
     link: https://www.amazon.de/-/en/BanaSuper-Certified-Montessori-Blue-Pink/dp/B0FH4KHM9V
     target: 92.00
     status: open

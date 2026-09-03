@@ -115,15 +115,15 @@ it:
     other_lang_code: "en"
 
   intro:
-    lead: "Se ti va di fare un pensiero a Gino, questa pagina è qui per aiutarti."
-    body: "Nostro figlio <strong>Gino Leone Iannillo</strong> sta crescendo circondato da tanto affetto, e ne siamo profondamente grati. Se desideri segnare un compleanno, una visita o un momento speciale con un regalo — senza alcun obbligo — qui trovi le cose che stiamo mettendo da parte."
-    note: "Cerchiamo di essere intenzionali nelle scelte ed evitiamo giochi casuali — lo spazio è limitato e preferiamo oggetti utili e significativi 💙"
+    lead: "Se ti va di fare un pensiero per Gino, questa pagina è qui per aiutarti."
+    body: "Nostro figlio <strong>Gino Leone Iannillo</strong> sta crescendo circondato da tanto affetto, e ne siamo profondamente grati. Se ti va di festeggiare un compleanno, una visita o un momento speciale con un regalo — senza alcun obbligo — qui trovi le cose per cui stiamo mettendo da parte."
+    note: "Cerchiamo di scegliere con cura ed evitiamo i giocattoli presi a caso — lo spazio è poco e preferiamo cose utili, che durino nel tempo 💙"
 
   how:
     heading: "Come funziona"
     step1: "Scegli un regalo qui sotto. Per ognuno vedi quanto è stato raccolto finora."
-    step2: "Scegli la cifra che preferisci — anche piccola va benissimo. In più persone si può contribuire allo stesso regalo, ed è proprio questa l'idea."
-    step3: "Invia come ti è più comodo, poi faccelo sapere, così aggiorniamo la barra."
+    step2: "Scegli la cifra che preferisci — anche piccola va benissimo. Allo stesso regalo possono contribuire più persone, ed è proprio questa l'idea."
+    step3: "Invia come ti è più comodo, poi faccelo sapere così aggiorniamo la barra."
 
   grid:
     heading: "I regali"
@@ -131,23 +131,23 @@ it:
     collected: "raccolti"
     of_target: "su %AMOUNT%"
     to_go: "mancano %AMOUNT%"
-    percent_funded: "%PCT%% raggiunto"
+    percent_funded: "%PCT%% del totale"
     aria_progress: "Avanzamento della raccolta per %GIFT%"
-    people_none: "Ancora nessuno — saresti il primo"
+    people_none: "Ancora nessuno — puoi iniziare tu"
     people_one: "1 persona finora"
     people_many: "%N% persone finora"
-    badge_funded: "Completo"
+    badge_funded: "Completato"
     btn_contribute: "Contribuisci a questo regalo"
     btn_funded: "Raggiunto — grazie di cuore 💙"
     btn_funded_hint: "Guarda i regali ancora aperti"
-    closed_note: "Questo è chiuso — grazie a tutti quelli che hanno partecipato."
-    overfunded_note: "Avete superato la cifra, e non ci lamentiamo."
+    closed_note: "Questo regalo è chiuso — grazie a tutti quelli che hanno partecipato."
+    overfunded_note: "Avete superato la cifra — e non ci lamentiamo."
     placeholder_alt: "Ancora senza foto"
     empty: "La lista è in preparazione — torna a dare un'occhiata."
 
   amount:
     legend: "Quanto ti va di dare?"
-    preset_remaining: "%AMOUNT% — lo completa"
+    preset_remaining: "%AMOUNT% — completa il regalo"
     other_label: "Oppure un altro importo"
     other_hint: "in euro"
     reference_label: "Aggiungi questa causale, così sappiamo a cosa si riferisce:"
@@ -162,7 +162,7 @@ it:
 
     revolut_title: "Revolut"
     revolut_who: "Immediato se usi già Revolut — e se non lo usi, puoi comunque pagare con carta senza creare un account."
-    revolut_note: "L'importo è già compilato, e puoi modificarlo prima di inviare. Inviare da un account Revolut non ha alcun limite. I pagamenti con carta sì: 1.160 € ogni 30 giorni, contati su tutti insieme — quindi se una carta venisse rifiutata è per questo, e il bonifico qui sotto funziona sempre."
+    revolut_note: "L'importo è già compilato e puoi modificarlo prima di inviare. Da un account Revolut non c'è alcun limite. Con carta sì: 1.160 € ogni 30 giorni, complessivi e non a testa — quindi se una carta viene rifiutata è per questo, e il bonifico qui sotto funziona sempre."
     revolut_button: "Apri Revolut"
 
     bank_title: "Bonifico bancario"
@@ -172,12 +172,12 @@ it:
     bank_iban_label: "IBAN"
     bank_reference_label: "Causale"
     bank_safe_note: "Un IBAN da solo non permette a nessuno di prelevare denaro — un bonifico lo autorizzi tu, e per un addebito diretto serve un mandato che hai firmato."
-    bank_noscript: "Le coordinate vengono composte dalla pagina stessa, che ha bisogno di JavaScript. Scrivici e te le mandiamo subito:"
+    bank_noscript: "Le coordinate vengono ricostruite dalla pagina, che per farlo ha bisogno di JavaScript. Scrivici e te le mandiamo subito:"
     bank_noscript_link: "Chiedici le coordinate bancarie"
 
   confirm:
     heading: "Un'ultima cosa — faccelo sapere"
-    body: "Le causali dei pagamenti hanno il vizio di sparire, quindi è così che scopriamo davvero chi ha contribuito. Ed è così che si muove la barra qui sopra."
+    body: "Le causali dei pagamenti hanno il vizio di perdersi, quindi è così che scopriamo davvero chi ha contribuito. Ed è così che si muove la barra qui sopra."
     name_label: "Il tuo nome"
     amount_label: "Importo inviato"
     anon_label: "Preferisco non comparire con il mio nome"
@@ -198,9 +198,9 @@ it:
 
   smallprint:
     heading: "Le cose da dire chiaramente"
-    money: "Questi soldi arrivano direttamente a noi. Non è una raccolta benefica e non c'è nessun terzo che li custodisce — ti stai fidando di noi, e non lo diamo per scontato."
+    money: "Questi soldi arrivano direttamente a noi. Non è una raccolta benefica e non c'è nessun intermediario che li custodisce — ti stai fidando di noi, e non lo diamo per scontato."
     protection: "È un trasferimento tra privati, non un acquisto. Non c'è nessuna protezione acquisti e, una volta inviato, né Revolut né la banca possono recuperarlo. Tra familiari va benissimo, ma è giusto saperlo prima di inviare."
-    fees: "Inviare dal saldo Revolut, o con un normale bonifico, è <strong>gratis</strong>. Pagare con carta può costarti una commissione, e i pagamenti con carta verso di noi sono limitati a 1.160 € ogni 30 giorni, contati su tutti insieme. Il bonifico è gratuito, non ha limiti e funziona sempre. Sono soldi tuoi — usa la strada gratuita."
+    fees: "Inviare dal saldo Revolut, o con un normale bonifico, è <strong>gratis</strong>. Pagare con carta può costarti una commissione, e i pagamenti con carta verso di noi sono limitati a 1.160 € ogni 30 giorni, complessivi e non a testa. Il bonifico è gratuito, non ha limiti e funziona sempre. Sono soldi tuoi — scegli la strada gratuita."
     manual: "Aggiorniamo queste barre a mano, quindi può passare un giorno o due prima che il tuo contributo compaia. Non è andato perso."
     surplus: "TODO: spiegare cosa succede se un regalo supera la cifra — l'eccedenza passa al regalo successivo o va su altro?"
     unfilled: "TODO: spiegare cosa succede se un regalo non viene completato — ci mettete voi la differenza o si usa diversamente?"
