@@ -102,8 +102,6 @@ en:
     protection: "This is a personal transfer, not a purchase. There is no buyer protection on it, and once it has gone neither Revolut nor your bank can claw it back. Between family that is fine, but you should know it before you press send."
     fees: "Sending from a Revolut balance, or by ordinary bank transfer, is <strong>free</strong>. Paying by card can cost you a fee, and card payments to us are capped at €1,160 in any 30 days across everyone together. A bank transfer is free, has no cap, and always works. It's your money — use the free route."
     manual: "We update these bars by hand, so there may be a day or two of delay before your contribution shows up. It isn't lost."
-    surplus: "TODO: say what happens if a gift is overfunded — does the extra roll onto the next gift, or go towards something else?"
-    unfilled: "TODO: say what happens if a gift never fills up — do you top it up yourselves, or redirect what was collected?"
     names: "Names only appear on this page if the giver said yes. Ask us to remove yours at any time and we will, no explanation needed."
     contact: "Anything at all, just write: %EMAIL%"
 
@@ -200,7 +198,5 @@ it:
     protection: "È un trasferimento tra privati, non un acquisto. Non c'è nessuna protezione acquisti e, una volta inviato, né Revolut né la banca possono recuperarlo. Tra familiari va benissimo, ma è giusto saperlo prima di inviare."
     fees: "Inviare dal saldo Revolut, o con un normale bonifico, è <strong>gratis</strong>. Pagare con carta può costarti una commissione, e i pagamenti con carta verso di noi sono limitati a 1.160 € ogni 30 giorni, complessivi e non a testa. Il bonifico è gratuito, non ha limiti e funziona sempre. Sono soldi tuoi — scegli la strada gratuita."
     manual: "Aggiorniamo queste barre a mano, quindi può passare un giorno o due prima che il tuo contributo compaia. Non è andato perso."
-    surplus: "TODO: spiegare cosa succede se un regalo supera la cifra — l'eccedenza passa al regalo successivo o va su altro?"
-    unfilled: "TODO: spiegare cosa succede se un regalo non viene completato — ci mettete voi la differenza o si usa diversamente?"
     names: "I nomi compaiono su questa pagina solo se chi ha contribuito è d'accordo. Chiedici di togliere il tuo quando vuoi, senza doverci spiegare nulla."
     contact: "Per qualsiasi cosa, scrivici: %EMAIL%"

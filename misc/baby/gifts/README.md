@@ -239,17 +239,19 @@ JavaScript. The bars move when you edit the file. That
 is the whole design, and it is why the page has no running costs and nothing
 that can quietly break.
 
-## Two things still to write
+## Two questions the page does not answer
 
-`_data/gifts_i18n.yml` has two `TODO:` entries under `smallprint`, shown on the
-live page exactly as written:
+The small print deliberately says nothing about what happens if a gift is
+**overfunded**, or if one **never fills up**. Both were drafted as TODO
+placeholders and then removed rather than worded, so the page makes no promise
+either way.
 
-- **`surplus`** — what happens if a gift is overfunded.
-- **`unfilled`** — what happens if a gift never fills up.
+That is a fine position -- these are the kind of thing better answered to a
+person who asks than declared to everyone. But it does mean that if someone
+does ask, there is no page to point them at. If you later settle on an answer,
+add it back as a `surplus:` and/or `unfilled:` string under `smallprint` in
+both languages, and a matching `<li>` in the small print list in
+`_includes/gifts/page.html`.
 
-Both are promises about other people's money, so they are left for you to word
-rather than guessed at. They are visible on the page right now — worth
-replacing before you share the link.
-
-The Italian copy was drafted for review, not written by a native speaker.
-Read it through and make it sound like you.
+The Italian copy was revised but not written by a native speaker. Read it
+through and make it sound like you.
