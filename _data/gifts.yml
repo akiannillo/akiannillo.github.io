@@ -129,6 +129,17 @@ gifts:
     status: open
     contributions: []
 
+  - id: woom-ready-helmet
+    name: "woom READY helmet and light"
+    name_it: "Casco woom READY con luce"
+    description: "The helmet that goes with the bike, with its rear light for when the afternoon runs late."
+    description_it: "Il casco che va con la bici, con la luce posteriore per quando il pomeriggio si fa tardi."
+    image: /assets/img/gifts/woom-ready-helmet.jpg
+    link: https://woom.com/en_INT/kids-helmet/ready-with-light?variant=m_woom-red
+    target: 89.80
+    status: open
+    contributions: []
+
   - id: osprey-poco-lt
     name: "Osprey Poco LT child carrier"
     name_it: "Zaino porta-bambino Osprey Poco LT"
