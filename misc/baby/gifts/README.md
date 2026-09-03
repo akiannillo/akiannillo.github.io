@@ -181,20 +181,22 @@ e.g. `paypal.me/akiannillo/25.50EUR`. Decimals are fine.
 **Revolut.me** takes the amount as *query parameters* instead:
 
 ```
-https://revolut.me/akiannillo?amount=25&currency=EUR&note=Gift%3A%20Lovevery%20Play%20Kit
+https://revolut.me/akiannillo?amount=2550&currency=EUR&note=Gift%3A%20Lovevery%20Play%20Kit
 ```
 
-Three things to know about that, because they are easy to get wrong later:
+That link opens at **€25.50**. Three things to know, because they are easy to
+get wrong later:
 
+- **`amount` is in MINOR units — cents, not euros.** `amount=2550` is €25.50,
+  and `amount=25` is €0.25. This is the opposite of PayPal, where the same
+  amount is written `paypal.me/akiannillo/25.50EUR`. It is parsed with
+  `parseInt`, so it must be a whole number of cents: the page multiplies by 100
+  and rounds. Verified by hand against a real link, not inferred.
 - **These parameters are undocumented.** Revolut publishes nothing about them;
   the format was read off revolut.me's own JavaScript bundle, which parses
   `amount`, `currency` and `note` from the query string. That means Revolut can
-  change it without warning. If the amount ever stops pre-filling, this is the
-  first place to look.
-- **`amount` is parsed with `parseInt`, so only whole euros survive.**
-  `?amount=25.50` arrives as 25. The page therefore rounds to the nearest euro
-  before building the link, and the copy tells the sender the amount is
-  editable. PayPal has no such limit.
+  change it without warning. If the amount ever stops pre-filling, or starts
+  arriving 100× out, this is the first place to look.
 - **`currency` must be one Revolut recognises.** If it is present but
   unrecognised, Revolut discards the amount *and* the currency and shows an
   empty form.

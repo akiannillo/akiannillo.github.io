@@ -133,14 +133,14 @@
 
       // revolut.me reads amount/currency/note from the query string. These
       // parameters are undocumented -- they were read off the site's own
-      // bundle -- and the amount goes through parseInt there, so only whole
-      // euros survive. Round rather than truncate, and let the sender adjust:
-      // the amount is editable in the app before they confirm.
+      // bundle, then confirmed by hand. The amount is in MINOR units, so
+      // amount=2550 is EUR 25.50; it is parsed with parseInt, which is why it
+      // must be a whole number of cents.
       if (revolutLink) {
         var note = 'note=' + encodeURIComponent(reference);
-        var rounded = amount ? Math.round(amount) : 0;
-        revolutLink.href = rounded > 0
-          ? 'https://revolut.me/' + cfg.revolut + '?amount=' + rounded +
+        var cents = amount ? Math.round(amount * 100) : 0;
+        revolutLink.href = cents > 0
+          ? 'https://revolut.me/' + cfg.revolut + '?amount=' + cents +
             '&currency=' + (cfg.currency || 'EUR') + '&' + note
           : 'https://revolut.me/' + cfg.revolut + '?' + note;
       }

@@ -221,7 +221,7 @@
                 <p class="path__nojs-links">
                   {%- for p in presets %}
                   {%- capture money_preset_nojs %}{% include gifts/money.html amount=p lang=lang %}{% endcapture -%}
-                  <a href="https://revolut.me/{{ cfg.revolut_tag }}?amount={{ p }}&amp;currency=EUR&amp;note={{ ref_q }}" target="_blank" rel="noopener noreferrer">{{ money_preset_nojs }}</a>
+                  <a href="https://revolut.me/{{ cfg.revolut_tag }}?amount={{ p | times: 100 }}&amp;currency=EUR&amp;note={{ ref_q }}" target="_blank" rel="noopener noreferrer">{{ money_preset_nojs }}</a>
                   {%- endfor %}
                 </p>
               </noscript>
