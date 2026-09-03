@@ -173,6 +173,36 @@ EOF
 Paste the three strings into `gifts.iban_parts` in `_config.yml`, and update
 `gifts.account_holder` if the name changed.
 
+## How the payment links carry the amount
+
+**PayPal** uses a documented path format: `paypal.me/<handle>/<amount>EUR`,
+e.g. `paypal.me/akiannillo/25.50EUR`. Decimals are fine.
+
+**Revolut.me** takes the amount as *query parameters* instead:
+
+```
+https://revolut.me/akiannillo?amount=25&currency=EUR&note=Gift%3A%20Lovevery%20Play%20Kit
+```
+
+Three things to know about that, because they are easy to get wrong later:
+
+- **These parameters are undocumented.** Revolut publishes nothing about them;
+  the format was read off revolut.me's own JavaScript bundle, which parses
+  `amount`, `currency` and `note` from the query string. That means Revolut can
+  change it without warning. If the amount ever stops pre-filling, this is the
+  first place to look.
+- **`amount` is parsed with `parseInt`, so only whole euros survive.**
+  `?amount=25.50` arrives as 25. The page therefore rounds to the nearest euro
+  before building the link, and the copy tells the sender the amount is
+  editable. PayPal has no such limit.
+- **`currency` must be one Revolut recognises.** If it is present but
+  unrecognised, Revolut discards the amount *and* the currency and shows an
+  empty form.
+
+The `note` parameter is worth keeping: it pre-fills the payment reference, so
+Revolut transfers arrive already labelled with the gift name. It is set even
+when no amount is (the plain "Open Revolut" button carries it).
+
 ## Path D — sending a PayPal money request
 
 Off by default. It exists for relatives who will not manage any of the other

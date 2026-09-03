@@ -105,6 +105,7 @@
     var otherRadio = panel.querySelector('[data-amount-other-radio]');
     var otherInput = panel.querySelector('[data-amount-input]');
     var paypalLink = panel.querySelector('[data-paypal]');
+    var revolutLink = panel.querySelector('[data-revolut]');
     var confirmLink = panel.querySelector('[data-confirm-link]');
     var confirmName = panel.querySelector('[data-confirm-name]');
     var confirmAnon = panel.querySelector('[data-confirm-anon]');
@@ -128,6 +129,20 @@
         paypalLink.href = amount
           ? 'https://paypal.me/' + cfg.paypal + '/' + amount.toFixed(2) + (cfg.currency || 'EUR')
           : 'https://paypal.me/' + cfg.paypal;
+      }
+
+      // revolut.me reads amount/currency/note from the query string. These
+      // parameters are undocumented -- they were read off the site's own
+      // bundle -- and the amount goes through parseInt there, so only whole
+      // euros survive. Round rather than truncate, and let the sender adjust:
+      // the amount is editable in the app before they confirm.
+      if (revolutLink) {
+        var note = 'note=' + encodeURIComponent(reference);
+        var rounded = amount ? Math.round(amount) : 0;
+        revolutLink.href = rounded > 0
+          ? 'https://revolut.me/' + cfg.revolut + '?amount=' + rounded +
+            '&currency=' + (cfg.currency || 'EUR') + '&' + note
+          : 'https://revolut.me/' + cfg.revolut + '?' + note;
       }
 
       if (confirmAmount) {

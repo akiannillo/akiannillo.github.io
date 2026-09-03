@@ -200,7 +200,7 @@
               <p class="path__warn">{{ t.paths.a_warning }}</p>
               <p class="path__go"><a class="btn-gift" href="https://paypal.me/{{ cfg.paypal_me }}" target="_blank" rel="noopener noreferrer" data-paypal>{{ t.paths.a_button }}</a></p>
               <noscript>
-                <p class="path__nojs">{{ t.paths.a_nojs }}</p>
+                <p class="path__nojs">{{ t.paths.nojs_presets }}</p>
                 <p class="path__nojs-links">
                   {%- for p in presets %}
                   {%- capture money_preset_nojs %}{% include gifts/money.html amount=p lang=lang %}{% endcapture -%}
@@ -210,11 +210,21 @@
               </noscript>
             </div>
 
+            {%- capture ref_q -%}{{ reference | url_encode | replace: '+', '%20' }}{%- endcapture -%}
             <div class="path path--b">
               <h5 class="path__title"><span class="path__tag">B</span> {{ t.paths.b_title }}</h5>
               <p class="path__who">{{ t.paths.b_who }}</p>
-              <p class="path__go"><a class="btn-gift" href="https://revolut.me/{{ cfg.revolut_tag }}" target="_blank" rel="noopener noreferrer">{{ t.paths.b_button }}</a></p>
+              <p class="path__go"><a class="btn-gift" href="https://revolut.me/{{ cfg.revolut_tag }}?note={{ ref_q }}" target="_blank" rel="noopener noreferrer" data-revolut>{{ t.paths.b_button }}</a></p>
               <p class="path__note">{{ t.paths.b_note }}</p>
+              <noscript>
+                <p class="path__nojs">{{ t.paths.nojs_presets }}</p>
+                <p class="path__nojs-links">
+                  {%- for p in presets %}
+                  {%- capture money_preset_nojs %}{% include gifts/money.html amount=p lang=lang %}{% endcapture -%}
+                  <a href="https://revolut.me/{{ cfg.revolut_tag }}?amount={{ p }}&amp;currency=EUR&amp;note={{ ref_q }}" target="_blank" rel="noopener noreferrer">{{ money_preset_nojs }}</a>
+                  {%- endfor %}
+                </p>
+              </noscript>
             </div>
 
             <div class="path path--c">

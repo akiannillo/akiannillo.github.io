@@ -64,12 +64,12 @@ en:
     a_who: "Easiest if you already have PayPal."
     a_button: "Open PayPal"
     a_warning: "Please choose <strong>“Sending to a friend”</strong>, not “Paying for an item or service”. The second option charges us a fee."
-    a_nojs: "Or go straight to a set amount:"
+    nojs_presets: "Or go straight to a set amount:"
 
     b_title: "Revolut"
     b_who: "Instant and free if you already use Revolut."
     b_button: "Open Revolut"
-    b_note: "You type the amount yourself in the app. If Revolut asks you to create an account, please don't bother — use the bank transfer below instead, it's simpler for you and it always works."
+    b_note: "The amount is filled in for you, and you can change it before sending. If Revolut asks you to create an account, please don't bother — use the bank transfer below instead, it's simpler for you and it always works."
 
     c_title: "Bank transfer"
     c_who: "Works for everyone in Europe. No app, no account, no fees."
@@ -175,11 +175,11 @@ it:
     a_who: "Il modo più semplice se hai già PayPal."
     a_button: "Apri PayPal"
     a_warning: "Scegli <strong>“Invio di denaro a un amico”</strong>, non “Pagamento per beni o servizi”. La seconda opzione ci fa pagare una commissione."
-    a_nojs: "Oppure vai direttamente a un importo fisso:"
+    nojs_presets: "Oppure vai direttamente a un importo fisso:"
 
     b_title: "Revolut"
     b_who: "Immediato e gratuito se usi già Revolut."
-    b_note: "L'importo lo scrivi tu nell'app. Se Revolut ti chiede di creare un account, lascia perdere — usa il bonifico qui sotto: è più semplice per te e funziona sempre."
+    b_note: "L'importo è già compilato, e puoi modificarlo prima di inviare. Se Revolut ti chiede di creare un account, lascia perdere — usa il bonifico qui sotto: è più semplice per te e funziona sempre."
     b_button: "Apri Revolut"
 
     c_title: "Bonifico bancario"
