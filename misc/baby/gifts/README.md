@@ -181,7 +181,7 @@ set. PayPal was removed deliberately — see "Why only two paths" below.
 The Revolut button is built from query parameters:
 
 ```
-https://revolut.me/akiannillo?amount=2550&currency=EUR&note=Gift%3A%20Lovevery%20Play%20Kit
+https://revolut.me/akiannillo?amount=2550&currency=EUR&note=Gift%3A%20woom%20WOW%20self-balancing%20bike
 ```
 
 That link opens at **€25.50**. Three things to know, because they are easy to

@@ -6,7 +6,7 @@
 # never store a precomputed total, it will drift.
 #
 # Easiest way to record a contribution:   python3 scripts/add-contribution.py
-# Validate before pushing:                python3 scripts/validate_gifts.py
+# Validate before pushing:                ruby scripts/validate_gifts.rb
 #
 # Gift fields
 #   id           required, unique, lowercase slug. Used in URL anchors and in
@@ -39,61 +39,120 @@
 currency: EUR
 
 gifts:
-  # --- DUMMY DATA -----------------------------------------------------------
-  # These three exist to show every visual state (0%, part-funded, complete).
-  # Replace them with the real list; that is a data-only change, no templates
-  # need touching.
-  # --------------------------------------------------------------------------
+  - id: lovevery-play-kits
+    name: "Lovevery Play Kits (0–48 months)"
+    name_it: "Box Lovevery (0–48 mesi)"
+    description: "The whole run of play kits, from birth to four years — each box arrives just as he is ready for it."
+    description_it: "L'intera serie di box, dalla nascita ai quattro anni: ognuna arriva proprio quando lui è pronto."
+    link: https://lovevery.eu/
+    target: 2600.00
+    status: open
 
-  - id: lovevery-box
-    name: "Lovevery Play Kit"
-    name_it: "Box Lovevery"
-    description: "One age-appropriate box of learning materials, designed to grow with him."
-    description_it: "Una box di materiali per imparare giocando, pensata per la sua età."
-    link: https://lovevery.eu
-    target: 120.00
+    # ------------------------------------------------------------------
+    # HEADS UP -- THE AMOUNTS BELOW ARE A PLACEHOLDER SPLIT.
+    #
+    # What is known and correct: EUR 660.00 has been given in total, by
+    # these ten people. The page only ever shows the total, the number of
+    # contributors and the names, so all three are right.
+    #
+    # What is NOT known: who gave how much. The 66.00 figures are simply
+    # 660 / 10 so the total comes out exactly, and the dates are when this
+    # was written down, not when the money arrived. Neither is displayed
+    # anywhere on the page.
+    #
+    # Replace them with the real figures when you have them -- this file is
+    # your own record of who gave what, and right now that part of it is a
+    # guess. Editing the amounts changes nothing visible as long as they
+    # still add up to what was actually given.
+    # ------------------------------------------------------------------
+    contributions:
+      - date: 2026-09-03
+        name: "Gaia Oliveti"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Luca Cioffi"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Giuseppe Demetrio Plutino"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Zia Sabrina"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Zia Carla e Zio Beniamino"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Zii Domenico e Pina Colella"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Famiglia Pacifico"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Antonio Guarino"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Lama Sleem"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+      - date: 2026-09-03
+        name: "Maura Medugno"
+        amount: 66.00
+        show_name: true
+        note: "amount not recorded individually"
+
+  - id: woom-wow
+    name: "woom WOW self-balancing bike"
+    name_it: "Bicicletta autobilanciante woom WOW"
+    description: "A first bike that balances itself, for when he is ready to push off on his own."
+    description_it: "La prima bici, che si bilancia da sola, per quando sarà pronto a spingersi da solo."
+    link: https://woom.com/en_INT/balance-bikes/self-balancing-bike/wow?variant=dreamy-sky
+    target: 179.00
     status: open
     contributions: []
 
-  - id: wooden-play-arch
-    name: "Wooden play arch"
-    name_it: "Arco da gioco in legno"
-    description: "A climbing arch that becomes a rocker, a tunnel and a den. It lasts for years."
-    description_it: "Un arco per arrampicarsi che diventa dondolo, tunnel e capanna. Dura anni."
-    target: 180.00
+  - id: osprey-poco-lt
+    name: "Osprey Poco LT child carrier"
+    name_it: "Zaino porta-bambino Osprey Poco LT"
+    description: "A proper hiking carrier, so he comes up the trail with us instead of waiting at the bottom."
+    description_it: "Uno zaino porta-bambino vero, così viene sul sentiero con noi invece di aspettarci a valle."
+    link: https://www.amazon.de/-/en/Osprey-Unisex-Child-Carrier-Black/dp/B0CN1H489D
+    target: 320.00
     status: open
-    contributions:
-      - date: 2026-08-14
-        name: "Zia Maria"
-        amount: 40.00
-        show_name: true
-        note: "Revolut"
-      - date: 2026-08-19
-        name: "Marco e Sara"
-        amount: 25.00
-        show_name: true
-        note: ""
-      - date: 2026-08-26
-        name: "Colleagues at work"
-        amount: 15.00
-        show_name: false
-        note: "asked not to be named"
+    contributions: []
 
-  - id: first-library
-    name: "His first little library"
-    name_it: "La sua prima piccola libreria"
-    description: "A front-facing bookshelf and a starter set of board books in three languages."
-    description_it: "Una libreria frontale e una prima raccolta di libri cartonati in tre lingue."
-    target: 90.00
-    status: funded
-    contributions:
-      - date: 2026-07-02
-        name: "Nonna Rosa"
-        amount: 50.00
-        show_name: true
-        note: ""
-      - date: 2026-07-11
-        name: "Giulia"
-        amount: 40.00
-        show_name: true
-        note: "bank transfer"
+  - id: osprey-poco-raincover
+    name: "Rain cover for the Osprey carrier"
+    name_it: "Copertura antipioggia per lo zaino Osprey"
+    description: "The cover that goes with the carrier. Not glamorous, but it is the difference between going out and staying in."
+    description_it: "La copertura che va con lo zaino. Poco affascinante, ma è la differenza tra uscire e restare a casa."
+    link: https://www.amazon.de/-/en/Osprey-Child-Carrier-Raincover-Limon/dp/B0CN1K66DV
+    target: 27.00
+    status: open
+    contributions: []
+
+  - id: foam-climbing-blocks
+    name: "Foam climbing blocks"
+    name_it: "Blocchi da arrampicata in gommapiuma"
+    description: "Soft blocks to climb, fall off and build again — indoor energy, safely spent."
+    description_it: "Blocchi morbidi da scalare, da cui cadere e da rimettere insieme: l'energia di casa, spesa in sicurezza."
+    link: https://www.amazon.de/-/en/BanaSuper-Certified-Montessori-Blue-Pink/dp/B0FH4KHM9V
+    target: 92.00
+    status: open
+    contributions: []

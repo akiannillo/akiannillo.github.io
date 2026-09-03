@@ -1,15 +1,29 @@
 {%- comment -%}
 Formats a number as a currency string at build time.
   include.amount  number
-  include.lang    'en' -> €120.00   |   'it' -> 120,00 €
+  include.lang    'en' -> €2,600.00   |   'it' -> 2.600,00 €
 Liquid has no printf, so this rounds to integer cents and reassembles.
+The thousands separator handles up to 6 digits (999,999), which is far
+beyond any plausible gift.
 {%- endcomment -%}
 {%- assign m_cents = include.amount | times: 1.0 | times: 100 | round -%}
 {%- assign m_whole = m_cents | divided_by: 100 -%}
 {%- assign m_frac = m_cents | modulo: 100 -%}
 {%- if m_frac < 10 -%}{%- assign m_frac = m_frac | prepend: '0' -%}{%- endif -%}
+{%- assign m_int = m_whole | append: '' -%}
+{%- assign m_len = m_int | size -%}
+{%- if m_len > 3 -%}
+  {%- assign m_head_len = m_len | minus: 3 -%}
+  {%- assign m_head = m_int | slice: 0, m_head_len -%}
+  {%- assign m_tail = m_int | slice: -3, 3 -%}
+  {%- if include.lang == 'it' -%}
+    {%- assign m_int = m_head | append: '.' | append: m_tail -%}
+  {%- else -%}
+    {%- assign m_int = m_head | append: ',' | append: m_tail -%}
+  {%- endif -%}
+{%- endif -%}
 {%- if include.lang == 'it' -%}
-{{- m_whole }},{{ m_frac }}&nbsp;€
+{{- m_int }},{{ m_frac }}&nbsp;€
 {%- else -%}
-€{{ m_whole }}.{{ m_frac }}
+€{{ m_int }}.{{ m_frac }}
 {%- endif -%}
