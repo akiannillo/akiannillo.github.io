@@ -373,7 +373,15 @@
   background: var(--gift-surface-alt);
   font-size: 0.88rem;
 }
-.smallprint .gifts__h2 { margin-top: 0; font-size: 1.1rem; }
+
+/* Collapsed by default. The native disclosure marker is kept rather than
+   restyled away, so it is obvious the section opens -- unlike the contribute
+   summary, which is already an obvious button. */
+.smallprint__summary { cursor: pointer; padding: 0.15rem 0; }
+.smallprint__summary:hover .gifts__h2 { color: var(--gift-accent); }
+.smallprint__summary:focus-visible { outline: 3px solid var(--gift-link); outline-offset: 3px; }
+.smallprint__summary .gifts__h2 { display: inline-block; margin: 0; font-size: 1.1rem; vertical-align: baseline; }
+.smallprint__body { margin-top: 0.85rem; }
 .smallprint__list { margin: 0; padding-left: 1.1rem; }
 .smallprint__list li { margin-bottom: 0.5rem; }
 .smallprint__contact { margin: 0.75rem 0 0; }

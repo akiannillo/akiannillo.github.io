@@ -291,7 +291,11 @@
   </section>
 
   <section class="smallprint" aria-labelledby="smallprint-heading">
-    <h2 id="smallprint-heading" class="gifts__h2">{{ t.smallprint.heading }}</h2>
+    <details class="smallprint__details">
+      <summary class="smallprint__summary">
+        <h2 id="smallprint-heading" class="gifts__h2">{{ t.smallprint.heading }}</h2>
+      </summary>
+      <div class="smallprint__body">
     <ul class="smallprint__list">
       <li>{{ t.smallprint.money }}</li>
       <li>{{ t.smallprint.protection }}</li>
@@ -302,6 +306,8 @@
       <li>{{ t.smallprint.names }}</li>
     </ul>
     <p class="smallprint__contact">{{ t.smallprint.contact | replace: '%EMAIL%', cfg.contact_email }}</p>
+      </div>
+    </details>
   </section>
 
   <script type="application/json" id="gifts-config">
