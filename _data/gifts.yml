@@ -156,6 +156,7 @@ gifts:
     name_it: "Blocchi da arrampicata in gommapiuma"
     description: "Soft blocks to climb, fall off and build again — indoor energy, safely spent."
     description_it: "Blocchi morbidi da scalare, da cui cadere e da rimontare: per sfogare l'energia in casa, in sicurezza."
+    image: /assets/img/gifts/foam-climbing-blocks.jpg
     link: https://www.amazon.de/-/en/BanaSuper-Certified-Montessori-Blue-Pink/dp/B0FH4KHM9V
     target: 92.00
     status: open
