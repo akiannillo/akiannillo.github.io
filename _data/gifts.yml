@@ -44,6 +44,7 @@ gifts:
     name_it: "Box Lovevery (0–48 mesi)"
     description: "The whole run of play kits, from birth to four years — each box arrives just as he is ready for it."
     description_it: "L'intera serie, dalla nascita ai quattro anni: ogni box arriva proprio quando lui è pronto."
+    image: /assets/img/gifts/lovevery-play-kits.jpg
     link: https://lovevery.eu/
     target: 2600.00
     status: open
@@ -122,6 +123,7 @@ gifts:
     name_it: "Bicicletta autobilanciante woom WOW"
     description: "A first bike that balances itself, for when he is ready to push off on his own."
     description_it: "La sua prima bici, che si bilancia da sola, per quando sarà pronto a partire da solo."
+    image: /assets/img/gifts/woom-wow.jpg
     link: https://woom.com/en_INT/balance-bikes/self-balancing-bike/wow?variant=dreamy-sky
     target: 179.00
     status: open
@@ -132,6 +134,7 @@ gifts:
     name_it: "Zaino porta-bambino Osprey Poco LT"
     description: "A proper hiking carrier, so he comes up the trail with us instead of waiting at the bottom."
     description_it: "Uno zaino porta-bambino vero, così viene sul sentiero con noi invece di aspettarci a valle."
+    image: /assets/img/gifts/osprey-poco-lt.jpg
     link: https://www.amazon.de/-/en/Osprey-Unisex-Child-Carrier-Black/dp/B0CN1H489D
     target: 320.00
     status: open
@@ -142,6 +145,7 @@ gifts:
     name_it: "Copertura antipioggia per lo zaino Osprey"
     description: "The cover that goes with the carrier. Not glamorous, but it is the difference between going out and staying in."
     description_it: "La copertura che va con lo zaino. Niente di entusiasmante, ma è la differenza tra uscire e restare a casa."
+    image: /assets/img/gifts/osprey-poco-raincover.jpg
     link: https://www.amazon.de/-/en/Osprey-Child-Carrier-Raincover-Limon/dp/B0CN1K66DV
     target: 27.00
     status: open

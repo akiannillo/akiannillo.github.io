@@ -87,7 +87,7 @@
 
       <div class="gift-card__media">
         {%- if gift.image %}
-        <img src="{{ gift.image | relative_url }}" alt="{{ gname | escape }}" loading="lazy" width="640" height="420">
+        <img src="{{ gift.image | relative_url }}" alt="{{ gname | escape }}" loading="lazy" width="800" height="600">
         {%- else %}
         <div class="gift-card__placeholder" role="img" aria-label="{{ t.grid.placeholder_alt | escape }}"><span aria-hidden="true">🎁</span></div>
         {%- endif %}
@@ -182,14 +182,6 @@
                 <span class="amount__hint">{{ t.amount.other_hint }}</span>
               </p>
             </fieldset>
-
-            <p class="reference">
-              <span class="reference__label">{{ t.amount.reference_label }}</span>
-              <span class="reference__row">
-                <code class="reference__value" data-reference-text>{{ reference }}</code>
-                <button type="button" class="copy js-only" data-copy="reference">{{ t.amount.copy }}</button>
-              </span>
-            </p>
 
             <h4 class="contribute__h">{{ t.paths.heading }}</h4>
             <noscript><p class="nojs-note">{{ t.paths.nojs_note }}</p></noscript>

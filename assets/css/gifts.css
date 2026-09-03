@@ -94,13 +94,24 @@
 }
 
 .gift-card__media { position: relative; background: var(--gift-surface-alt); }
-.gift-card__media img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+/* Product shots come in portrait, square and landscape. `contain` shows each
+   one whole instead of cropping the top and bottom off a tall bike or
+   carrier; the tile behind it keeps the grid even. */
+.gift-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  padding: 0.5rem;
+  background: #fff;
+}
 
 .gift-card__placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   font-size: 2.75rem;
   color: var(--gift-ink-soft);
   background:
@@ -264,10 +275,7 @@
 
 /* --- reference + copy ------------------------------------------------------ */
 
-.reference { margin: 0 0 0.5rem; font-size: 0.9rem; }
-.reference__label { display: block; color: var(--gift-ink-soft); margin-bottom: 0.3rem; }
-.reference__row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
-.reference__value, .bank__value {
+.bank__value {
   background: var(--gift-surface);
   border: 1px solid var(--gift-border);
   border-radius: 6px;
