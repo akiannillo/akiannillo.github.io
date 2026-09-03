@@ -14,3 +14,6 @@ beautiful-jekyll-theme-*.gem
 workspace.code-workspace
 cv/resume.log
 .jekyll-cache
+
+# local session notes, not for the public repo
+memory.md

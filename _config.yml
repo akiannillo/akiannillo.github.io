@@ -290,6 +290,8 @@ defaults:
 exclude:
   - CHANGELOG.md
   - misc/baby/gifts/README.md   # internal notes for the gift pages, not a page
+  - CLAUDE.md                   # internal project notes, not a page
+  - memory.md                   # internal project notes, not a page
   - CNAME
   - Gemfile
   - Gemfile.lock
