@@ -206,18 +206,30 @@ the plain "Open Revolut" button carries it.
 
 ## Why only two paths
 
-Revolut does let people pay by card, which is why PayPal was dropped. But
-Revolut caps what can be **received** by card through a revolut.me link at
-roughly £250 per week and £1,000 per month, with no more than 20 completed
-top-ups per week. The limit is per-person and cannot be raised. When a sender
-hits it, Revolut asks *them* to create an account.
+PayPal was dropped because Revolut covers both audiences on its own:
 
-So Revolut is the convenient option for people who already use it — not the
-card option for everyone, and the page never claims otherwise. **Bank transfer
-is what keeps the promise that nobody has to create an account**: free,
-uncapped, and available to everyone in the EU. If contributions ever start
-arriving faster than that weekly cap, the bank transfer path absorbs it without
-anything needing to change.
+- **People who already have Revolut** send from their account. This is
+  **unlimited** — no cap, no fee, instant.
+- **People who don't** can pay by card through the same link **without creating
+  an account**. This is capped: **€1,160 per rolling 30 days**, counted across
+  everyone together, not per sender. (Figures read off the receiving account
+  itself — if they ever change, that screen is the source of truth, not this
+  file.)
+
+That cap is the reason bank transfer stays. It is a shared ceiling, so a busy
+month of card contributions can exhaust it and later senders get declined
+through no fault of their own. **Bank transfer is the uncapped path**: free, no
+app, no account, available to everyone in the EU. It is not a legacy option and
+should not be removed to tidy the page up.
+
+Two consequences worth keeping in mind:
+
+- If the gift list ever totals well over €1,160 and people give quickly, expect
+  some card payments to fail. Nothing breaks — the page already points those
+  senders at the bank transfer — but you may want to mention it directly to
+  anyone giving a large amount.
+- The page never claims cards work for everyone unconditionally. That wording
+  is deliberate; please keep it honest if you rewrite the copy.
 
 ## Things deliberately not built
 

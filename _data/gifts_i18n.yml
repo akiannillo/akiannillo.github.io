@@ -62,9 +62,9 @@ en:
     nojs_presets: "Or go straight to a set amount:"
 
     revolut_title: "Revolut"
-    revolut_who: "Instant and free if you already use Revolut."
+    revolut_who: "Instant if you already use Revolut — and if you don't, you can still pay by card without creating an account."
     revolut_button: "Open Revolut"
-    revolut_note: "The amount is filled in for you, and you can change it before sending. If Revolut asks you to create an account, please don't bother — use the bank transfer below instead, it's simpler for you and it always works."
+    revolut_note: "The amount is filled in for you, and you can change it before sending. Sending from a Revolut account has no limit at all. Card payments do: €1,160 in any 30 days, counted across everyone — so if a card is ever turned down, that is why, and the bank transfer below always works."
 
     bank_title: "Bank transfer"
     bank_who: "Works for everyone in Europe. No app, no account, no fees."
@@ -101,7 +101,7 @@ en:
     heading: "The honest small print"
     money: "This money comes to us personally. It isn't a charity, and there's no escrow or third party holding it — you're trusting us, and we don't take that lightly."
     protection: "This is a personal transfer, not a purchase. There is no buyer protection on it, and once it has gone neither Revolut nor your bank can claw it back. Between family that is fine, but you should know it before you press send."
-    fees: "Sending from a Revolut balance, or by ordinary bank transfer, is <strong>free</strong>. Paying by card can cost you a fee, and there is a limit on how much we can receive that way — if Revolut asks you to create an account, please don't: the bank transfer is free, has no such limit, and always works. It's your money — use the free route."
+    fees: "Sending from a Revolut balance, or by ordinary bank transfer, is <strong>free</strong>. Paying by card can cost you a fee, and card payments to us are capped at €1,160 in any 30 days across everyone together. A bank transfer is free, has no cap, and always works. It's your money — use the free route."
     manual: "We update these bars by hand, so there may be a day or two of delay before your contribution shows up. It isn't lost."
     surplus: "TODO: say what happens if a gift is overfunded — does the extra roll onto the next gift, or go towards something else?"
     unfilled: "TODO: say what happens if a gift never fills up — do you top it up yourselves, or redirect what was collected?"
@@ -161,8 +161,8 @@ it:
     nojs_presets: "Oppure vai direttamente a un importo fisso:"
 
     revolut_title: "Revolut"
-    revolut_who: "Immediato e gratuito se usi già Revolut."
-    revolut_note: "L'importo è già compilato, e puoi modificarlo prima di inviare. Se Revolut ti chiede di creare un account, lascia perdere — usa il bonifico qui sotto: è più semplice per te e funziona sempre."
+    revolut_who: "Immediato se usi già Revolut — e se non lo usi, puoi comunque pagare con carta senza creare un account."
+    revolut_note: "L'importo è già compilato, e puoi modificarlo prima di inviare. Inviare da un account Revolut non ha alcun limite. I pagamenti con carta sì: 1.160 € ogni 30 giorni, contati su tutti insieme — quindi se una carta venisse rifiutata è per questo, e il bonifico qui sotto funziona sempre."
     revolut_button: "Apri Revolut"
 
     bank_title: "Bonifico bancario"
@@ -200,7 +200,7 @@ it:
     heading: "Le cose da dire chiaramente"
     money: "Questi soldi arrivano direttamente a noi. Non è una raccolta benefica e non c'è nessun terzo che li custodisce — ti stai fidando di noi, e non lo diamo per scontato."
     protection: "È un trasferimento tra privati, non un acquisto. Non c'è nessuna protezione acquisti e, una volta inviato, né Revolut né la banca possono recuperarlo. Tra familiari va benissimo, ma è giusto saperlo prima di inviare."
-    fees: "Inviare dal saldo Revolut, o con un normale bonifico, è <strong>gratis</strong>. Pagare con carta può costarti una commissione, e c'è un limite a quanto possiamo ricevere in questo modo — se Revolut ti chiede di creare un account, lascia perdere: il bonifico è gratuito, non ha questo limite e funziona sempre. Sono soldi tuoi — usa la strada gratuita."
+    fees: "Inviare dal saldo Revolut, o con un normale bonifico, è <strong>gratis</strong>. Pagare con carta può costarti una commissione, e i pagamenti con carta verso di noi sono limitati a 1.160 € ogni 30 giorni, contati su tutti insieme. Il bonifico è gratuito, non ha limiti e funziona sempre. Sono soldi tuoi — usa la strada gratuita."
     manual: "Aggiorniamo queste barre a mano, quindi può passare un giorno o due prima che il tuo contributo compaia. Non è andato perso."
     surplus: "TODO: spiegare cosa succede se un regalo supera la cifra — l'eccedenza passa al regalo successivo o va su altro?"
     unfilled: "TODO: spiegare cosa succede se un regalo non viene completato — ci mettete voi la differenza o si usa diversamente?"
