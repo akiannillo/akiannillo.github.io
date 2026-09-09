@@ -77,7 +77,7 @@ en:
 
   confirm:
     heading: "One last thing — tell us"
-    body: "Payment notes have a habit of going missing, so this is how we actually find out who gave what. It's also how the bar above moves."
+    body: "The page can't see your payment, so this is how we find out who gave what, and how the bar above moves. It also lets you tell us if you'd rather not have your name shown."
     name_label: "Your name"
     amount_label: "Amount sent"
     anon_label: "Please don't show my name on the page"
@@ -173,7 +173,7 @@ it:
 
   confirm:
     heading: "Un'ultima cosa — faccelo sapere"
-    body: "Le causali dei pagamenti hanno il vizio di perdersi, quindi è così che scopriamo davvero chi ha contribuito. Ed è così che si muove la barra qui sopra."
+    body: "La pagina non vede il tuo pagamento, quindi è così che scopriamo chi ha contribuito, ed è così che si muove la barra qui sopra. Qui puoi anche dirci se preferisci non far comparire il tuo nome."
     name_label: "Il tuo nome"
     amount_label: "Importo inviato"
     anon_label: "Preferisco non comparire con il mio nome"
