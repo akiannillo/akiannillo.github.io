@@ -172,3 +172,25 @@ gifts:
     target: 92.00
     status: open
     contributions: []
+
+  - id: bugaboo-bumper-bar
+    name: "Bugaboo bumper bar for the Butterfly 2"
+    name_it: "Barra di protezione Bugaboo per la Butterfly 2"
+    description: "The bar that goes across the front of his pushchair — something to hold on to, and somewhere to hang the toys."
+    description_it: "La barra davanti al passeggino: qualcosa a cui aggrapparsi, e dove appendere i giochi."
+    image: /assets/img/gifts/bugaboo-bumper-bar.jpg
+    link: https://www.bugaboo.com/lu-fr/accessoires/bumper-bars/bugaboo-barre-de-protection-butterfly-2dragonfly-100342MI.html
+    target: 49.95
+    status: open
+    contributions: []
+
+  - id: hauck-steering-wheel
+    name: "hauck pushchair steering wheel"
+    name_it: "Volante hauck per passeggino"
+    description: "A toy steering wheel that clips onto the pushchair, horn included, so he can do the driving from six months on."
+    description_it: "Un volante giocattolo che si aggancia al passeggino, clacson compreso, così dai sei mesi guida lui."
+    image: /assets/img/gifts/hauck-steering-wheel.jpg
+    link: https://www.hauck.de/en/products/pushchair-steering-wheel
+    target: 19.90
+    status: open
+    contributions: []
