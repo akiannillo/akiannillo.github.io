@@ -75,6 +75,13 @@ touching them.
 - **Revolut links take the amount in cents**: `?amount=8980` is EUR 89.80.
   These query parameters are undocumented and were read off revolut.me's own
   bundle.
+- **The "tell us" confirmation form is load-bearing, not a nicety.** Nothing on
+  the site can see the bank or Revolut account; the bar only moves when the
+  giver emails and someone runs `add-contribution.py`. It is also the only
+  place people can ask to be shown as Anonymous. Copy must state that reason
+  plainly — do not invent failure modes such as "payment notes get lost".
+- Copy lives only in `_data/gifts_i18n.yml`; after editing it, check it still
+  parses with `ruby -ryaml -e 'YAML.load_file("_data/gifts_i18n.yml")'`.
 
 ## Adding a gift from a product URL
 
