@@ -76,6 +76,28 @@ touching them.
   These query parameters are undocumented and were read off revolut.me's own
   bundle.
 
+## Adding a gift from a product URL
+
+The routine request is "add this present: <url>". Fetch the page for the
+name, price and image, then append a block to `_data/gifts.yml` (format in
+`misc/baby/gifts/README.md`). Set `target` to the shop price to the cent.
+
+Product images go in `assets/img/gifts/<id>.jpg`, roughly 900 px on the long
+side, JPEG, white background, to match the existing cards. Tooling notes:
+
+- No ImageMagick or Pillow on the host. `sips` handles resize and AVIF/PNG to
+  JPEG (`sips -Z 900 -s format jpeg -s formatOptions 85 in --out out.jpg`).
+- `sips` flattens transparency to **black**. Shop CDNs (Bugaboo's Demandware
+  in particular) serve cut-outs with an alpha channel, so check the result;
+  if the background is black, flatten on white with Pillow in a throwaway
+  container: `docker run --rm -v "$DIR":/w python:3-slim sh -c "pip -q
+  install pillow && python -c '...'"`.
+- Bugaboo's image service ignores `sfrm=jpg`; ask for `.png?sfrm=png` and
+  flatten yourself.
+
+Italian `name_it` / `description_it` drafted here must be flagged for the
+user's review, never presented as final.
+
 ## Commands
 
 ```bash
