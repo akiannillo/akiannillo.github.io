@@ -12,6 +12,20 @@ These cost real time. Read them before trying to preview.
   system Ruby is 2.6.10 and `bundle install` cannot resolve against it (`ffi`
   needs Ruby >= 3.0). `brew install ruby` and put it ahead of `/usr/bin/ruby`
   on `PATH` is the real fix.
+- **Working preview route: Docker.** Docker Desktop is installed but usually
+  not running; `open -a Docker` starts it (wait for `docker info` to succeed).
+  Then:
+
+  ```bash
+  docker run -d --name akisite -p 4000:4000 -v "$PWD":/srv/site \
+    -v akisite-gems:/usr/local/bundle -w /srv/site ruby:3.3 \
+    bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --port 4000 --force_polling"
+  ```
+
+  First run pulls the image and installs gems (a few minutes); the
+  `akisite-gems` volume caches them so later runs start in seconds. The site
+  is at <http://127.0.0.1:4000/misc/baby/eng/>, rebuilds on file changes, and
+  `docker rm -f akisite` stops it. Nothing on the host is touched.
 - **Command Line Tools header mismatch.** The CLT ships the Ruby 2.6 headers
   under `universal-darwin25` while native gem builds look for
   `universal-darwin24`, so every native extension fails to compile even once
@@ -67,7 +81,7 @@ touching them.
 ```bash
 ruby scripts/validate_gifts.rb          # stdlib only, runs on system Ruby
 python3 scripts/add-contribution.py     # record a contribution, stdlib only
-bundle exec jekyll serve                # see Environment gotchas first
+bundle exec jekyll serve                # fails on this Mac; use the Docker route in Environment gotchas
 ```
 
 Routine update when money arrives:
