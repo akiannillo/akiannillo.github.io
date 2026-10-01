@@ -117,6 +117,11 @@ gifts:
         amount: 66.00
         show_name: true
         note: "amount not recorded individually"
+      - date: 2026-09-30
+        name: "Mariarosaria e Giacomo"
+        amount: 25.00
+        show_name: true
+        note: "Revolut"
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
