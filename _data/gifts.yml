@@ -132,7 +132,12 @@ gifts:
     link: https://woom.com/en_INT/balance-bikes/self-balancing-bike/wow?variant=dreamy-sky
     target: 179.00
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-17
+        name: "Francesca Clari"
+        amount: 30.00
+        show_name: true
+        note: ""
 
   - id: woom-ready-helmet
     name: "woom READY helmet and light"
