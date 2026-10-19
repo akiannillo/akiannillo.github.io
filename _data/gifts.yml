@@ -122,6 +122,11 @@ gifts:
         amount: 25.00
         show_name: true
         note: "Revolut"
+      - date: 2026-10-19
+        name: "Gaia Olivetti"
+        amount: 20.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
@@ -135,6 +140,11 @@ gifts:
     contributions:
       - date: 2026-10-17
         name: "Francesca Clari"
+        amount: 30.00
+        show_name: true
+        note: ""
+      - date: 2026-10-19
+        name: "Chiara Iannicelli"
         amount: 30.00
         show_name: true
         note: ""
