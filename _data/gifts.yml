@@ -141,7 +141,7 @@ gifts:
       - date: 2026-10-17
         name: "Francesca Clari"
         amount: 30.00
-        show_name: true
+        show_name: false
         note: ""
       - date: 2026-10-19
         name: "Chiara Iannicelli"
