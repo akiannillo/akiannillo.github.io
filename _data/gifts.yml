@@ -148,6 +148,11 @@ gifts:
         amount: 30.00
         show_name: true
         note: ""
+      - date: 2026-10-19
+        name: "Lorenzo Botrugno"
+        amount: 119.00
+        show_name: true
+        note: ""
 
   - id: woom-ready-helmet
     name: "woom READY helmet and light"
