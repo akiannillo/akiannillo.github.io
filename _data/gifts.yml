@@ -168,7 +168,12 @@ gifts:
     link: https://woom.com/en_INT/kids-helmet/ready-with-light?variant=m_woom-red
     target: 89.80
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-20
+        name: "Jorge e Irma"
+        amount: 50.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-lt
     name: "Osprey Poco LT child carrier"
