@@ -127,6 +127,11 @@ gifts:
         amount: 20.00
         show_name: true
         note: ""
+      - date: 2026-10-20
+        name: "Lucia Rosaria Muro"
+        amount: 30.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
