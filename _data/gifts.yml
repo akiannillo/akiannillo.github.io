@@ -141,7 +141,7 @@ gifts:
     image: /assets/img/gifts/woom-wow.jpg
     link: https://woom.com/en_INT/balance-bikes/self-balancing-bike/wow?variant=dreamy-sky
     target: 179.00
-    status: open
+    status: funded
     contributions:
       - date: 2026-10-17
         name: "Francesca Clari"
