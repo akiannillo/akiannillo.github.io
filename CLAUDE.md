@@ -33,11 +33,14 @@ These cost real time. Read them before trying to preview.
   header tree somewhere writable, add a `universal-darwin24` copy alongside
   the `25` one, and point `RbConfig::CONFIG['rubyhdrdir']` at it via
   `RUBYOPT=-r<patch>.rb`.
-- **`git push` over `origin` fails non-interactively.** `origin` is an HTTPS
-  remote and the osxkeychain helper cannot prompt. An SSH key for GitHub
-  already exists (`~/.ssh/aki-github`, configured in `~/.ssh/config`), so push
-  with the SSH URL explicitly, or fix it permanently:
-  `git remote set-url origin git@github.com:akiannillo/akiannillo.github.io.git`
+- **Claude cannot push from this environment; the user pushes.** `origin` is
+  an HTTPS remote and the osxkeychain helper cannot prompt. SSH also fails
+  here: `~/.ssh/aki-github` does not exist (only `id_ed25519`, labelled "key
+  for gitlab"), and `github.com` is not in `known_hosts`. `git pull` works
+  over HTTPS since the repo is public. So commit locally and give the user
+  `cd <repo> && git push` to run in their own terminal. Do not rewrite the
+  remote URL. The auto-mode classifier also blocks `git commit --amend`;
+  make a follow-up commit instead.
 
 ## Conventions
 
@@ -119,3 +122,21 @@ Routine update when money arrives:
 python3 scripts/add-contribution.py && ruby scripts/validate_gifts.rb && \
   git add _data/gifts.yml && git commit -m "Gift: contribution from ..." && git push
 ```
+
+### Recording contributions non-interactively
+
+`add-contribution.py` reads stdin, so it can be driven with `printf`:
+`printf '<gift-id>\n\n<Name>\n<amount>\ny\n\ny\n' | python3 scripts/add-contribution.py`
+(answers: id, date [default today], name, amount, show name, private note,
+confirm). Gift ids: `grep -nE '^  - id:' _data/gifts.yml`. Names are given
+as the user states them (e.g. "Zia Daniela e Zio Michele", Italian "e"). The
+user often corrects spellings or adds surnames afterwards; fix with a new
+commit.
+
+- **Anonymous requests:** set `show_name: false`; the real name stays in the
+  `name` field (public repo, so offer to blank it if privacy matters).
+- **`status:`** — set `funded` once the user says the gift is ordered/bought
+  (clears the validator warning); `closed` only if they decided not to buy it.
+- **Display rules (user preference):** the card percentage is capped at 100%
+  and there is no "overfunded" note; the collected amount still shows the real
+  total.
