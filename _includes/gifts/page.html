@@ -117,7 +117,7 @@
           <p class="gift-progress__figures">
             <strong class="gift-progress__collected">{{ money_total }} {{ t.grid.collected }}</strong>
             <span class="gift-progress__of">{{ t.grid.of_target | replace: '%AMOUNT%', money_target }}</span>
-            <span class="gift-progress__pct">{{ t.grid.percent_funded | replace: '%PCT%', pct_r }}</span>
+            <span class="gift-progress__pct">{{ t.grid.percent_funded | replace: '%PCT%', bar }}</span>
             {%- unless is_funded %}
             <span class="gift-progress__left">{{ t.grid.to_go | replace: '%AMOUNT%', money_remaining }}</span>
             {%- endunless %}
@@ -130,9 +130,6 @@
             {%- endif -%}
           </p>
 
-          {%- if pct_r > 100 %}
-          <p class="gift-progress__over">{{ t.grid.overfunded_note }}</p>
-          {%- endif %}
         </div>
 
         {%- if is_closed %}
