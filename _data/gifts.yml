@@ -189,7 +189,12 @@ gifts:
     link: https://www.amazon.de/-/en/Osprey-Unisex-Child-Carrier-Black/dp/B0CN1H489D
     target: 320.00
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-21
+        name: "Zio Stefano e Zia Sara"
+        amount: 50.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-raincover
     name: "Rain cover for the Osprey carrier"
