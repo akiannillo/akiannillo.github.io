@@ -167,7 +167,7 @@ gifts:
     image: /assets/img/gifts/woom-ready-helmet.jpg
     link: https://woom.com/en_INT/kids-helmet/ready-with-light?variant=m_woom-red
     target: 89.80
-    status: open
+    status: funded
     contributions:
       - date: 2026-10-20
         name: "Jorge e Irma"
