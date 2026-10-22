@@ -33,13 +33,13 @@ These cost real time. Read them before trying to preview.
   header tree somewhere writable, add a `universal-darwin24` copy alongside
   the `25` one, and point `RbConfig::CONFIG['rubyhdrdir']` at it via
   `RUBYOPT=-r<patch>.rb`.
-- **Claude cannot push from this environment; the user pushes.** `origin` is
-  an HTTPS remote and the osxkeychain helper cannot prompt. SSH also fails
-  here: `~/.ssh/aki-github` does not exist (only `id_ed25519`, labelled "key
-  for gitlab"), and `github.com` is not in `known_hosts`. `git pull` works
-  over HTTPS since the repo is public. So commit locally and give the user
-  `cd <repo> && git push` to run in their own terminal. Do not rewrite the
-  remote URL. The auto-mode classifier also blocks `git commit --amend`;
+- **Pushing works from this environment now** (confirmed 2026-10-22: `git
+  push` over the HTTPS `origin` succeeded). It used to fail — the osxkeychain
+  helper could not prompt and SSH had no GitHub key — so if a push errors,
+  fall back to giving the user `cd <repo> && git push`. Use
+  `GIT_TERMINAL_PROMPT=0 git push` so a failure cannot hang. Push only when
+  the user asks ("publish"); a commit alone does not publish. Do not rewrite
+  the remote URL. The auto-mode classifier also blocks `git commit --amend`;
   make a follow-up commit instead.
 
 ## Conventions
@@ -135,6 +135,10 @@ commit.
 
 - **Anonymous requests:** set `show_name: false`; the real name stays in the
   `name` field (public repo, so offer to blank it if privacy matters).
+- **Splitting a gift:** when a giver's money covers a named gift and "the
+  remainder" goes to another, fill the named gift to its exact target and put
+  the rest on the other (two `add-contribution.py` runs, same name). Check
+  targets first: `grep -nE 'target:' _data/gifts.yml`.
 - **`status:`** — set `funded` once the user says the gift is ordered/bought
   (clears the validator warning); `closed` only if they decided not to buy it.
 - **Display rules (user preference):** the card percentage is capped at 100%
