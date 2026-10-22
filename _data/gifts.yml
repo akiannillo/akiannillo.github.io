@@ -195,6 +195,11 @@ gifts:
         amount: 50.00
         show_name: true
         note: ""
+      - date: 2026-10-22
+        name: "Nonno Gino e Nonna Anna"
+        amount: 108.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-raincover
     name: "Rain cover for the Osprey carrier"
@@ -216,7 +221,12 @@ gifts:
     link: https://www.amazon.de/-/en/BanaSuper-Certified-Montessori-Blue-Pink/dp/B0FH4KHM9V
     target: 92.00
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-22
+        name: "Nonno Gino e Nonna Anna"
+        amount: 92.00
+        show_name: true
+        note: ""
 
   - id: bugaboo-bumper-bar
     name: "Bugaboo bumper bar for the Butterfly 2"
