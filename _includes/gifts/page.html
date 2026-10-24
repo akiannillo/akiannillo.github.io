@@ -40,9 +40,44 @@
   {%- assign visible_count = 0 -%}
   {%- for g in all_gifts -%}{%- unless g.status == 'hidden' -%}{%- assign visible_count = visible_count | plus: 1 -%}{%- endunless -%}{%- endfor -%}
 
+  {%- comment -%} --- counts for the filter, same rules as the cards below --- {%- endcomment -%}
+  {%- assign open_count = 0 -%}
+  {%- assign funded_count = 0 -%}
+  {%- for g in all_gifts -%}
+    {%- if g.status == 'hidden' -%}{%- continue -%}{%- endif -%}
+    {%- assign g_total = 0 -%}
+    {%- for c in g.contributions -%}{%- assign g_total = g_total | plus: c.amount -%}{%- endfor -%}
+    {%- assign g_remaining = g.target | times: 1.0 | minus: g_total -%}
+    {%- if g.status == 'funded' or g_remaining <= 0 -%}
+      {%- assign funded_count = funded_count | plus: 1 -%}
+    {%- elsif g.status != 'closed' -%}
+      {%- assign open_count = open_count | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- comment -%} A filter only earns its place when it would hide something and
+  still leave something to show. {%- endcomment -%}
+  {%- assign show_filter = false -%}
+  {%- if open_count > 0 and open_count < visible_count -%}{%- assign show_filter = true -%}{%- endif -%}
+
   {%- if visible_count == 0 -%}
   <p class="gifts__empty">{{ t.grid.empty }}</p>
   {%- else -%}
+
+  {%- comment -%} The filter is pure CSS: the radios sit before the grid as
+  siblings, so `:checked ~ .gift-grid` hides cards with JavaScript off. A card
+  reached by #gift-<id> is always shown, via :target. {%- endcomment -%}
+  {%- if show_filter %}
+  <div class="gift-filter">
+  <span class="gift-filter__label" id="gift-filter-label">{{ t.filter.label }}</span>
+  <input class="gift-filter__radio gift-filter__radio--open" type="radio" name="gift-filter" id="gift-filter-open" value="open" aria-describedby="gift-filter-label" checked>
+  <label class="gift-filter__chip" for="gift-filter-open">{{ t.filter.open }} <span class="gift-filter__count">{{ open_count }}</span></label>
+  {%- if funded_count > 0 %}
+  <input class="gift-filter__radio gift-filter__radio--funded" type="radio" name="gift-filter" id="gift-filter-funded" value="funded" aria-describedby="gift-filter-label">
+  <label class="gift-filter__chip" for="gift-filter-funded">{{ t.filter.funded }} <span class="gift-filter__count">{{ funded_count }}</span></label>
+  {%- endif %}
+  <input class="gift-filter__radio gift-filter__radio--all" type="radio" name="gift-filter" id="gift-filter-all" value="all" aria-describedby="gift-filter-label">
+  <label class="gift-filter__chip" for="gift-filter-all">{{ t.filter.all }} <span class="gift-filter__count">{{ visible_count }}</span></label>
+  {%- endif %}
 
   <ul class="gift-grid">
   {%- for gift in all_gifts -%}
@@ -83,7 +118,7 @@
     {%- capture money_target -%}{% include gifts/money.html amount=target lang=lang %}{%- endcapture -%}
     {%- capture money_remaining -%}{% include gifts/money.html amount=remaining lang=lang %}{%- endcapture -%}
 
-    <li class="gift-card gift-card--{{ gift.status }}{% if is_funded %} is-funded{% endif %}{% if is_closed %} is-closed{% endif %}" id="gift-{{ gift.id }}">
+    <li class="gift-card gift-card--{{ gift.status }}{% if is_open %} is-open{% endif %}{% if is_funded %} is-funded{% endif %}{% if is_closed %} is-closed{% endif %}" id="gift-{{ gift.id }}">
 
       <div class="gift-card__media">
         {%- if gift.image %}
@@ -250,6 +285,9 @@
     </li>
   {%- endfor -%}
   </ul>
+  {%- if show_filter %}
+  </div>
+  {%- endif -%}
   {%- endif -%}
 
   <section class="thanks" aria-labelledby="thanks-heading">

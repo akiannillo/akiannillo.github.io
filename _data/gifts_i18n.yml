@@ -46,6 +46,12 @@ en:
     placeholder_alt: "No photo yet"
     empty: "The list is being put together — do check back."
 
+  filter:
+    label: "Show"
+    open: "Still open"
+    funded: "Completed"
+    all: "All"
+
   amount:
     legend: "How much would you like to give?"
     preset_remaining: "%AMOUNT% — completes it"
@@ -141,6 +147,12 @@ it:
     overfunded_note: "Avete superato la cifra — e non ci lamentiamo."
     placeholder_alt: "Ancora senza foto"
     empty: "La lista è in preparazione — torna a dare un'occhiata."
+
+  filter:
+    label: "Mostra"
+    open: "Ancora aperti"
+    funded: "Completati"
+    all: "Tutti"
 
   amount:
     legend: "Quanto ti va di dare?"

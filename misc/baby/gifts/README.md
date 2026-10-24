@@ -99,6 +99,14 @@ even while `status` still says `open` — the page can never invite money for
 something already paid for. The validator warns you when that happens so you
 can set `status: funded` and make the data say what the page shows.
 
+**The filter.** Above the grid, chips switch between *Still open* (the
+default), *Completed* and *All*, each with a count. It is pure CSS -- radio
+inputs placed before the grid hide cards with `:checked ~ .gift-grid` -- so it
+works with JavaScript off. A card opened through a `#gift-<id>` link (the
+thank-you list uses these) is always shown, whatever the filter. The filter
+only appears when it would hide something and still leave something to show;
+closed gifts appear only under *All*.
+
 **Closing a gift**: set `status: closed`. Use this when you have decided not to
 buy it after all; use `funded` when you have. Overfunding is allowed — the bar
 caps at 100% but the real total is shown, along with a line acknowledging it.

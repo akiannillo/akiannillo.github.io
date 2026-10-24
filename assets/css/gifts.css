@@ -59,6 +59,69 @@
 .gifts__steps li { margin-bottom: 0.4rem; }
 .gifts__empty { color: var(--gift-ink-soft); font-style: italic; }
 
+/* --- filter ---------------------------------------------------------------- */
+
+/* Pure CSS, so it works with JavaScript off: the radios are siblings that
+   precede .gift-grid, and the checked one hides cards through `~`. The grid
+   wraps onto its own row of this flex container. A card reached by a
+   #gift-<id> link is never hidden (:not(:target)). */
+.gift-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.gift-filter > .gift-grid { flex: 1 1 100%; margin-top: 0.75rem; }
+.gift-filter__label { font-size: 0.95rem; font-weight: 700; margin-right: 0.25rem; }
+
+.gift-filter__radio {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.gift-filter__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  margin: 0;
+  border: 1px solid var(--gift-border);
+  border-radius: 999px;
+  background: var(--gift-surface);
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.gift-filter__chip:hover { border-color: var(--gift-accent); }
+.gift-filter__radio:checked + .gift-filter__chip {
+  background: var(--gift-accent);
+  border-color: var(--gift-accent);
+  color: #fff;
+  font-weight: 700;
+}
+.gift-filter__radio:focus-visible + .gift-filter__chip { outline: 3px solid var(--gift-link); outline-offset: 2px; }
+
+.gift-filter__count {
+  min-width: 1.5em;
+  padding: 0 0.4em;
+  border-radius: 999px;
+  background: var(--gift-surface-alt);
+  color: var(--gift-ink-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+.gift-filter__radio:checked + .gift-filter__chip .gift-filter__count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.gift-filter__radio--open:checked ~ .gift-grid .gift-card:not(.is-open):not(:target),
+.gift-filter__radio--funded:checked ~ .gift-grid .gift-card:not(.is-funded):not(:target) {
+  display: none;
+}
+
 /* --- grid ----------------------------------------------------------------- */
 
 .gift-grid {

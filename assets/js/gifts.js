@@ -10,6 +10,7 @@
      - assembles the IBAN from base64 parts on request
      - copy-to-clipboard buttons
      - opens the right panel when the page is opened on a #give-<id> link
+     - the "gifts still open" link on funded cards resets the filter
 
    No dependencies, no third-party calls, no storage, no cookies.
    --------------------------------------------------------------------------- */
@@ -211,4 +212,13 @@
 
   openFromHash();
   window.addEventListener('hashchange', openFromHash);
+
+  // "See the gifts still open" on a funded card should switch the filter back
+  // to the open gifts, not just scroll up to it.
+  var filterOpen = document.getElementById('gift-filter-open');
+  if (filterOpen) {
+    Array.prototype.forEach.call(root.querySelectorAll('.gift-card__done-link'), function (link) {
+      link.addEventListener('click', function () { filterOpen.checked = true; });
+    });
+  }
 })();
