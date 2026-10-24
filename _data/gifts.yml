@@ -210,7 +210,12 @@ gifts:
     link: https://www.amazon.de/-/en/Osprey-Child-Carrier-Raincover-Limon/dp/B0CN1K66DV
     target: 27.00
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-24
+        name: "Zio Giacomo, Zia Angela e Nina"
+        amount: 27.00
+        show_name: true
+        note: ""
 
   - id: foam-climbing-blocks
     name: "Foam climbing blocks"
@@ -237,7 +242,12 @@ gifts:
     link: https://www.bugaboo.com/lu-fr/accessoires/bumper-bars/bugaboo-barre-de-protection-butterfly-2dragonfly-100342MI.html
     target: 49.95
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-24
+        name: "Zio Giacomo, Zia Angela e Nina"
+        amount: 49.95
+        show_name: true
+        note: ""
 
   - id: hauck-steering-wheel
     name: "hauck pushchair steering wheel"
@@ -248,4 +258,9 @@ gifts:
     link: https://www.hauck.de/en/products/pushchair-steering-wheel
     target: 19.90
     status: open
-    contributions: []
+    contributions:
+      - date: 2026-10-24
+        name: "Zio Giacomo, Zia Angela e Nina"
+        amount: 19.90
+        show_name: true
+        note: ""
