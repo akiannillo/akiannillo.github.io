@@ -8,6 +8,7 @@ published: true
 
 | Period | Name | Info | Role | Budget |
 |---|---|---|---|---|
+| 2027 - 2030 (36 months, start date TBC) | [CHAOS-MAS](/2026-10-27-CHAOS-MAS-funded/) | Chaos Engineering for Multi-Agent Systems, FNR CORE 2026 (C26/IS-SAS/2001106). | Principal Investigator | 758k |
 | April 2023 - March 2026 | AI for transport & logistic | partnership with Gulliver Luxembourg | Principal Investigator | confidential | 
 | January 2023 - June 2023 | [FIT4START #13](https://gouvernement.lu/en/actualites/toutes_actualites/communiques/2022/10-octobre/28-fit4-start.html) | WAVY MEET | Project Leader | 150k |
 | October 2022 - September 2025 | DeFi Security | partnership with [Quantstamp Inc](https://quantstamp.com/) |  Principal Investigator | confidential |
