@@ -13,7 +13,9 @@ I am thrilled to share that my project **CHAOS-MAS** has been funded by the Luxe
 
 Earlier this year I wrote about [ChaosLLM](/2026-02-04-CHAOS-LLM/), our first step towards dependability testing for tool-calling agents. One finding stuck with me: agents cope reasonably well with obvious failures, but plausible yet slightly wrong tool outputs lead them to confident, incorrect answers.
 
-Since then, agents have become even less isolated. They call external tools through protocols like the Model Context Protocol (MCP), they coordinate with other agents, and they are being deployed in settings where failures have real costs. In a multi-agent system, a single faulty tool response can cascade through the whole team. We still lack a rigorous way to test for this.
+That line of work has just had another milestone: our paper **[The Scaling Paradox of Tool-Calling LLM Agents Under Realistic MCP Faults](https://neurips.cc/virtual/2026/loc/sydney/poster/151564)** was accepted at NeurIPS 2026, and will be presented in Sydney. Together with Joshua S. Owotogbe, Roberto Natella, Francesco Avallone, Kristina Kudryavtseva and Indika Kumara, we introduce MCP-Injector, a fault-injection middleware for the MCP tool-call path, with a fault model calibrated on more than 57,000 issue and pull-request threads from nearly 1,800 open-source MCP repositories. Realistic faults sharply reduce task completion, and, surprisingly, the larger model we tested completes fewer tasks under faults than the smaller one, while the agent framework's error handling matters more than model scale. It is exactly the kind of evidence that motivated CHAOS-MAS.
+
+More broadly, agents have become even less isolated. They call external tools through protocols like the Model Context Protocol (MCP), they coordinate with other agents, and they are being deployed in settings where failures have real costs. In a multi-agent system, a single faulty tool response can cascade through the whole team. We still lack a rigorous way to test for this.
 
 CHAOS-MAS brings chaos engineering to multi-agent, tool-using LLM systems. The project will deliver:
 
