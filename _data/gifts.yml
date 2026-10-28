@@ -200,6 +200,11 @@ gifts:
         amount: 108.00
         show_name: true
         note: ""
+      - date: 2026-10-28
+        name: "Alessio e Isabel"
+        amount: 65.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-raincover
     name: "Rain cover for the Osprey carrier"
