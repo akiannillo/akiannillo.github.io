@@ -88,12 +88,12 @@ gifts:
         show_name: true
         note: "amount not recorded individually"
       - date: 2026-09-03
-        name: "Zia Carla e Zio Beniamino"
+        name: "Zia Carla & Zio Beniamino"
         amount: 66.00
         show_name: true
         note: "amount not recorded individually"
       - date: 2026-09-03
-        name: "Zii Domenico e Pina Colella"
+        name: "Zii Domenico & Pina Colella"
         amount: 66.00
         show_name: true
         note: "amount not recorded individually"
@@ -118,12 +118,12 @@ gifts:
         show_name: true
         note: "amount not recorded individually"
       - date: 2026-09-30
-        name: "Mariarosaria e Giacomo"
+        name: "Mariarosaria & Giacomo"
         amount: 25.00
         show_name: true
         note: "Revolut"
       - date: 2026-10-19
-        name: "Gaia Olivetti e Mario Pecora"
+        name: "Gaia Olivetti & Mario Pecora"
         amount: 20.00
         show_name: true
         note: ""
@@ -133,12 +133,12 @@ gifts:
         show_name: true
         note: ""
       - date: 2026-10-29
-        name: "Chiara e Luca"
+        name: "Chiara & Luca"
         amount: 20.00
         show_name: true
         note: ""
       - date: 2026-10-29
-        name: "Ilias, Anastasiia e Stéphanie"
+        name: "Ilias, Anastasiia & Stéphanie"
         amount: 100.00
         show_name: true
         note: ""
@@ -180,12 +180,12 @@ gifts:
     status: funded
     contributions:
       - date: 2026-10-20
-        name: "Jorge e Irma"
+        name: "Jorge & Irma"
         amount: 50.00
         show_name: true
         note: ""
       - date: 2026-10-21
-        name: "Zia Daniela e Zio Michele"
+        name: "Zia Daniela & Zio Michele"
         amount: 50.00
         show_name: true
         note: ""
@@ -201,22 +201,22 @@ gifts:
     status: open
     contributions:
       - date: 2026-10-21
-        name: "Zio Stefano e Zia Sara"
+        name: "Zio Stefano & Zia Sara"
         amount: 50.00
         show_name: true
         note: ""
       - date: 2026-10-22
-        name: "Nonno Gino e Nonna Anna"
+        name: "Nonno Gino & Nonna Anna"
         amount: 108.00
         show_name: true
         note: ""
       - date: 2026-10-28
-        name: "Alessio e Isabel"
+        name: "Alessio & Isabel"
         amount: 65.00
         show_name: true
         note: ""
       - date: 2026-10-29
-        name: "Silvia e Lorenzo"
+        name: "Silvia & Lorenzo"
         amount: 20.00
         show_name: true
         note: ""
@@ -237,7 +237,7 @@ gifts:
     status: open
     contributions:
       - date: 2026-10-24
-        name: "Zio Giacomo, Zia Angela e Nina"
+        name: "Zio Giacomo, Zia Angela & Nina"
         amount: 27.00
         show_name: true
         note: ""
@@ -253,7 +253,7 @@ gifts:
     status: open
     contributions:
       - date: 2026-10-22
-        name: "Nonno Gino e Nonna Anna"
+        name: "Nonno Gino & Nonna Anna"
         amount: 92.00
         show_name: true
         note: ""
@@ -269,7 +269,7 @@ gifts:
     status: open
     contributions:
       - date: 2026-10-24
-        name: "Zio Giacomo, Zia Angela e Nina"
+        name: "Zio Giacomo, Zia Angela & Nina"
         amount: 49.95
         show_name: true
         note: ""
@@ -285,7 +285,7 @@ gifts:
     status: open
     contributions:
       - date: 2026-10-24
-        name: "Zio Giacomo, Zia Angela e Nina"
+        name: "Zio Giacomo, Zia Angela & Nina"
         amount: 19.90
         show_name: true
         note: ""

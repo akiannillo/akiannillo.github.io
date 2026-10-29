@@ -129,7 +129,7 @@ python3 scripts/add-contribution.py && ruby scripts/validate_gifts.rb && \
 `printf '<gift-id>\n\n<Name>\n<amount>\ny\n\ny\n' | python3 scripts/add-contribution.py`
 (answers: id, date [default today], name, amount, show name, private note,
 confirm). Gift ids: `grep -nE '^  - id:' _data/gifts.yml`. Names are given
-as the user states them (e.g. "Zia Daniela e Zio Michele", Italian "e"). The
+as the user states them, but joined with "&" rather than "e"/"and" (e.g. "Zia Daniela & Zio Michele"). The
 user often corrects spellings or adds surnames afterwards; fix with a new
 commit.
 
