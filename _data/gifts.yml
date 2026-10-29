@@ -132,6 +132,11 @@ gifts:
         amount: 30.00
         show_name: true
         note: ""
+      - date: 2026-10-29
+        name: "Chiara e Luca"
+        amount: 20.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
@@ -203,6 +208,11 @@ gifts:
       - date: 2026-10-28
         name: "Alessio e Isabel"
         amount: 65.00
+        show_name: true
+        note: ""
+      - date: 2026-10-29
+        name: "Silvia e Lorenzo"
+        amount: 20.00
         show_name: true
         note: ""
 
