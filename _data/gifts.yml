@@ -215,6 +215,11 @@ gifts:
         amount: 20.00
         show_name: true
         note: ""
+      - date: 2026-10-29
+        name: "Flora, Petros e Dori"
+        amount: 30.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-raincover
     name: "Rain cover for the Osprey carrier"
