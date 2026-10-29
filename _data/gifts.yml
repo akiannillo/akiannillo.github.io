@@ -137,6 +137,11 @@ gifts:
         amount: 20.00
         show_name: true
         note: ""
+      - date: 2026-10-29
+        name: "Ilias, Anastasiia e Stéphanie"
+        amount: 100.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
