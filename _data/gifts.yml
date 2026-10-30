@@ -147,6 +147,11 @@ gifts:
         amount: 10.00
         show_name: true
         note: ""
+      - date: 2026-10-30
+        name: "Andre, Melanie & Maxine"
+        amount: 50.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
