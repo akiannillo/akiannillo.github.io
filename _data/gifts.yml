@@ -162,6 +162,16 @@ gifts:
         amount: 60.00
         show_name: true
         note: ""
+      - date: 2026-10-31
+        name: "Carlos & Roberto"
+        amount: 40.00
+        show_name: true
+        note: ""
+      - date: 2026-10-31
+        name: "Florian"
+        amount: 35.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
