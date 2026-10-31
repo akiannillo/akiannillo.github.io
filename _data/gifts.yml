@@ -152,6 +152,16 @@ gifts:
         amount: 50.00
         show_name: true
         note: ""
+      - date: 2026-10-31
+        name: "Tata Lama"
+        amount: 40.00
+        show_name: true
+        note: ""
+      - date: 2026-10-31
+        name: "Tía Carol & Tío Andres"
+        amount: 60.00
+        show_name: true
+        note: ""
 
   - id: woom-wow
     name: "woom WOW self-balancing bike"
