@@ -235,6 +235,21 @@ gifts:
         amount: 30.00
         show_name: true
         note: ""
+      - date: 2026-10-31
+        name: "Tío Kiyo"
+        amount: 50.00
+        show_name: true
+        note: ""
+      - date: 2026-10-31
+        name: "Patricia, Claude & Cloé"
+        amount: 25.00
+        show_name: true
+        note: ""
+      - date: 2026-10-31
+        name: "Christophe, Katya & Maxime"
+        amount: 47.00
+        show_name: true
+        note: ""
 
   - id: osprey-poco-raincover
     name: "Rain cover for the Osprey carrier"
